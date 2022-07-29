@@ -23,5 +23,5 @@ Contents
    :maxdepth: 1
 
    index
-   TF2/TF2 (Vanilla)
-   TF2/TF2 (Workshop)
+   TF2 (Vanilla)
+   TF2 (Workshop)

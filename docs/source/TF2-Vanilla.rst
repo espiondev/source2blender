@@ -1,4 +1,5 @@
 .. _tf2_vanilla:
+
 TF2-Vanilla
 ===========
 
@@ -6,10 +7,12 @@ TF2-Vanilla
     :depth: 1
 
 .. _maps_and_props_v:
+
 Maps and included props
 -----------------------
 
 .. _method_1_v:
+
 Method 1 (Recommended)
 ^^^^^^^^^^^^^^^^^^^^^^
 
@@ -18,6 +21,7 @@ Method 1 (Recommended)
 | Some maps are compressed beyond readability for BSPSource (Usually newer ones). To fix that, you need to repack it with a batch script file.
 
 .. _fix_compressed_bsp:
+
 Fix compressed .BSP files
 """""""""""""""""""""""""
 
@@ -60,6 +64,7 @@ Fix compressed .BSP files
 |
 
 .. _convert_bsp_to_vmf:
+
 Convert a .BSP to .VMF
 """"""""""""""""""""""
 
@@ -71,6 +76,7 @@ Convert a .BSP to .VMF
 | 
 
 .. _install_bst:
+
 Install Blender Source Tools
 """"""""""""""""""""""""""""
 
@@ -82,6 +88,7 @@ Install Blender Source Tools
 |
 
 .. _import_vmf:
+
 Import .VMF files into Blender
 """""""""""""""""""""""""""""""""""""
 
@@ -98,13 +105,15 @@ Import .VMF files into Blender
 | io_import_vmf is now installed. You can now import a .VMF file from the :guilabel:`File` > :guilabel:`Import` > :guilabel:`Valve Map Format (.vmf)` button. Importing most maps will likely freeze Blender, but wait for it to finish.
 |
 
-.. _method_2:
+.. _method_2_v:
+
 Method 2 (Alternate)
 ^^^^^^^^^^^^^^^^^^^^
 
 `SourceIO <https://github.com/REDxEYE/SourceIO>`_ will be used for method 2.
 
 .. _import_bsp_sourceio:
+
 Import .BSP files into Blender with SourceIO
 """"""""""""""""""""""""""""""""""""""""""""
 

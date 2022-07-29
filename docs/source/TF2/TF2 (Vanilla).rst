@@ -24,8 +24,7 @@ How to fix compressed .BSP files
     | However, you must follow the steps after this in the right order. 
 
 
-*    Find your TF2 installation folder. You can locate it by right clicking on TF2 in your Steam library, hovering over the :guilabel:`Manage >` button, and clicking on :guilabel:`Browse local files`.
-This will open File Explorer in your TF2 folder. It should have a few folders in it, such as "bin", "hl2", "platform", "tf", as well as a file titled hl2.exe".
+*    Find your TF2 installation folder. You can locate it by right clicking on TF2 in your Steam library, hovering over the :guilabel:`Manage >` button, and clicking on :guilabel:`Browse local files`. This will open File Explorer in your TF2 folder. It should have a few folders in it, such as "bin", "hl2", "platform", "tf", as well as a file titled hl2.exe".
 *    Navigate into the "bin" folder.
 *    Create a new .TXT file by right clicking on File Explorer, hovering over :guilabel:`New >`, and selecting :guilabel:`Text Document`. Its name doesn't matter, as long as it still has the .TXT file extension. File extensions may be hidden by default, so to enable it, click on :guilabel:`View` at the top of the window, and check the :guilabel:`File name extensions` box.
 *    Open the .TXT file you just created with the text editor of your choice. Notepad should come installed on almost all Windows systems, but `Visual Studio Code <https://code.visualstudio.com/>`_ or `Notepad++ <https://notepad-plus-plus.org/>`_ can be downloaded for free online. 
@@ -61,7 +60,7 @@ How to convert a .BSP to .VMF
 
 *    Run "bspsrc.jar"
 *    Because of the outdated (as of writing) file selection dialog, it is recommended to simply drag and drop your .BSP file.
-*    You will be prompted to choose an output folder. Choose one that isn't too cluttered so it isn't too hard locating your file.
+*    You will be prompted to choose an output folder. Choose one that isn't too cluttered so it isn't difficult to locate your file.
 *    Click on :guilabel:`Decompile`.
 | Your .VMF file has been decompiled and is in your output folder.
 | 

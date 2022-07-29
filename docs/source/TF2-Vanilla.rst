@@ -4,7 +4,7 @@ TF2-Vanilla
 ===========
 
 .. contents:: Table of Contents
-    :depth: 1
+    :depth: 2
 
 .. _maps_and_props_v:
 

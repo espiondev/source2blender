@@ -3,6 +3,9 @@ Source2Blender documentation
 
 | This documentation will serve as a beginner-friendly guide to porting assets from games featuring Valve's game engine, Source, to Blender, the most popular free and open source 3D computer graphics software. 
 
+.. image:: _images/logo.png
+  :width: 150
+  :alt: TF2 Blender Icon
 
 .. note::
 

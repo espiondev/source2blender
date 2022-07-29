@@ -1,13 +1,15 @@
+.. _tf2_vanilla:
 TF2 (Vanilla)
 =============
 
 .. contents:: Table of Contents
     :depth: 2
 
-
+.. _maps_and_props:
 Maps and included props
 -----------------------
 
+.. _method_1:
 Method 1 (Recommended)
 ^^^^^^^^^^^^^^^^^^^^^^
 
@@ -15,7 +17,8 @@ Method 1 (Recommended)
 | BSPSource converts ``.BSP`` files (Map format used by some Source games) to ``.VMF``. ``.VMF`` files are what will be imported into Blender. 
 | Some maps are compressed beyond readability for BSPSource (Usually newer ones). To fix that, you need to repack it with a batch script file.
 
-How to fix compressed .BSP files
+.. _fix_compressed_bsp:
+Fix compressed .BSP files
 """"""""""""""""""""""""""""""""
 
 .. note::
@@ -45,6 +48,7 @@ How to fix compressed .BSP files
     EXIT
 
 *    Save and close out of the text editor.
+
 .. warning::
 
    **Save a backup of this map you are about to repack, as this script may overwrite the original file.**
@@ -55,7 +59,8 @@ How to fix compressed .BSP files
 | The repacked .BSP file is now in the selected folder. You can use BSPSource to convert it to a .VMF now. 
 |
 
-How to convert a .BSP to .VMF
+.. _convert_bsp_to_vmf:
+Convert a .BSP to .VMF
 """""""""""""""""""""""""""""
 
 *    Run "bspsrc.jar"
@@ -65,7 +70,8 @@ How to convert a .BSP to .VMF
 | Your .VMF file has been decompiled and is in your output folder.
 | 
 
-How to install Blender Source Tools
+.. _install_bst:
+Install Blender Source Tools
 """""""""""""""""""""""""""""""""""
 
 *    In Blender, go into :guilabel:`Edit` > :guilabel:`Preferences`.
@@ -75,7 +81,8 @@ How to install Blender Source Tools
 | Blender Source Tools is now installed.
 |
 
-How to import .VMF files into Blender
+.. _import_vmf:
+Import .VMF files into Blender
 """""""""""""""""""""""""""""""""""""
 
 .. note::
@@ -90,3 +97,46 @@ How to import .VMF files into Blender
 *    Navigate to your TF2 game installation folder. Select the "tf" folder.
 | io_import_vmf is now installed. You can now import a .VMF file from the :guilabel:`File` > :guilabel:`Import` > :guilabel:`Valve Map Format (.vmf)` button. Importing most maps will likely freeze Blender, but wait for it to finish.
 |
+
+.. _method_2:
+Method 2 (Alternate)
+^^^^^^^^^^^^^^^^^^^^
+
+`SourceIO <https://github.com/REDxEYE/SourceIO>`_ will be used for method 2.
+
+.. _import_bsp_sourceio:
+Import .BSP files into Blender with SourceIO
+""""""""""""""""""""""""""""""""""""""""""""
+
+.. note::
+
+    Carefully follow these instructions. If you make a mistake, you will have to delete everything (hundreds of objects) from the current scene and try again, or create a new, blank, project instead (which is easier).
+
+*    Follow the steps in ":ref:`install_bst`" to install SourceIO. No setup necessary.
+*    Go to :guilabel:`File` > :guilabel:`⤓ Import` > :guilabel:`Source Engine Assets` > :guilabel:`Source map (.bsp)`
+*    Select your map of choice. The map **MUST** be in your TF2 game directory. It will be in ``[game_directory] / tf / maps /``. You can use the name filter to narrow down the results. 
+| Once loaded in, maps will be quite bare-bones. Lhe lighting will most likely be too dark, and the stage props aren't there. There are a few things to set up.
+*    In the Outliner (panel on the right that lists all objects in the scene), scroll down until you see a collection of props represented by objects known as "empty". You can also move your mouse to the right and drag the scroll bar down, which is faster.
+
+.. image:: _images/empty.png
+  :width: 400
+  :alt: The default blender icon for an empty
+
+*    Left click to select the top-most empty. If you ever accidentally select another one, select the top one again.
+*    Scroll down until you see the last empty prop. :guilabel:`Shift` + click on it to select all objects between the top and bottom one.
+*    Hovering over the 3D Viewport, press :guilabel:`N` to open the side panel. There will be a :guilabel:`SourceIO` tab.
+*    Click on :guilabel:`Load Entity`.
+| You have loaded the map's props. Repeat this if there are any more Collections of props you need visible.
+| The lighting is going to appear strange because in Eevee (Blender's default render engine) has a maximum of 128 lights. Filter the Outliner by lights with the following settings
+
+.. seealso::
+
+    `Full list of Eevee's limitations <https://docs.blender.org/manual/en/dev/render/eevee/limitations.html>`_
+
+|
+
+.. image:: _images/toggles.png
+  :width: 400
+  :alt: Toggles that will only show light objects. 
+
+| You can delete every light except for the one called ``light_environment``, which will be in the ``light_environment`` collection. You can also go into edit mode and delete the outer faces of the skybox. You can replace them with any of the hundreds of free, high-resolution HDRI textures from `Poly Haven <https://polyhaven.com/hdris>`_

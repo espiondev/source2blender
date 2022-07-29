@@ -8,7 +8,6 @@ TF2 (Vanilla)
 Maps and included props
 -----------------------
 
-.. _Method 1:
 Method 1 (Recommended)
 ^^^^^^^^^^^^^^^^^^^^^^
 
@@ -16,7 +15,6 @@ Method 1 (Recommended)
 | BSPSource converts *.BSP*   files (Map format used by some Source games) to *.VMF*. *.VMF*   files are what will be imported into Blender. 
 | Some maps are compressed beyond readability for BSPSource (Usually newer ones). To fix that, you need to repack it with a batch script file.
 
-.. _Fix compressed BSP files:
 How to fix compressed .BSP files
 """"""""""""""""""""""""""""""""
 
@@ -25,14 +23,13 @@ How to fix compressed .BSP files
     | These steps are only to be followed in case a .BSP file was too compressed for BSPSource.
     | However, you must follow the steps after this in the right order. 
 
-|
+
 *    Find your TF2 installation folder. You can locate it by right clicking on TF2 in your Steam library, hovering over the "Manage >" button, and clicking on "Browse local files".
 This will open File Explorer in your TF2 folder. It should have a few folders in it, such as "bin", "hl2", "platform", "tf", as well as a file titled "hl2.exe".
 *   Navigate into the "bin" folder.
 *   Create a new .TXT file by right clicking on File Explorer, hovering over "New >", and selecting "Text Document". Its name doesn't matter, as long as it still has the .TXT file extension. File extensions may be hidden by default, so to enable it, click on "View" at the top of the window, and check the "File name extensions" box.
 *   Open the .TXT file you just created with the text editor of your choice. Notepad should come installed on almost all Windows systems, but `Visual Studio Code <https://code.visualstudio.com/>`_ or `Notepad++ <https://notepad-plus-plus.org/>`_ can be downloaded for free online. 
 *   Copy and paste the following into the .TXT file:
-
 .. code-block:: batch
     @ECHO OFF
     SET "PScommand="POWERSHELL Add-Type -AssemblyName System.Windows.Forms; $FolderBrowse = New-Object System.Windows.Forms.OpenFileDialog -Property @{ValidateNames = $false;CheckFileExists = $false;RestoreDirectory = $true;FileName = 'Selected Folder';};$null = $FolderBrowse.ShowDialog();$FolderName = Split-Path -Path $FolderBrowse.FileName;Write-Output $FolderName""
@@ -45,23 +42,19 @@ This will open File Explorer in your TF2 folder. It should have a few folders in
     EXIT
 
 *   Save and close out of the text editor.
-|
-
 .. warning::
 
    **Save a backup of this map you are about to repack, as this script may overwrite the original file.**
+    |
 
-|
 *   Rename the file to have a .BAT extension. You will be warned that the file may become unusable. Click "Yes".
 *   Double click on the batch script for it to run. It will prompt you with a destination folder to choose.
 | The repacked .BSP file is now in the selected folder. You can use BSPSource to convert it to a .VMF now. 
 |
 
-.. _Convert BSP to VMF:
 How to convert a .BSP to .VMF
 """""""""""""""""""""""""""""
 
-|
 *   Run "bspsrc.jar"
 *   Because of the outdated (as of writing) file selection dialog, it is recommended to simply drag and drop your .BSP file.
 *   You will be prompted to choose an output folder. Choose one that isn't too cluttered so it isn't too hard locating your file.
@@ -69,11 +62,9 @@ How to convert a .BSP to .VMF
 | Your .VMF file has been decompiled and is in your output folder.
 | 
 
-.. _Install Blender Source Tools:
 How to install Blender Source Tools
 """""""""""""""""""""""""""""""""""
 
-|
 *   In Blender, go into Edit > Preferences.
 *   In the Add-ons menu, click on the "⤓ Install..." button.
 *   Select the .ZIP file you downloaded from the Blender Source Tools website.
@@ -81,15 +72,13 @@ How to install Blender Source Tools
 | Blender Source Tools is now installed.
 |
 
-.. _Import VMF files:
 How to import .VMF files into Blender
 """""""""""""""""""""""""""""""""""""
-|
+
 .. note::
 
     io_import_vmf requires Blender Source Tools to be installed. if you followed the last steps, you should be fine.
 
-|
 *   Follow the same steps to install io_import_vmf as you installed Blender Source Tools.
 *   Click on the arrow to the left of it to open the settings.
 *   Choose a cache directory path. This should be its own empty folder.

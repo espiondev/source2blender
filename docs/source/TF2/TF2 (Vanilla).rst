@@ -12,7 +12,7 @@ Method 1 (Recommended)
 ^^^^^^^^^^^^^^^^^^^^^^
 
 | `BSPSource <https://developer.valvesoftware.com/wiki/BSPSource>`_, `Blender Source Tools <https://developer.valvesoftware.com/wiki/Blender_Source_Tools>`_ and `io_import_vmf <https://github.com/lasa01/io_import_vmf>`_ will be used for method 1.
-| BSPSource converts *.BSP*   files (Map format used by some Source games) to *.VMF*. *.VMF*   files are what will be imported into Blender. 
+| BSPSource converts ``.BSP`` files (Map format used by some Source games) to ``.VMF``. ``.VMF`` files are what will be imported into Blender. 
 | Some maps are compressed beyond readability for BSPSource (Usually newer ones). To fix that, you need to repack it with a batch script file.
 
 How to fix compressed .BSP files

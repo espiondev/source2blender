@@ -5,11 +5,11 @@ TF2-Vanilla
 .. contents:: Table of Contents
     :depth: 1
 
-.. _maps_and_props:
+.. _maps_and_props_v:
 Maps and included props
 -----------------------
 
-.. _method_1:
+.. _method_1_v:
 Method 1 (Recommended)
 ^^^^^^^^^^^^^^^^^^^^^^
 

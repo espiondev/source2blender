@@ -1,5 +1,5 @@
 .. _tf2_workshop:
-TF2 (Workshop)
+TF2-Workshop
 ==============
 
 .. contents:: Table of Contents
@@ -13,4 +13,13 @@ Maps and included props
 Method 1 (Recommended)
 ^^^^^^^^^^^^^^^^^^^^^^
 
-stuff
+
+Contents
+--------
+
+.. toctree::
+   :maxdepth: 1
+
+   index
+   TF2-Vanilla
+   TF2-Workshop

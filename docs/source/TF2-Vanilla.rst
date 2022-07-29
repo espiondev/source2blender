@@ -60,6 +60,7 @@ Fix compressed .BSP files
 
 *    Rename the file to have a .BAT extension. You will be warned that the file may become unusable. Click :guilabel:`Yes`.
 *    Double click on the batch script for it to run. It will prompt you with a destination folder to choose.
+
 | The repacked .BSP file is now in the selected folder. You can use BSPSource to convert it to a .VMF now. 
 |
 
@@ -72,8 +73,9 @@ Convert a .BSP to .VMF
 *    Because of the outdated (as of writing) file selection dialog, it is recommended to simply drag and drop your .BSP file.
 *    You will be prompted to choose an output folder. Choose one that isn't too cluttered so it isn't difficult to locate your file.
 *    Click on :guilabel:`Decompile`.
+
 | Your .VMF file has been decompiled and is in your output folder.
-| 
+|
 
 .. _install_bst:
 
@@ -84,6 +86,7 @@ Install Blender Source Tools
 *    In the Add-ons menu, click on the :guilabel:`⤓ Install...` button.
 *    Select the .ZIP file you downloaded from the Blender Source Tools website.
 *    Click on the check box to enable it.
+
 | Blender Source Tools is now installed.
 |
 
@@ -102,6 +105,7 @@ Import .VMF files into Blender
 *    Click the :guilabel:`+` button under the "Valve game definitions: " section.
 *    Click on :guilabel:`Detect from a game directory`.
 *    Navigate to your TF2 game installation folder. Select the "tf" folder.
+
 | io_import_vmf is now installed. You can now import a .VMF file from the :guilabel:`File` > :guilabel:`Import` > :guilabel:`Valve Map Format (.vmf)` button. Importing most maps will likely freeze Blender, but wait for it to finish.
 |
 
@@ -124,7 +128,9 @@ Import .BSP files into Blender with SourceIO
 *    Follow the steps in ":ref:`install_bst`" to install SourceIO. No setup necessary.
 *    Go to :guilabel:`File` > :guilabel:`⤓ Import` > :guilabel:`Source Engine Assets` > :guilabel:`Source map (.bsp)`
 *    Select your map of choice. The map **MUST** be in your TF2 game directory. It will be in ``[game_directory] / tf / maps /``. You can use the name filter to narrow down the results. 
+
 | Once loaded in, maps will be quite bare-bones. Lhe lighting will most likely be too dark, and the stage props aren't there. There are a few things to set up.
+
 *    In the Outliner (panel on the right that lists all objects in the scene), scroll down until you see a collection of props represented by objects known as "empty". You can also move your mouse to the right and drag the scroll bar down, which is faster.
 
 .. image:: _images/empty.png
@@ -135,6 +141,7 @@ Import .BSP files into Blender with SourceIO
 *    Scroll down until you see the last empty prop. :guilabel:`Shift` + click on it to select all objects between the top and bottom one.
 *    Hovering over the 3D Viewport, press :guilabel:`N` to open the side panel. There will be a :guilabel:`SourceIO` tab.
 *    Click on :guilabel:`Load Entity`.
+
 | You have loaded the map's props. Repeat this if there are any more Collections of props you need visible.
 | The lighting is going to appear strange because in Eevee (Blender's default render engine) has a maximum of 128 lights. Filter the Outliner by lights with the following settings
 

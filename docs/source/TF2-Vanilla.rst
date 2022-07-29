@@ -1,6 +1,6 @@
 .. _tf2_vanilla:
 TF2-Vanilla
-=============
+===========
 
 .. contents:: Table of Contents
     :depth: 1
@@ -19,7 +19,7 @@ Method 1 (Recommended)
 
 .. _fix_compressed_bsp:
 Fix compressed .BSP files
-""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""
 
 .. note::
 
@@ -61,7 +61,7 @@ Fix compressed .BSP files
 
 .. _convert_bsp_to_vmf:
 Convert a .BSP to .VMF
-"""""""""""""""""""""""""""""
+""""""""""""""""""""""
 
 *    Run "bspsrc.jar"
 *    Because of the outdated (as of writing) file selection dialog, it is recommended to simply drag and drop your .BSP file.
@@ -72,7 +72,7 @@ Convert a .BSP to .VMF
 
 .. _install_bst:
 Install Blender Source Tools
-"""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""
 
 *    In Blender, go into :guilabel:`Edit` > :guilabel:`Preferences`.
 *    In the Add-ons menu, click on the :guilabel:`⤓ Install...` button.
@@ -120,7 +120,7 @@ Import .BSP files into Blender with SourceIO
 
 .. image:: _images/empty.png
   :width: 400
-  :alt: The default blender icon for an empty
+  :alt: The default Blender icon for an empty
 
 *    Left click to select the top-most empty. If you ever accidentally select another one, select the top one again.
 *    Scroll down until you see the last empty prop. :guilabel:`Shift` + click on it to select all objects between the top and bottom one.

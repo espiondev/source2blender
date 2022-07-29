@@ -1,5 +1,5 @@
 Source2Blender documentation
-============================================
+============================
 
 | This documentation will serve as a beginner-friendly guide to porting assets from games featuring Valve's game engine, Source, to Blender, the most popular free and open source 3D computer graphics software. 
 
@@ -14,7 +14,8 @@ Source2Blender documentation
 
 Credit
 ------
-This documentation was made by Woha on a Google docs and was ported to ReadTheDocs by Spy (`spy-ware on Github <https://github.com/spy-ware>`_)
+This documentation was made by Woha and `Hisanimations <https://github.com/hisprofile>`_ and was ported to ReadTheDocs by Spy (`spy-ware on Github <https://github.com/spy-ware>`_)
+
 
 Contents
 --------

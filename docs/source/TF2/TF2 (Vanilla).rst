@@ -2,7 +2,7 @@ TF2 (Vanilla)
 =============
 
 .. contents:: Table of Contents
-    :depth: 3
+    :depth: 2
 
 
 Maps and included props

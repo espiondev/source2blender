@@ -9,12 +9,16 @@ Source2Blender documentation
    | This project is under active development and will receive constant updates. If what you're looking for isn't here at the moment, check back soon or join the `TF2 Blender Discord server <https://discord.gg/zHC2gJW>`_
    | Feel free to contribute to this documentation by submitting a pull request on the `GitHub repository <https://github.com/spy-ware/source2blender>`_
 
+Credit
+------
+This documentation was made by Woha on a Google docs and was ported to ReadTheDocs by Spy (`spy-ware on Github <https://github.com/spy-ware>`_)
+
 Contents
 --------
 
 .. toctree::
+   :maxdepth: 2
 
    index
-   
    TF2/TF2 (Vanilla)
    TF2/TF2 (Workshop)

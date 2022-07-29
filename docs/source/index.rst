@@ -1,4 +1,4 @@
-Welcome to the Source2Blender documentation!
+Source2Blender documentation
 ============================================
 
 | This documentation will serve as a guide to porting assets from games featuring Valve's Source game engine to Blender, the most popular free and open source 3D computer graphics software. 

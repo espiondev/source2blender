@@ -15,14 +15,3 @@ Maps and included props
 
 Method 1 (Recommended)
 ^^^^^^^^^^^^^^^^^^^^^^
-
-
-Contents
---------
-
-.. toctree::
-   :maxdepth: 1
-
-   index
-   TF2-Vanilla
-   TF2-Workshop

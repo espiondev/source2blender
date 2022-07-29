@@ -158,13 +158,3 @@ Import .BSP files into Blender with SourceIO
 | In some cases, you can delete every light except for the one called ``light_environment`` (the sun light), which will be in the ``light_environment`` collection. You can also go into edit mode and delete the outer faces of the skybox. You can replace them with any of the hundreds of free, high-resolution HDRI textures from `Poly Haven <https://polyhaven.com/hdris>`_
 | Otherwise, you may want to manually delete each light individually if it doesn't add to the scene's lighting.
 
-
-Contents
---------
-
-.. toctree::
-   :maxdepth: 1
-
-   index
-   TF2-Vanilla
-   TF2-Workshop

@@ -118,7 +118,7 @@ Import .BSP files into Blender with SourceIO
 | Once loaded in, maps will be quite bare-bones. Lhe lighting will most likely be too dark, and the stage props aren't there. There are a few things to set up.
 *    In the Outliner (panel on the right that lists all objects in the scene), scroll down until you see a collection of props represented by objects known as "empty". You can also move your mouse to the right and drag the scroll bar down, which is faster.
 
-.. image:: _images/empty.png
+.. image:: //_images/empty.png
   :width: 400
   :alt: The default blender icon for an empty
 
@@ -135,7 +135,7 @@ Import .BSP files into Blender with SourceIO
 
 |
 
-.. image:: _images/toggles.png
+.. image:: //_images/toggles.png
   :width: 400
   :alt: Toggles that will only show light objects. 
 

@@ -73,7 +73,7 @@ Fix compressed .BSP files
 Convert a .BSP to .VMF
 """"""""""""""""""""""
 
-.. important:: DEPENDANCIES
+.. important::
 
     You need to install `Java <https://www.java.com/download/ie_manual.jsp>`_ to run BSPSource.
 
@@ -143,10 +143,13 @@ Import .BSP files into Blender with SourceIO
 | Once loaded in, maps will be quite bare-bones. Lhe lighting will most likely be too dark, and the stage props aren't there. There are a few things to set up.
 
 *    In the Outliner (panel on the right that lists all objects in the scene), scroll down until you see a collection of props represented by objects known as "empty". You can also move your mouse to the right and drag the scroll bar down, which is faster.
+
+
 Default Blender icon for an empty.
 .. image:: _images/empty.png
   :width: 150
   :alt: The default Blender icon for an empty
+
 
 *    Left click to select the top-most empty. If you ever accidentally select another one, select the top one again.
 *    Scroll down until you see the last empty prop. :guilabel:`Shift` + click on it to select all objects between the top and bottom one.

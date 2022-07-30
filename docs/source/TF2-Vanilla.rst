@@ -4,7 +4,7 @@ TF2-Vanilla
 ===========
 
 .. contents:: Table of Contents
-    :depth: 2
+    :depth: 3
 
 
 .. _maps_and_props_v:
@@ -17,7 +17,10 @@ Maps and included props
 Method 1 (Recommended)
 ^^^^^^^^^^^^^^^^^^^^^^
 
-| `BSPSource <https://developer.valvesoftware.com/wiki/BSPSource>`_, `Blender Source Tools <https://developer.valvesoftware.com/wiki/Blender_Source_Tools>`_ and `io_import_vmf <https://github.com/lasa01/io_import_vmf>`_ will be used for method 1.
+.. note::
+    Always get the most recent version of a program or add-on linked here.
+
+| `BSPSource <https://developer.valvesoftware.com/wiki/BSPSource>`_, `Blender Source Tools <https://developer.valvesoftware.com/wiki/Blender_Source_Tools>`_ and `io_import_vmf / Plumber <https://github.com/lasa01/io_import_vmf/releases>`_ will be used for method 1.
 | BSPSource converts ``.BSP`` files (Map format used by some Source games) to .VMF. .VMF files are what will be imported into Blender. 
 | Some maps are compressed beyond readability for BSPSource (Usually newer ones). To fix that, you need to repack it with a batch script file.
 
@@ -70,7 +73,12 @@ Fix compressed .BSP files
 Convert a .BSP to .VMF
 """"""""""""""""""""""
 
-*    Run "bspsrc.jar"
+.. important:: DEPENDANCIES
+
+    You need to install `Java <https://www.java.com/download/ie_manual.jsp>`_ to run BSPSource.
+
+
+*    Run ``bspsrc.jar``
 *    Because of the outdated (as of writing) file selection dialog, it is recommended to simply drag and drop your .BSP file.
 *    You will be prompted to choose an output folder. Choose one that isn't too cluttered so it isn't difficult to locate your file.
 *    Click on :guilabel:`Decompile`.
@@ -98,7 +106,9 @@ Import .VMF files into Blender
 
 .. note::
 
-    io_import_vmf requires Blender Source Tools to be installed. if you followed the last steps, you should be fine.
+    | io_import_vmf, which has recently been renamed to Plumber, requires Blender Source Tools to be installed. if you followed the steps to install it, you should be fine.
+    | If you downloaded the most recent version of the add-on, you don't need to follow these steps. It's been automated.
+
 
 *    Follow the same steps to install io_import_vmf as you installed Blender Source Tools.
 *    Click on the arrow to the left of it to open the settings.

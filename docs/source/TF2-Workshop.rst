@@ -4,7 +4,7 @@ TF2-Workshop
 ==============
 
 .. contents:: Table of Contents
-    :depth: 2
+    :depth: 3
 
 .. _maps_and_props_w:
 
@@ -15,3 +15,5 @@ Maps and included props
 
 Method 1 (Recommended)
 ^^^^^^^^^^^^^^^^^^^^^^
+
+coming soon

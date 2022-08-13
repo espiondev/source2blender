@@ -1,18 +1,21 @@
 .. _tf2_vanilla:
 
-TF2-Vanilla
+TF2 Vanilla
 ===========
 
 .. contents:: Table of Contents
     :depth: 3
 
 
-.. _maps_and_props_v:
+.. _tf2_v_mapsandprops:
 
 Maps and included props
 -----------------------
 
-.. _method_1_v:
+.. _map_method1:
+
+| Method 1 uses three tools, all linked in that section. This Method is recommended as it makes the maps significantly easier to work with. All imported items are organized into collections and very easy to work with and customize.
+| Method 2 uses only one addon, called SourceIO. It's a one click solution and way easier than Method 1, but the names of objects becomes a very big mess with this method, and there's extra cleanup required as extra stuff like the map hitbox is also imported. It's closer in looks to TF2 as it uses its own shader, so if you want the true TF2 look, then use this. Method 1 also works fine but is more for applying your own style or flaire to stuff.
 
 Method 1 (Recommended)
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -20,9 +23,10 @@ Method 1 (Recommended)
 .. note::
     Always get the most recent version of a program or add-on linked here.
 
-| `BSPSource <https://developer.valvesoftware.com/wiki/BSPSource>`_, `Blender Source Tools <https://developer.valvesoftware.com/wiki/Blender_Source_Tools>`_ and `io_import_vmf / Plumber <https://github.com/lasa01/io_import_vmf/releases>`_ will be used for method 1.
-| BSPSource converts ``.BSP`` files (Map format used by some Source games) to .VMF. .VMF files are what will be imported into Blender. 
-| Some maps are compressed beyond readability for BSPSource (Usually newer ones). To fix that, you need to repack it with a batch script file.
+| `BSPSource <https://developer.valvesoftware.com/wiki/BSPSource>`_, `Blender Source Tools <https://developer.valvesoftware.com/wiki/Blender_Source_Tools>`_ and `Plumber <https://github.com/lasa01/io_import_vmf/releases>`_ will be used for method 1. The steps to install these will be shown later in the guide as well, you do not have to download directly from here. (Plumber was originally called io_import_vmf. This new creation is currently in Beta but significantly superior to io_import_vmf and that's why we've linked the page to download that instead.)
+| BSPSource converts ``.BSP`` files (Map format used by many Source games, including TF2) to ``.VMF``. ``.VMF`` files are what will be imported into Blender using the addon called Plumber. Plumber can bring the map in, but their page says to install Blender Source Tools so specific other models, and more importantly, props on the maps, can be imported as well.
+
+| To start off, we first need to make sure the map is usable to even import. Some maps are compressed beyond readability for BSPSource (Usually newer ones). To fix that, you need to decompile it.
 
 .. _fix_compressed_bsp:
 
@@ -60,7 +64,6 @@ Fix compressed .BSP files
 .. warning::
 
    **Save a backup of this map you are about to repack, as this script may overwrite the original file.**
-    |
 
 *    Rename the file to have a .BAT extension. You will be warned that the file may become unusable. Click :guilabel:`Yes`.
 *    Double click on the batch script for it to run. It will prompt you with a destination folder to choose.
@@ -77,13 +80,13 @@ Convert a .BSP to .VMF
 
     You need to install `Java <https://www.java.com/download/ie_manual.jsp>`_ to run BSPSource.
 
-
 *    Run ``bspsrc.jar``
-*    Because of the outdated (as of writing) file selection dialog, it is recommended to simply drag and drop your .BSP file.
-*    You will be prompted to choose an output folder. Choose one that isn't too cluttered so it isn't difficult to locate your file.
+*    There's many options in there. Leave them be, just click the button for 'Add', and browse to your TF2 folder. From there, go to tf/maps and choose the specific .bsp (map file) you want to convert.
+*    Once that's done, just click the Decompile button in the bottom right, there's no need to edit the other settings, though you're free to play around if you personally want to.
+*    A file browser will show up for where to put the ``.VMF`` file. You can choose any location, but it's best if it's a place you can easily come back to.
 *    Click on :guilabel:`Decompile`.
 
-| Your .VMF file has been decompiled and is in your output folder.
+| Your .VMF file has now been decompiled and is in your output folder.
 |
 
 .. _install_bst:
@@ -93,31 +96,24 @@ Install Blender Source Tools
 
 *    In Blender, go into :guilabel:`Edit` > :guilabel:`Preferences`.
 *    In the Add-ons menu, click on the :guilabel:`⤓ Install...` button.
-*    Select the .ZIP file you downloaded from the Blender Source Tools website.
+*    Select the .ZIP file you downloaded from the `Blender Source Tools <https://developer.valvesoftware.com/wiki/Blender_Source_Tools>`_ website.
 *    Click on the check box to enable it.
 
-| Blender Source Tools is now installed.
+| Blender Source Tools is now installed. You'll notice its settings show up under the :guilabel:`⤓ Import` section in the :guilabel:`File` menu on the top left of Blender.
 |
 
-.. _import_vmf:
+.. _Plumber:
 
 Import .VMF files into Blender
-"""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""
 
-.. note::
+*    In Blender, go into :guilabel:`Edit` > :guilabel:`Preferences`.
+*    In the Add-ons menu, click on the :guilabel:`⤓ Install...` button.
+*    Select the .ZIP file you downloaded from the `Plumber <https://github.com/lasa01/io_import_vmf/releases>`_ releases page.
+*    Click on the check box to enable it.
+*    It should automatically have detected any Steam products it's compatible with, such as Team Fortress 2, Left 4 Dead, Portal, Half Life 2, etc. It depends on what you have installed. Make sure you have a properly working copy of the game and it's in a valid Steam location otherwise it won't detect it.
 
-    | io_import_vmf, which has recently been renamed to Plumber, requires Blender Source Tools to be installed. if you followed the steps to install it, you should be fine.
-    | If you downloaded the most recent version of the add-on, you don't need to follow these steps. It's been automated.
-
-
-*    Follow the same steps to install io_import_vmf as you installed Blender Source Tools.
-*    Click on the arrow to the left of it to open the settings.
-*    Choose a cache directory path. This should be its own empty folder.
-*    Click the :guilabel:`+` button under the "Valve game definitions: " section.
-*    Click on :guilabel:`Detect from a game directory`.
-*    Navigate to your TF2 game installation folder. Select the "tf" folder.
-
-| io_import_vmf is now installed. You can now import a .VMF file from the :guilabel:`File` > :guilabel:`Import` > :guilabel:`Valve Map Format (.vmf)` button. Importing most maps will likely freeze Blender, but wait for it to finish.
+| Plumber is now installed. You can now import a .VMF file from the :guilabel:`File` > :guilabel:`Import` > :guilabel:`Plumber` > :guilabel:`Valve Map Format (.vmf)` button. Browse to the location you stored your ``.VMF`` file which you Decompiled using BSPSource earlier, make sure that in the Import settings, the game is set to Team Fortress 2. That's it, you should have everything.
 |
 
 .. _method_2_v:
@@ -134,40 +130,40 @@ Import .BSP files into Blender with SourceIO
 
 .. note::
 
-    Carefully follow these instructions. If you make a mistake, you will have to delete everything (hundreds of objects) from the current scene and try again, or create a new, blank, project instead (which is easier).
+    Carefully follow these instructions. If you make a mistake, you will have to create a new, blank, project, as this addon directly reads off the ``.BSP`` in real time and doesn't allow that file to be changed or edited. This also means you should have a completely blank project before using the Add-on.
 
-*    Follow the steps in ":ref:`install_bst`" to install SourceIO. No setup necessary.
+*    In Blender, go into :guilabel:`Edit` > :guilabel:`Preferences`.
+*    In the Add-ons menu, click on the :guilabel:`⤓ Install...` button.
+*    Select the .ZIP file you downloaded from the `SourceIO <https://github.com/REDxEYE/SourceIO>`_ releases page.
+*    Click on the check box to enable it.
 *    Go to :guilabel:`File` > :guilabel:`⤓ Import` > :guilabel:`Source Engine Assets` > :guilabel:`Source map (.bsp)`
 *    Select your map of choice. The map **MUST** be in your TF2 game directory. It will be in ``[game_directory] / tf / maps /``. You can use the name filter to narrow down the results. 
 
-| Once loaded in, maps will be quite bare-bones. Lhe lighting will most likely be too dark, and the stage props aren't there. There are a few things to set up.
+| Once loaded in, maps will be quite bare-bones. The lighting will most likely be too dark, and the stage props aren't there. There are a few things to set up.
 
-*    In the Outliner (panel on the right that lists all objects in the scene), scroll down until you see a collection of props represented by objects known as "empty". You can also move your mouse to the right and drag the scroll bar down, which is faster.
-
-
-Default Blender icon for an empty.
-.. image:: _images/empty.png
-  :width: 150
-  :alt: The default Blender icon for an empty
-
-
-*    Left click to select the top-most empty. If you ever accidentally select another one, select the top one again.
-*    Scroll down until you see the last empty prop. :guilabel:`Shift` + click on it to select all objects between the top and bottom one.
-*    Hovering over the 3D Viewport, press :guilabel:`N` to open the side panel. There will be a :guilabel:`SourceIO` tab.
+*    Press A to select all objects within the viewport. Then Shift Click on an ``Empty``. An ``Empty`` is a placeholder. You'll notice a lot of these in places where Props are supposed to be.
+*    Hovering over the 3D Viewport, press :guilabel:`N` to open the side panel. There will be a :guilabel:`SourceIO` tab. Click on that to open it.
 *    Click on :guilabel:`Load Entity`.
+*    It might take some time so please be patient. If done right, all props should show up without any error messages, and there will also now be a lot of Collections.
 
-| You have loaded the map's props. Repeat this if there are any more Collections of props you need visible.
 | The lighting is going to appear strange because in Eevee (Blender's default render engine) has a maximum of 128 lights. Filter the Outliner by lights with the following settings
 
 .. image:: _images/toggles.png
   :width: 150
   :alt: Toggles that will only show light objects. 
 
-.. seealso::
+.. _MapPrep:
 
-    `Full list of Eevee's limitations <https://docs.blender.org/manual/en/dev/render/eevee/limitations.html>`_
-    |
+Finishing Touches
+"""""""""""""""""
 
-| In some cases, you can delete every light except for the one called ``light_environment`` (the sun light), which will be in the ``light_environment`` collection. You can also go into edit mode and delete the outer faces of the skybox. You can replace them with any of the hundreds of free, high-resolution HDRI textures from `Poly Haven <https://polyhaven.com/hdris>`_
-| Otherwise, you may want to manually delete each light individually if it doesn't add to the scene's lighting.
+* Go to :guilabel:`Material Preview` mode to confirm that all materials are actually fully functional before you do anything else.
+* Use Eevee if you want a true TF2 look. Cycles will get you very different results.
+* There's unfortunately a limit of Eevee which there's no way around. It can only have 128 active lights at once, while a lot of maps in TF2 end up having significantly more than that. Unfortunately the only way around this is to use Cycles, which doesn't have a light limit, but another alternative is to maintain the majority of the look by turning off every light except the one which starts with the name ``light_environment``. This is the 'Sun' light and is responsible for nearly all outdoor shadows present on the map.
+* If you want more accurate TF2 colors, go to Color Management, and set the Color Profile from :guilabel:`Filmic` to :guilabel:`Standard`.
 
+.. note::
+
+    | In some maps, for example ``pl_badwater``, some universally used props will look a bit off, such as the rocks used in the starting area for the Payload Cart. This is because these props have multiple different skins used by different maps. A script is being developed to make it easy to change skins, but if you currently want to do it manually, then go to the Materials section of this object and make it so all the assigned faces are of a different material slot instead. If you know how Materials and Assigning works, this shouldn't be too difficult for you to do.
+    | If you used SourceIO to bring the map in, then in the N menu there should be the option to change through different skins easily.
+| 

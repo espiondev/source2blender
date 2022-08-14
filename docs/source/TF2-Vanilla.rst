@@ -164,7 +164,7 @@ Installing and using SourceIO
   :alt: Toggles that will only show light objects. 
 
 .. seealso::
-    For a full list of Eevee's limitations, you can consult `this page < https://docs.blender.org/manual/en/latest/render/eevee/limitations.html>`_ from Blender's official manual. 
+    For a full list of Eevee's limitations, you can consult `this page <https://docs.blender.org/manual/en/latest/render/eevee/limitations.html>`_ from Blender's official manual. 
 
 .. _finishing_touches:
 

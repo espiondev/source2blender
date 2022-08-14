@@ -14,7 +14,7 @@ Source2Blender documentation
 
 Credit
 ------
-This documentation was made by Woha and `Hisanimations <https://github.com/hisprofile>`_ and was ported to ReadTheDocs by Spy (`spy-ware on Github <https://github.com/spy-ware>`_)
+This documentation was made by `Woha <https://github.com/WilliamWoha>`_ and `Hisanimations <https://github.com/hisprofile>`_ and was adapted to ReadTheDocs by Spy (`spy-ware on Github <https://github.com/spy-ware>`_) and Woha (`WilliamWoha on GitHub <https://github.com/WilliamWoha>`_) 
 
 
 Contents

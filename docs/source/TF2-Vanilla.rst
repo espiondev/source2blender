@@ -29,7 +29,6 @@ Summary of Method 1
 """""""""""""""""""
 
 | This is written here as a smaller version to come back to so you don't have to read the entire thing if you're doing the process again.
-|
 *    Download ``BSPSource``, ``Plumber``, and ``Blender Source Tools``. Install ``Plumber`` and ``Blender Source Tools`` into Blender. (This step is only necessary on first time use).
 *    Locate map you wish to bring into Blender under ``[game_directory] / tf / maps /``.
 *    Uncompress the ``.BSP`` file if necessary.
@@ -48,22 +47,21 @@ Full Guide of Method 1
 | `BSPSource <https://developer.valvesoftware.com/wiki/BSPSource>`_, `Blender Source Tools <https://developer.valvesoftware.com/wiki/Blender_Source_Tools>`_ and `Plumber <https://github.com/lasa01/io_import_vmf/releases>`_ will be used for method 1. The steps to install these will be shown later in the guide as well, you do not have to download directly from here. (Plumber was originally called io_import_vmf. This new creation is currently in Beta but significantly superior to io_import_vmf and that's why we've linked the page to download that instead.)
 | BSPSource converts ``.BSP`` files (Map format used by many Source games, including TF2) to ``.VMF``. ``.VMF`` files are what will be imported into Blender using the addon called Plumber. Plumber can bring the map in, but their page says to install Blender Source Tools so specific other models, and more importantly, props on the maps, can be imported as well.
 
-| To start off, we first need to make sure the map is usable to even import. Some maps are compressed beyond readability for BSPSource (Usually newer ones). To fix that, you need to decompile it.
+| To start off, we first need to make sure the map is usable to even import. Some maps are compressed beyond readability for BSPSource (Usually newer ones). To fix that, you need to Repack it.
 
 .. _fix_compressed_bsp:
 
-Fix compressed .BSP files
-"""""""""""""""""""""""""
+Repack compressed .BSP files
+""""""""""""""""""""""""""""
 
 .. note::
 
     | These steps are only to be followed in case a .BSP file was too compressed for BSPSource.
     | However, you must follow the steps after this in the right order. 
 
-*    Go to the releases page for `EspionRepacker < https://github.com/spy-ware/EspionRepacker>`_ and download the latest version.
-*    Navigate to ``[game directory] / bin``, ``[game directory] / tf / maps / [map to repack]``, and your output folder. 
+*    Go to the releases page for `EspionRepacker <https://github.com/spy-ware/EspionRepacker>`_ and download the latest version.
+*    Navigate to ``[game directory] / bin`` for the BSPZip folder, ``[game directory] / tf / maps / [map to repack]`` as the map you want to Repack, and your output folder of choice.
 *    Click on :guilabel:`Repack` to repack your file. it will be in your output directory. 
-
 
 .. _convert_bsp_to_vmf:
 
@@ -77,12 +75,11 @@ Convert a .BSP to .VMF
 *    Download `BSPSource <https://developer.valvesoftware.com/wiki/BSPSource>`_ and extract it.
 *    Run ``bspsrc.jar``
 *    There's many options in the program. Leave them be, just click the button for 'Add', and browse to your TF2 folder. From there, go to ``tf / maps`` and choose the specific ``.BSP`` (map file) you want to convert.
-*    Once that's done, just click the Decompile button in the bottom right, there's no need to edit the other settings, though you're free to play around if you personally want to.
+*    Once that's done, just click the :guilabel:`Decompile` button in the bottom right, there's no need to edit the other settings, though you're free to play around if you personally want to.
 *    A file browser will show up for where to put the ``.VMF`` file. You can choose any location, but it's best if it's a place you can easily come back to.
 *    Click on :guilabel:`Decompile`.
 
 | Your .VMF file has now been decompiled and is in your output folder.
-|
 
 .. _install_bst:
 
@@ -91,11 +88,10 @@ Install Blender Source Tools
 
 *    In Blender, go into :guilabel:`Edit` > :guilabel:`Preferences`.
 *    In the Add-ons menu, click on the :guilabel:`⤓ Install...` button.
-*    Select the .ZIP file you downloaded from the `Blender Source Tools <https://developer.valvesoftware.com/wiki/Blender_Source_Tools>`_ website.
+*    Select the ``.ZIP`` file you downloaded from the `Blender Source Tools <https://developer.valvesoftware.com/wiki/Blender_Source_Tools>`_ website.
 *    Click on the check box to enable it.
 
 | Blender Source Tools is now installed. You'll notice its settings show up under the :guilabel:`⤓ Import` section in the :guilabel:`File` menu on the top left of Blender.
-|
 
 .. _install_Plumber:
 
@@ -104,14 +100,13 @@ Import .VMF files into Blender
 
 *    In Blender, go into :guilabel:`Edit` > :guilabel:`Preferences`.
 *    In the Add-ons menu, click on the :guilabel:`⤓ Install...` button.
-*    Select the .ZIP file you downloaded from the `Plumber <https://github.com/lasa01/io_import_vmf/releases>`_ releases page.
+*    Select the ``.ZIP`` file you downloaded from the `Plumber <https://github.com/lasa01/io_import_vmf/releases>`_ releases page.
 *    Click on the check box to enable it.
-*    It should automatically have detected any Steam products it's compatible with, such as Team Fortress 2, Left 4 Dead, Portal, Half Life 2, etc. It depends on what you have installed. Make sure you have a properly working copy of Team Fortress 2 and it's in a valid Steam location otherwise it won't detect it.
+*    It should automatically find any Steam products it's compatible with, such as Team Fortress 2, Left 4 Dead, Portal, Half Life 2, etc. It depends on what you have installed. Make sure you have a properly working copy of Team Fortress 2 and it's in a valid Steam location otherwise it won't detect it.
 
 | Plumber is now installed. 
 | 
-| You can now import a .VMF file from the :guilabel:`File` > :guilabel:`Import` > :guilabel:`Plumber` > :guilabel:`Valve Map Format (.vmf)` button. Browse to the location you stored your ``.VMF`` file which you Decompiled using BSPSource earlier, make sure that in the Import settings, the game is set to Team Fortress 2. That's it, you should have everything. If you wish to repeat this whole process for another map, a Summary is written at the top of the Method 1 section which you can refer to.
-|
+| You can now import a .VMF file from the :guilabel:`File` > :guilabel:`Import` > :guilabel:`Plumber` > :guilabel:`Valve Map Format (.vmf)` button. Browse to the location you stored your ``.VMF`` file which you Decompiled using BSPSource earlier. Make sure that in the Import settings, the game is set to Team Fortress 2, and it's also recommended for the Scale to be set to 0.1, and the Light Brightness set to 10. This is so the map is compatible with the Hisanimations Characters port and TF2 Collections Port. That's it, you should have everything. If you wish to repeat this whole process for another map, a Summary is written at the top of the Method 1 section which you can refer to.
 
 .. _map_method2:
 
@@ -124,11 +119,10 @@ Summary of Method 2
 """""""""""""""""""
 
 | This is written here as a smaller version to come back to so you don't have to read the entire thing if you're doing the process again.
-|
 *    Download SourceIO and install it into Blender.
 *    Import ``.BSP`` file from :guilabel:`File` > :guilabel:`Import` > :guilabel:`Source Engine Assets` > :guilabel:`Source Map (.bsp)` in Blender.
 *    Locate map you wish to bring into Blender under ``[game_directory] / tf / maps /``
-*    Select everything by pressing A, Shift Click an ``Empty``
+*    Select everything by pressing A, then Shift Click an ``Empty``
 *    Press N under Viewport to open a side menu, go to SourceIO in that menu, and click ``Load Entity``
 *    Disable all lights except ``light_environment``, and set Color Profile from :guilabel:`Filmic` to :guilabel:`Standard`.
 
@@ -144,7 +138,7 @@ Full Guide of Method 2
 Installing and using SourceIO
 """""""""""""""""""""""""""""
 
-.. note::
+.. important::
 
     Carefully follow these instructions. If you make a mistake, you will have to create a new, blank, project, as this addon directly reads off the ``.BSP`` in real time and doesn't allow that file to be changed or edited. This also means you should have a completely blank project before using the Add-on.
 
@@ -170,8 +164,8 @@ Installing and using SourceIO
 
 .. _MapPrep:
 
-Finishing Touches
-"""""""""""""""""
+Finishing Touches (Both Methods)
+""""""""""""""""""""""""""""""""
 
 * Go to :guilabel:`Material Preview` mode to confirm that all materials are actually fully functional before you do anything else.
 * Use Eevee if you want a true TF2 look. Cycles will get you very different results.
@@ -182,7 +176,6 @@ Finishing Touches
 
     | In some maps, for example ``pl_badwater``, some universally used props will look a bit off, such as the rocks used in the starting area for the Payload Cart. This is because these props have multiple different skins used by different maps. A script is being developed to make it easy to change skins, but if you currently want to do it manually, then go to the Materials section of this object and make it so all the assigned faces are of a different material slot instead. If you know how Materials and Assigning works, this shouldn't be too difficult for you to do.
     | If you used SourceIO to bring the map in, then in the N menu there should be the option to change through different skins easily.
-| 
 
 .. _tf2_v_individualprops:
 
@@ -191,7 +184,6 @@ Individual Props
 
 | This section is written as a way to obtain individual props universally used in maps stored in the TF2 files, such as Barrels or Control Points or Gates. Some maps will have props that aren't used universally, and are exclusive to them. In this case it's best to just import the map, find the prop, and separate it.
 | Although this part is possible to do with both Plumber and BSPSource, it's so much more of a hassle that we didn't even think it was worth writing the Plumber method. If for any reason you're still interested in that method, you can contact us on Discord and we can tell you about it.
-| 
 
 .. _prop_method1:
 
@@ -199,27 +191,24 @@ Method
 ^^^^^^
 
 | The process is rather simple, just needs a bit of setup then the importing of the prop should be doable with one click.
-|
 *    Download `GCFScape <https://nemstools.github.io/pages/GCFScape-Download.html>`_, and `SourceIO <https://github.com/REDxEYE/SourceIO>`_.
 *    In Blender, go into :guilabel:`Edit` > :guilabel:`Preferences`.
 *    In the Add-ons menu, click on the :guilabel:`⤓ Install...` button.
 *    Select the .ZIP file you downloaded from the `SourceIO <https://github.com/REDxEYE/SourceIO>`_ releases page.
 *    Click on the check box to enable it.
 *    Go to ``[game_directory] / tf`` and open the file called ``tf2_misc_dir.vpk``. It should open through GCFScape.
-*    Drag the window of the ``[game_directory] / tf`` folder so that it's visible, as you can drag and drop files.
-*    Drag the ``Models`` folder into ``[game_directory] / tf``.
-*    Go to the ``Materials`` folder. Inside of it there should be another folder called ``Models``. Drag this to ``[game_directory] / tf`` as well.
-*    Once extracted, you may close GCFScape and open another file called ``tf2_textures_dir.vpk``. There should be another folder inside called ``Models``. Drag this to ``[game_directory] / tf``.
-|
-| All of that was for setting things up. Once that's completed, all you have to do for bringing a Model in is to open Blender, click :guilabel:`File` > :guilabel:`⤓ Import` > :guilabel:`Source Engine Assets` > :guilabel:`Source model (.mdl)`, and choose the ``.MDL`` file you're after inside the ``Models`` folder. It should have textures set up and everything.
+*    In GCFScape, right Click the ``Models`` folder, click :guilabel:`Extract`, and Extract it to ``[game_directory] / tf``. You can drag and drop as well but it is considerably laggier to do so.
+*    Again in GCFScape, go to the ``Materials`` folder. Inside of it there should be another folder called ``Models``. Extract this to ``[game_directory] / tf`` as well.
+*    Once extracted, you may close GCFScape and open another file called ``tf2_textures_dir.vpk``. There should be another folder inside called ``Models``. Extract this to ``[game_directory] / tf``.
+| All of that was for setting things up. Once that's completed, all you have to do for bringing a Model in is to open Blender, click :guilabel:`File` > :guilabel:`⤓ Import` > :guilabel:`Source Engine Assets` > :guilabel:`Source model (.mdl)`, and choose the ``.MDL`` file you're after inside the ``Models`` folder. It should have textures set up and everything. The above steps don't have to be repeated.
 
 .. _tf2_v_characterandrig:
 
 Character and Rig
 -----------------
 
-| Method 1 is easier to do as, the work is already done. `Hisanimations <https://youtu.be/7rH6_eq-I0c>`_ from the `TF2 Blender Discord Server <https://discord.gg/zHC2gJW>`_ has already made a fully working Character Ports file that you can use for yourself. Click on his name and it'll take you to a YouTube video where he explains what it is and how to use it. That's literally it we don't even have to write more about it here. If you have any questions about it then join the Discord server and you can ask there. This one is recommended in most cases, but if you're going to do Animation work, and especially long animation work, then Method 2 is recommended, as it gives significantly better performance.
-| Method 2 is to extract all the Characters and Rigs from the actual game. Three tools are used. It's definitely not as simple of a method, as in Method 1 everything is already done for you. You should only do this if you'll be doing animations and need the max performance.
+| Method 1 is easier to do as, the work is already done. `Hisanimations <https://youtu.be/7rH6_eq-I0c>`_ from the `TF2 Blender Discord Server <https://discord.gg/zHC2gJW>`_ has already made a fully working Character Ports file that you can use for yourself. Click on his name and it'll take you to a YouTube video where he explains what it is and how to use it. That's literally it we don't even have to write more about it here. If you have any questions about it then join the Discord server and you can ask there. Using this is recommended in most cases, but if you're going to do Animation work, and especially long animation work, then Method 2 is recommended, as it gives significantly better performance in animations.
+| Method 2 is to extract all the Characters and Rigs from the actual game. Three tools are used. It's definitely not as simple of a method, as in Method 1 everything is already done for you. You should only do this if you'll be doing animations and need the max performance. You can still animate with Method 1, it will just not give as high of an FPS counter.
 | Method 2 requires a fully working copy of Team Fortress 2 and a recent copy of Blender. You don't need a copy of the game to use Method 1. If you are unable to get these methods to work, it is recommended to use the latest version of Blender.
 
 .. _characterandrig_method1:
@@ -240,7 +229,6 @@ Summary of Method 2
 """""""""""""""""""
 
 | This is written here as a smaller version to come back to so you don't have to read the entire thing if you're doing the process again.
-|
 *    Download ``GCFScape``, ``Blender Source Tools``, and ``Crowbar``. Install ``Blender Source Tools`` as an addon into Blender. (This step is only necessary for first time use).
 *    Extract the necessary class files into a folder of your choice.
 *    Open the ``.MDL`` file in Crowbar and Decompile it into another folder.
@@ -254,8 +242,7 @@ Full Guide of Method 2
 
 .. note::
 
-    | If you want better quality models, you'll have to adventure to the lands of SFM. Within that are files under a directory called ``tf_movies``. The Character Models under this directory are much higher quality than the ones which can be found within TF2's own files, and if you have SFM installed or know someone who has it installed, it's highly recommended to use these instead. You don't lose out on much, if any performance if using these. If you're going this route, you'll know you did it right when the Crowbar decompiled files have SFM in their names.
-|
+    | If you want better quality models, you'll have to adventure to the lands of SFM. Within that are files under a directory called ``tf_movies``. The Character Models under this directory are much higher quality than the ones which can be found within TF2's own files, and if you have SFM installed or know someone who has it installed, it's highly recommended to use these instead. You barely lose performance when using these. If you're going this route, you'll know you did it right when the Crowbar decompiled files have SFM in their names.
 
 *    Download `GCFScape <https://nemstools.github.io/pages/GCFScape-Download.html>`_, `Crowbar <https://steamcommunity.com/groups/CrowbarTool>`_, and `Blender Source Tools <https://developer.valvesoftware.com/wiki/Blender_Source_Tools>`_.
 *    Go to ``[game_directory] / tf`` and open the file called ``tf2_misc_dir.vpk``. It should open through GCFScape.
@@ -267,7 +254,7 @@ Full Guide of Method 2
 *    Click :guilabel:`Decompile` in the bottom left.
 *    In Blender, go into :guilabel:`Edit` > :guilabel:`Preferences`.
 *    In the Add-ons menu, click on the :guilabel:`⤓ Install...` button.
-*    Select the .ZIP file you downloaded from the `Blender Source Tools <https://developer.valvesoftware.com/wiki/Blender_Source_Tools>`_ page.
+*    Select the ``.ZIP`` file you downloaded from the `Blender Source Tools <https://developer.valvesoftware.com/wiki/Blender_Source_Tools>`_ page.
 *    Click on the check box to enable it.
 *    Finally, In Blender, go into :guilabel:`File` > :guilabel:`Import` > :guilabel:`Source Engine (.smd, .vta, .dmx, .qc)`.
 *    Go to the folder where ``Crowbar`` Decompiled the files. In there you should find multiple files, click on the one that ends with ``.QC``.
@@ -277,20 +264,20 @@ Full Guide of Method 2
 
 .. note::
 
-    | If you used TF2's in-game files, then inside GCFScape when you're extracting the files, you might have noticed that similar files were also under ``models / player``. The difference between these files and the ones inside ``models / player / hwm`` is only of the mouth supposedly having HWM properties. HWM, or **H**ard**W**are **M**orph System, is used by VALVe for facial reflexes and stuff. But according to Hisanimations, they aren't used in TF2, despite their files being present. Whether you use files under ``models / player`` or ``models / player / hwm``, doesn't matter. Other than the mouth, both have the exact same mesh and their quality will be the same.
+    | If you used TF2's in-game files, then inside GCFScape when you're extracting the files, you might have noticed that similar files were also under ``models / player``. The difference between these files and the ones inside ``models / player / hwm`` is only of the mouth supposedly having HWM properties. HWM, or HardWare Morph System, is used by VALVe for facial reflexes and stuff. But according to Hisanimations, they aren't used in TF2, despite their files being present. Whether you use files under ``models / player`` or ``models / player / hwm``, won't matter. Other than the mouth, both have the exact same mesh and their quality will be the same.
 
 .. _tf2_v_animations:
 
 Animations
 ----------
 
-| Regardless of what method you use to bring in the TF2 Characters and their appropriate rigs, be it the Hisanimations port, or the TF2 in game models, or the SFM models, all use the same method for applying in-game animations. There's no other method hence only one method is listed. However, for the Hisanimations port, you do have to make sure you get the one that's compatible with taunts. That one is available under the ``#community-ports`` channel of the `TF2 Blender Discord server < https://discord.gg/zHC2gJW>`_.
+| Regardless of what method you use to bring in the TF2 Characters and their appropriate rigs, be it the Hisanimations port, or the TF2 in game models, or the SFM models, all use the same method for applying in-game animations. There's no other method hence only one method is listed. However, for the Hisanimations port, you do have to make sure you get the one that's compatible with taunts. That one is available under the ``#community-ports`` channel of the `TF2 Blender Discord server <https://discord.gg/zHC2gJW>`_.
 | 
 
 .. note::
 
     | Not all animations from TF2 can be brought in with ease. Some can, but not all. It depends on which specific animation you want to bring in. Some animations in TF2 are additive, instead of independent, meaning that you need a base animation and the new animation adds on top of it. For example, to bring in the animation of shooting the shotgun, you first need to have the idle animation of that shotgun brought in.
-    | This is possible in SFM. However, in Blender, a script is required. It's currently being developed by Hisanimations and not currently ready.
+    | This is possible in SFM. However, in Blender, a script is required. It's currently being developed by Hisanimations and not ready at the time of writing.
 
 .. _animations_method1:
 
@@ -299,16 +286,15 @@ Method
 
 *    Download `GCFScape <https://nemstools.github.io/pages/GCFScape-Download.html>`_, `Crowbar <https://steamcommunity.com/groups/CrowbarTool>`_, and `Blender Source Tools <https://developer.valvesoftware.com/wiki/Blender_Source_Tools>`_.
 *    Go to ``[game_directory] / tf`` and open the file called ``tf2_misc_dir.vpk``. It should open through GCFScape.
-*    Drag the window of the ``[game_directory] / tf`` folder so that it's visible, as you can drag and drop files.
-*    Extract the ``models`` folder to ``[game_directory] / tf`` 
-*    Go to ``models / player`` and find ``(class)_animations.mdl``. Copy it to another location, preferably a new folder. This is the file that holds almost all animation data for that specific class.
-*    Repeat the process for ``models / workshop / player / animations``. Just in case the specific animation can't be found in that first ``.MDL`` file, we'll get the remaining ones from here too.
+*    From GCFScape, extract the ``models`` folder to ``[game_directory] / tf`` 
+*    Close GCFScape. Go to the folder you just extracted, which is``models``, and go to the ``player`` folder. Copy ``(class)_animations.mdl`` to another location, preferably a new folder. This is the file that holds almost all animation data for that specific class.
+*    Repeat the process for the ``.MDL`` present in ``models / workshop / player / animations``. Just in case the specific animation can't be found in that first ``.MDL`` file, we'll get the remaining ones from here too.
 *    Open Crowbar, and go to the :guilabel:`Decompile` tab. For the ``MDL`` file, select the ``.MDL`` from the files you just extracted through GCFScape.
 *    For the Output Folder, make a new folder or choose an existing one to Decompile to.
 *    You don't need to change any settings, click :guilabel:`Decompile` in the bottom left. If done right, the folder should have a very large amount of ``.SMD`` files.
 *    In Blender, go into :guilabel:`Edit` > :guilabel:`Preferences`.
 *    In the Add-ons menu, click on the :guilabel:`⤓ Install...` button.
-*    Select the .ZIP file you downloaded from the `Blender Source Tools <https://developer.valvesoftware.com/wiki/Blender_Source_Tools>`_ page.
+*    Select the ``.ZIP`` file you downloaded from the `Blender Source Tools <https://developer.valvesoftware.com/wiki/Blender_Source_Tools>`_ page.
 *    Click on the check box to enable it.
 *    Finally, In Blender, click on the specific skeleton you want to apply an animation to (You do have to import the Character first. You can't just bring the animation into an empty scene.)
 *    Go into :guilabel:`File` > :guilabel:`Import` > :guilabel:`Source Engine (.smd, .vta, .dmx, .qc)`.
@@ -318,4 +304,25 @@ Method
 .. note::
 
     | In some cases, you may find two identically named files, one name starting with taunt_ and the other name starting with layer_taunt_. These are different files. As of writing, it is uncertain which is the one to use but, if one file doesn't give the wanted results, try the other. Also, not every animation is guaranteed to work, even if it's not an Additive taunt.
-    | All animations are designed to be played back at 30fps. If you know how to animate then changing the framerate of this shouldn't be difficult.
+    | Animations are designed to be played back at 30fps or 24fps. If you know how to animate then changing the framerate of this shouldn't be difficult. You can experiment with the values and keyframes to see what you're comfortable with.
+    
+.. _tf2_v_weaponsandcosmetics:
+
+Weapons and Cosmetics
+---------------------
+
+| There's probably a way to import it manually, but why bother with that when a much easier way exists. `Hisanimations <https://youtu.be/0DMz-n1LSII>`_ made a TF2 collection port that includes all of these items, just click on his name to watch the video where he explains it.
+
+.. _tf2_v_soundeffects:
+
+Sound Effects
+-------------
+
+| Download `GCFScape <https://nemstools.github.io/pages/GCFScape-Download.html>`_. With GCFScape, open ``tf2_sound_misc.vpk`` in ``[game_directory] / tf`` to search for whatever you're after. You can extract it and look through it or just go through it directly in there.
+
+.. _tf2_v_voicelines:
+
+Voice Lines
+-----------
+
+| Download `GCFScape <https://nemstools.github.io/pages/GCFScape-Download.html>`_. With GCFScape, open ``tf2_sound_vo_english_dir.vpk`` in ``[game_directory] / tf`` to search for whatever you're after. You can extract it and look through it or just go through it directly in there.

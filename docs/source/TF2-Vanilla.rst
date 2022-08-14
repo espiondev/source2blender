@@ -107,7 +107,7 @@ Import .VMF files into Blender
 | Plumber is now installed. 
 | 
 | You can now import a .VMF file from the :guilabel:`File` > :guilabel:`Import` > :guilabel:`Plumber` > :guilabel:`Valve Map Format (.vmf)` button. Browse to the location you stored your ``.VMF`` file which you Decompiled using BSPSource earlier. Make sure that in the Import settings, the game is set to Team Fortress 2, and it's also recommended for the Scale to be set to 0.1, and the Light Brightness set to 10. This is so the map is compatible with the Hisanimations Characters port and TF2 Collections Port. That's it, you should have everything. If you wish to repeat this whole process for another map, a Summary is written at the top of the Method 1 section which you can refer to.
-
+| Go to :ref:`finishing_touches` for advice on clean up and additional useful things to know about. 
 .. _map_method2:
 
 Method 2 (Alternate)
@@ -163,10 +163,10 @@ Installing and using SourceIO
   :width: 150
   :alt: Toggles that will only show light objects. 
 
-..seealso::
+.. seealso::
     For a full list of Eevee's limitations, you can consult `this page < https://docs.blender.org/manual/en/latest/render/eevee/limitations.html>`_ from Blender's official manual. 
 
-.. _MapPrep:
+.. _finishing_touches:
 
 Finishing Touches (Both Methods)
 """"""""""""""""""""""""""""""""

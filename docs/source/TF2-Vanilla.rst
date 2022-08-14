@@ -60,38 +60,10 @@ Fix compressed .BSP files
     | These steps are only to be followed in case a .BSP file was too compressed for BSPSource.
     | However, you must follow the steps after this in the right order. 
 
+*    Go to the releases page for `EspionRepacker < https://github.com/spy-ware/EspionRepacker>`_ and download the latest version.
+*    Navigate to ``[game directory] / bin``, ``[game directory] / tf / maps / [map to repack]``, and your output folder. 
+*    Click on :guilabel:`Repack` to repack your file. it will be in your output directory. 
 
-*    Find your TF2 installation folder. You can locate it by right clicking on TF2 in your Steam library, hovering over the :guilabel:`Manage >` button, and clicking on :guilabel:`Browse local files`. This will open File Explorer in your TF2 folder. It should have a few folders in it, such as ``bin``, ``hl2``, ``platform``, ``tf``, as well as a file titled ``hl2.exe``.
-*    Navigate into the ``bin`` folder.
-*    Create a new .TXT file by right clicking on File Explorer, hovering over :guilabel:`New >`, and selecting :guilabel:`Text Document`. Its name doesn't matter, as long as it still has the .TXT file extension. File extensions may be hidden by default, so to enable it, click on :guilabel:`View` at the top of the window, and check the :guilabel:`File name extensions` box.
-*    Open the .TXT file you just created with the text editor of your choice. Notepad should come installed on almost all Windows systems, but `Visual Studio Code <https://code.visualstudio.com/>`_ or `Notepad++ <https://notepad-plus-plus.org/>`_ can be downloaded for free online. 
-*    Copy and paste the following into the .TXT file:
-
-.. code-block:: batch
-    :caption: .BSP repack script
-    :linenos:
-
-    @ECHO OFF
-    SET "PScommand="POWERSHELL Add-Type -AssemblyName System.Windows.Forms; $FolderBrowse = New-Object System.Windows.Forms.OpenFileDialog -Property @{ValidateNames = $false;CheckFileExists = $false;RestoreDirectory = $true;FileName = 'Selected Folder';};$null = $FolderBrowse.ShowDialog();$FolderName = Split-Path -Path $FolderBrowse.FileName;Write-Output $FolderName""
-    FOR /F "usebackq tokens=*" %%Q in (`%PScommand%`) DO (
-        SET FOLDER=%%Q
-    )
-    echo FOLDER
-    bspzip -repack FOLDER
-    PAUSE
-    EXIT
-
-*    Save and close out of the text editor.
-
-.. warning::
-
-   **Save a backup of this map you are about to repack, as this script may overwrite the original file.**
-
-*    Rename the file to have a .BAT extension. You will be warned that the file may become unusable. Click :guilabel:`Yes`.
-*    Double click on the batch script for it to run. It will prompt you with a destination folder to choose.
-
-| The repacked .BSP file is now in the selected folder. You can use BSPSource to convert it to a .VMF now. 
-|
 
 .. _convert_bsp_to_vmf:
 
@@ -273,7 +245,7 @@ Summary of Method 2
 *    Extract the necessary class files into a folder of your choice.
 *    Open the ``.MDL`` file in Crowbar and Decompile it into another folder.
 *    Use Blender Source Tools to import the ``.QC`` file
-*    Remove or hide any unnecessary objects such as the Hitbox or extra LODs.
+*    Remove or hide any unnecessary objects such as the hitbox or extra LODs.
 
 .. _characterandrig_method2_detailed:
 
@@ -282,7 +254,7 @@ Full Guide of Method 2
 
 .. note::
 
-    | If you want better quality models, you'll have to adventure to the lands of SFM. Within that are files under a directory called ``tf_movies``. The Character Models under this directory are much higher quality than the ones which can be found within TF2's own files, and if you have SFM installed or know someone who has it installed, it's **HIGHLY** recommended to use these instead. You don't lose out on much, if any performance if using these. If you're going this route, you'll know you did it right when the Crowbar decompiled files have SFM in their names.
+    | If you want better quality models, you'll have to adventure to the lands of SFM. Within that are files under a directory called ``tf_movies``. The Character Models under this directory are much higher quality than the ones which can be found within TF2's own files, and if you have SFM installed or know someone who has it installed, it's highly recommended to use these instead. You don't lose out on much, if any performance if using these. If you're going this route, you'll know you did it right when the Crowbar decompiled files have SFM in their names.
 |
 
 *    Download `GCFScape <https://nemstools.github.io/pages/GCFScape-Download.html>`_, `Crowbar <https://steamcommunity.com/groups/CrowbarTool>`_, and `Blender Source Tools <https://developer.valvesoftware.com/wiki/Blender_Source_Tools>`_.
@@ -301,24 +273,24 @@ Full Guide of Method 2
 *    Go to the folder where ``Crowbar`` Decompiled the files. In there you should find multiple files, click on the one that ends with ``.QC``.
 *    If everything was done right, you should now have the model in Blender with a fully working rig.
 
-| Some cleanup would be required, as there's extra objects and meshes you don't really need, like LODs or a Vertex Cloud or the Hitbox. The highest quality Object is the one which doesn't have LOD in the name. It's parented to ``(class).qc_skeleton``. The rig is fully working, extra weight paint or work isn't needed.
+| Some cleanup would be required, as there's extra objects and meshes you don't really need, like LODs or a vertex cloud or the hitbox. The highest quality object is the one which doesn't have LOD in the name. It's parented to ``(class).qc_skeleton``. The rig is fully working, extra weight paint or work isn't needed.
 
 .. note::
 
-    | If you used TF2's in-game files, then inside GCFScape when you're extracting the files, you might have noticed that similar files were also under ``models / player``. The difference between these files and the ones inside ``models / player / hwm`` is only of the mouth supposedly having HWM properties. HWM, or **H**ard**W**are **M**orph System, is used by VALVe for facial reflexes and stuff. But according to Hisanimations, the files are there but the game doesn't use them. Whether you use files under ``models / player`` or ``models / player / hwm``, doesn't matter. Other than the mouth, both have the exact same mesh and their quality will be the same.
+    | If you used TF2's in-game files, then inside GCFScape when you're extracting the files, you might have noticed that similar files were also under ``models / player``. The difference between these files and the ones inside ``models / player / hwm`` is only of the mouth supposedly having HWM properties. HWM, or **H**ard**W**are **M**orph System, is used by VALVe for facial reflexes and stuff. But according to Hisanimations, they aren't used in TF2, despite their files being present. Whether you use files under ``models / player`` or ``models / player / hwm``, doesn't matter. Other than the mouth, both have the exact same mesh and their quality will be the same.
 
 .. _tf2_v_animations:
 
 Animations
 ----------
 
-| Regardless of what method you use to bring in the TF2 Characters and their appropriate Rigs, be it the Hisanimations port, or the TF2 in game models, or the SFM models, all use the same Method for applying in-game Animations. There's no other method hence only one Method is listed. However, for the Hisanimations port, you do have to make sure you get the one that's compatible with Taunts. That one is available under the #community-ports channel of the TF2-Blender discord server.
+| Regardless of what method you use to bring in the TF2 Characters and their appropriate rigs, be it the Hisanimations port, or the TF2 in game models, or the SFM models, all use the same method for applying in-game animations. There's no other method hence only one method is listed. However, for the Hisanimations port, you do have to make sure you get the one that's compatible with taunts. That one is available under the ``#community-ports`` channel of the `TF2 Blender Discord server < https://discord.gg/zHC2gJW>`_.
 | 
 
 .. note::
 
     | Not all animations from TF2 can be brought in with ease. Some can, but not all. It depends on which specific animation you want to bring in. Some animations in TF2 are additive, instead of independent, meaning that you need a base animation and the new animation adds on top of it. For example, to bring in the animation of shooting the shotgun, you first need to have the idle animation of that shotgun brought in.
-    | This is possible in SFM however for Blender, a script is required. It's currently being worked on by Hisanimations and not completed at the time of writing.
+    | This is possible in SFM. However, in Blender, a script is required. It's currently being developed by Hisanimations and not currently ready.
 
 .. _animations_method1:
 
@@ -345,5 +317,5 @@ Method
 
 .. note::
 
-    | As of writing this, in some cases you can find two identically named files, one name starting with taunt_ and the other name starting with layer_taunt_. These are different files. As of writing, it is uncertain which is the one to use but, if one file doesn't give the wanted results, try the other. Also, not every animation is guaranteed to work, even if it's not an Additive taunt.
+    | In some cases, you may find two identically named files, one name starting with taunt_ and the other name starting with layer_taunt_. These are different files. As of writing, it is uncertain which is the one to use but, if one file doesn't give the wanted results, try the other. Also, not every animation is guaranteed to work, even if it's not an Additive taunt.
     | All animations are designed to be played back at 30fps. If you know how to animate then changing the framerate of this shouldn't be difficult.

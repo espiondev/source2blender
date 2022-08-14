@@ -59,7 +59,7 @@ Repack compressed .BSP files
     | These steps are only to be followed in case a .BSP file was too compressed for BSPSource.
     | However, you must follow the steps after this in the right order. 
 
-*    Go to the releases page for `EspionRepacker <https://github.com/spy-ware/EspionRepacker>`_ and download the latest version.
+*    Go to the releases page for `EspionRepacker <https://github.com/spy-ware/EspionRepacker>`_ and download the latest version (``.EXE``, not Source Code).
 *    Navigate to ``[game directory] / bin`` for the BSPZip folder, ``[game directory] / tf / maps / [map to repack]`` as the map you want to Repack, and your output folder of choice.
 *    Click on :guilabel:`Repack` to repack your file. it will be in your output directory. 
 

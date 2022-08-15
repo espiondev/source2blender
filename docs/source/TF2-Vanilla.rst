@@ -3,11 +3,66 @@
 TF2 Vanilla
 ===========
 
-| Depending on the category you'll find two methods or only one. Where there are two methods (Such as in the ``Maps and included props`` Section), the benefits and drawbacks of both will be listed. Places where there's only one method means that the other method just wasn't as good/worth it, or there only is one way to do it. The reasoning will be listed in that section.
+| Throughout this page, you'll find clickable text where a link is provided. Just click on it or right click and 'Open in new tab' to see the contents.
+| Depending on the category you'll find two methods or only one. Where there are two methods (Such as in the :ref:`tf2_v_mapsandprops` Section), the benefits and drawbacks of both will be listed. Places where there's only one method means that the other method just wasn't as good/worth it, or there only is one way to do it. The reasoning will be listed in that section.
+| It's best if you have an up-to-date copy of Team Fortress 2 installed as nearly all of these methods will be relying on obtaining files present from within the game.
 
 .. contents:: Table of Contents
     :depth: 3
 
+
+.. _tf2_v_installingprograms:
+
+Installing Programs
+-------------------
+
+.. _install_bst:
+
+Installing Blender Source Tools
+"""""""""""""""""""""""""""""""
+
+*    Download `Blender Source Tools <http://steamreview.org/BlenderSourceTools>`_, it's a ``.ZIP`` file. Don't open or extract it. Make sure your Blender version is up to date, the download link says it's supported for versions 2.92 and higher.
+*    In Blender, go into :guilabel:`Edit` > :guilabel:`Preferences`.
+*    In the Add-ons menu, click on the :guilabel:`⤓ Install...` button.
+*    Select the ``.ZIP`` file you downloaded from the `Blender Source Tools <http://steamreview.org/BlenderSourceTools>`_ website.
+*    Click on the check box to enable it.
+
+| Blender Source Tools is now installed. You'll notice its Import option show up under :guilabel:`File` > :guilabel:`Import` > :guilabel:`Source Engine (.smd, .vta, .dmx, .qc)`.
+
+.. _install_Plumber:
+
+Installing Plumber
+""""""""""""""""""
+
+*    Go to the `Plumber <https://github.com/lasa01/io_import_vmf/releases>`_ download page, click on the big bold text in front that says Plumber. Scroll down, download the ``.ZIP`` that's appropriate for your system. It's available for MacOS, Linux, and Windows. Do not extract or open the ``.ZIP`` when downloaded.
+*    Make sure your Blender Version is up to date. The site says it supports 2.82 and higher but for compatibility with Blender Source Tools, make sure you have 2.92 or higher.
+*    In Blender, go into :guilabel:`Edit` > :guilabel:`Preferences`.
+*    In the Add-ons menu, click on the :guilabel:`⤓ Install...` button.
+*    Select the ``.ZIP`` file you downloaded from the `Plumber <https://github.com/lasa01/io_import_vmf/releases>`_ releases page.
+*    Click on the check box to enable it.
+*    It should automatically find any Steam products it's compatible with, such as Team Fortress 2, Left 4 Dead, Portal, Half Life 2, etc. It depends on what you have installed. Make sure you have a properly working copy of Team Fortress 2 and it's in a valid Steam location otherwise it won't detect it.
+
+| Plumber is now installed. You'll notice its Import option show up under  :guilabel:`File` > :guilabel:`Import` > :guilabel:`Plumber`.
+
+.. _install_sourceio:
+
+Installing SourceIO
+"""""""""""""""""""
+
+*    Go to the `SourceIO <https://github.com/REDxEYE/SourceIO/releases>`_ download page, click on the big bold text that says SourceIO. Scroll down, download the file called ``SourceIO.zip``. Do not extract or open the ``.ZIP`` when downloaded.
+*    In Blender, go into :guilabel:`Edit` > :guilabel:`Preferences`.
+*    In the Add-ons menu, click on the :guilabel:`⤓ Install...` button.
+*    Select the ``.ZIP`` file you downloaded from the `SourceIO <https://github.com/REDxEYE/SourceIO/releases>`_ releases page.
+*    Click on the check box to enable it.
+
+| SourceIO is now installed. You'll notice its settings show up under :guilabel:`File` > :guilabel:`Import` > :guilabel:`Source Engine Assets`.
+
+.. _install_nonaddons:
+
+Installing GCFScape, Crowbar, BSPSource
+"""""""""""""""""""""""""""""""""""""""
+
+| These programs are either unpacked into folders or have an installer. Just go to their download links by clicking their names in the section they're referred to. They're programs that run outside Blender, and not as addons.
 
 .. _tf2_v_mapsandprops:
 
@@ -15,7 +70,7 @@ Maps and included props
 -----------------------
 
 | :ref:`map_method1` uses three tools, all linked in that section. This method is recommended as it makes the maps significantly easier to work with. All imported items are organized into collections and very easy to work with and customize.
-| :ref`map_method2` uses only one addon, called SourceIO. It's a one click solution and way easier than :ref:`map_method1` , but the names of objects becomes messy, and there's extra cleanup required as extra objects such as the map hitbox is also imported. It's closer in looks to TF2 as it uses its own shader, so if you want the true TF2 look, then use this. :ref:`map_method1` also works fine but is bettet suited for applying your own style or flair to your renders and animations. 
+| :ref:`map_method2` uses only one addon, called SourceIO. It's a one click solution and way easier than :ref:`map_method1` , but the names of objects becomes messy, and there's extra cleanup required as extra objects such as the map hitbox is also imported. It's closer in looks to TF2 as it uses its own shader, so if you want the true TF2 look, then use this. :ref:`map_method1` also works fine but is better suited for applying your own style or flair to your renders and animations. 
 | Both methods require a fully working copy of Team Fortress 2 and a recent copy of Blender. If you are unable to get these methods to work, it is recommended to use the latest version of Blender.
 
 .. _map_method1:
@@ -28,10 +83,9 @@ Method 1 (Recommended)
 Summary of Method 1
 """""""""""""""""""
 
-| This summary is a smaller guide to come back to so you don't have to read the entire thing if you're doing the process again.
 *    Download ``BSPSource``, ``Plumber``, and ``Blender Source Tools``. Install ``Plumber`` and ``Blender Source Tools`` into Blender. (This step is only necessary on first time use).
-*    Locate map you wish to bring into Blender under ``[game_directory] / tf / maps /``.
-*    Uncompress the ``.BSP`` file if necessary.
+*    Locate map you wish to bring into Blender by going to ``[game_directory] / tf / maps /``.
+*    Repack the ``.BSP`` file using ``EspionRepacker`` if necessary.
 *    Convert ``.BSP`` file into ``.VMF`` file using BSPSource.
 *    Import ``.VMF`` file from :guilabel:`File` > :guilabel:`Import` > :guilabel:`Plumber` > :guilabel:`Valve Map Format (.vmf)` in Blender.
 *    Disable all lights except ``light_environment``, and set Color Profile from :guilabel:`Filmic` to :guilabel:`Standard`.
@@ -44,8 +98,7 @@ Full Guide of Method 1
 .. note::
     Always get the most recent version of a program or Add-on linked here.
 
-| `BSPSource <https://developer.valvesoftware.com/wiki/BSPSource>`_, `Blender Source Tools <https://developer.valvesoftware.com/wiki/Blender_Source_Tools>`_, and `Plumber <https://github.com/lasa01/io_import_vmf/releases>`_ will be used for :ref:`map_method1_detailed`. The steps to install these will be shown later in the guide as well, you do not have to download directly from here. (Plumber was originally called io_import_vmf. This new creation is currently in Beta but significantly superior to io_import_vmf and that's why we've linked the page to download that instead.)
-| BSPSource converts ``.BSP`` files (Map format used by many Source games, including TF2) to ``.VMF``. ``.VMF`` files are what will be imported into Blender using the addon called Plumber. Plumber can import the map, but Blender Source Tools needs to be installed so that other models, and more importantly, map props, can be imported as well.
+| `Blender Source Tools <http://steamreview.org/BlenderSourceTools>`_, `Blender Source Tools <https://developer.valvesoftware.com/wiki/Blender_Source_Tools>`_, and `Plumber <https://github.com/lasa01/io_import_vmf/releases>`_ will be used for Method 1. The steps to install these can be seen at the :ref:`tf2_v_installingprograms` section. (Plumber was originally called io_import_vmf. This new creation is currently in Beta but significantly superior to io_import_vmf and that's why we've linked the page to download that instead.)
 
 | To start off, we need to make sure the map is even usable in the first place. Some maps are compressed beyond readability for BSPSource (Usually newer ones). To fix that, you need to repack it.
 
@@ -56,12 +109,12 @@ Repack compressed .BSP files
 
 .. note::
 
-    | These steps are only to be followed in case a .BSP file was too compressed for BSPSource.
-    | However, you must follow the steps after this in the right order. 
+    | These steps are only to be followed in case a .BSP file was too compressed for BSPSource. If you're unsure, better to do it anyways.
+    | Make sure to follow the steps in the right order. 
 
-*    Go to the releases page for `EspionRepacker <https://github.com/spy-ware/EspionRepacker>`_ and download the latest version (``.EXE``, not Source Code).
+*    Go to the releases page for `EspionRepacker <https://github.com/spy-ware/EspionRepacker/releases>`_ and download the latest version (``.EXE``, not Source Code).
 *    Navigate to ``[game directory] / bin`` for the BSPZip folder, ``[game directory] / tf / maps / [map to repack]`` as the map you want to Repack, and your output folder of choice.
-*    Click on :guilabel:`Repack` to repack your file. it will be in your output directory. 
+*    Click on :guilabel:`Repack` to repack your file. A folder will be generated called ``out``, and within this folder will be the ``.BSP`` file, ready to use for the next steps. 
 
 .. _convert_bsp_to_vmf:
 
@@ -72,42 +125,35 @@ Convert a .BSP to .VMF
 
     You need to install `Java <https://www.java.com/download/ie_manual.jsp>`_ to run BSPSource.
 
-*    Download `BSPSource <https://developer.valvesoftware.com/wiki/BSPSource>`_ and extract it.
+*    Download `BSPSource <https://developer.valvesoftware.com/wiki/BSPSource>`_ and extract it. Make sure to extract all files.
 *    Run ``bspsrc.jar``
-*    There's many options in the program. Leave them be, just click the button for 'Add', and browse to your TF2 folder. From there, go to ``tf / maps`` and choose the specific ``.BSP`` (map file) you want to convert.
-*    Once that's done, just click the :guilabel:`Decompile` button in the bottom right, there's no need to edit the other settings, though you're free to play around if you personally want to.
+*    There's many options in the program. For now, just click the button for :guilabel:`Add`, and browse to your TF2 folder. From there, go to ``[game_directory] / tf / maps`` and choose the specific ``.BSP`` (map file) you want to convert.
+*    Go to the :guilabel:`Other` tab in BSPSource, and enable the checkbox labelled :guilabel:`Extract Embedded Files`.
+*    Once that's done, just click the :guilabel:`Decompile` button in the bottom right, there's no need to edit the other settings, though you're free to play around if you know what you're doing.
 *    A file browser will show up for where to put the ``.VMF`` file. You can choose any location, but it's best if it's a place you can easily come back to.
 *    Click on :guilabel:`Decompile`.
 
-| Your .VMF file has now been decompiled and is in your output folder.
+| Your .VMF file has now been decompiled and is in your output folder. You'll notice another folder in that location with the same name as the ``.VMF`` file. We'll use this later. If such a folder doesn't exist, then don't worry about it.
 
-.. _install_bst:
+.. important::
 
-Install Blender Source Tools
-""""""""""""""""""""""""""""
+    During the time that BSPSource is Decompiling the map, it will show logs of what it's doing. There is an ``Errors & Warnings`` box visible. This should be completely empty. If at any point something is shown in this box, then the process failed and needs to be done again.
 
-*    In Blender, go into :guilabel:`Edit` > :guilabel:`Preferences`.
-*    In the Add-ons menu, click on the :guilabel:`⤓ Install...` button.
-*    Select the ``.ZIP`` file you downloaded from the `Blender Source Tools <https://developer.valvesoftware.com/wiki/Blender_Source_Tools>`_ website.
-*    Click on the check box to enable it.
+.. _importing_vmf:
 
-| Blender Source Tools is now installed. You'll notice its settings show up under the :guilabel:`⤓ Import` section in the :guilabel:`File` menu on the top left of Blender.
+Bringing The Map In
+"""""""""""""""""""
 
-.. _install_Plumber:
+| You can now import a .VMF file from the :guilabel:`File` > :guilabel:`Import` > :guilabel:`Plumber` > :guilabel:`Valve Map Format (.vmf)` button (Make sure Plumber and Blender Source Tools are installed). Browse to the location you stored your ``.VMF`` file which you Decompiled using BSPSource earlier. 
+*    Make sure that in the Import settings, the game is set to Team Fortress 2. 
+*    Set the Scale to be set to 0.1, and the Light Brightness set to 10. This is so the map is compatible with the Hisanimations Characters port and TF2 Collections Port.
+*    In the folder space underneath the :guilabel:`Game`, type the name of the folder with the same name as the ``.VMF``. So if for example, your map file is called ``pl_pier_d.vmf`` then there should also be a folder called ``pl_pier_d``. Write ``pl_pier_d`` in that space. If you don't have such a folder, you can skip this step.
+*    Then click the ``.VMF`` file, and click :guilabel:`Import`. That's it, you should have everything. 
 
-Import .VMF files into Blender
-""""""""""""""""""""""""""""""
+| The installation steps are not necessary to do again. It's really just as simple as, Repack ``.BSP`` if needed, Turn into ``.VMF`` with BSPSource, Bring ``.VMF`` into Blender.
+| Go to :ref:`finishing_touches` for advice on clean up and additional useful things to know about within Blender regarding these maps.
+| If you wish to familiarize yourself with the whole process, or see an overview, a :ref:`map_method1_summary` is written which you can refer to.
 
-*    In Blender, go into :guilabel:`Edit` > :guilabel:`Preferences`.
-*    In the Add-ons menu, click on the :guilabel:`⤓ Install...` button.
-*    Select the ``.ZIP`` file you downloaded from the `Plumber <https://github.com/lasa01/io_import_vmf/releases>`_ releases page.
-*    Click on the check box to enable it.
-*    It should automatically find any Steam products it's compatible with, such as Team Fortress 2, Left 4 Dead, Portal, Half Life 2, etc. It depends on what you have installed. Make sure you have a properly working copy of Team Fortress 2 and it's in a valid Steam location otherwise it won't detect it.
-
-| Plumber is now installed. 
-| 
-| You can now import a .VMF file from the :guilabel:`File` > :guilabel:`Import` > :guilabel:`Plumber` > :guilabel:`Valve Map Format (.vmf)` button. Browse to the location you stored your ``.VMF`` file which you Decompiled using BSPSource earlier. Make sure that in the Import settings, the game is set to Team Fortress 2, and it's also recommended for the Scale to be set to 0.1, and the Light Brightness set to 10. This is so the map is compatible with the Hisanimations Characters port and TF2 Collections Port. That's it, you should have everything. If you wish to repeat this whole process for another map, a Summary is written at the top of the Method 1 section which you can refer to.
-| Go to :ref:`finishing_touches` for advice on clean up and additional useful things to know about. 
 .. _map_method2:
 
 Method 2 (Alternate)
@@ -118,13 +164,11 @@ Method 2 (Alternate)
 Summary of Method 2
 """""""""""""""""""
 
-| This summary is a smaller guide to come back to so you don't have to read the entire thing if you're doing the process again.
-
-*    Download SourceIO and install it into Blender.
+*    Download SourceIO and install it into Blender (This step is only necessary for first time use).
 *    Import ``.BSP`` file from :guilabel:`File` > :guilabel:`Import` > :guilabel:`Source Engine Assets` > :guilabel:`Source Map (.bsp)` in Blender.
-*    Locate map you wish to bring into Blender under ``[game_directory] / tf / maps /``
-*    Select everything by pressing A, then Shift Click an ``Empty``
-*    Press N under the 3D Viewport to open the sidebar, go to SourceIO, and click :guilabel:`Load Entity`
+*    Locate map you wish to bring into Blender under ``[game_directory] / tf / maps /``.
+*    Select everything by pressing A, then Shift Click an ``Empty``.
+*    Press N under the 3D Viewport to open the sidebar, go to SourceIO, and click :guilabel:`Load Entity`.
 *    Disable all lights except ``light_environment``, and set Color Profile from :guilabel:`Filmic` to :guilabel:`Standard`.
 
 .. _map_method2_detailed:
@@ -132,32 +176,27 @@ Summary of Method 2
 Full Guide of Method 2
 """"""""""""""""""""""
 
-`SourceIO <https://github.com/REDxEYE/SourceIO>`_ will be used for method 2.
+`SourceIO <https://github.com/REDxEYE/SourceIO>`_ will be used for :ref:`map_method2_detailed`. The steps to install these can be seen at the :ref:`tf2_v_installingprograms` section.
 
-.. _import_bsp_sourceio:
+.. _importing_bsp:
 
-Installing and using SourceIO
-"""""""""""""""""""""""""""""
+Bringing the Map in
+"""""""""""""""""""
 
 .. important::
 
     Carefully follow these instructions. If you make a mistake, you will have to create a new, blank, project, as this addon directly reads off the ``.BSP`` in real time and doesn't allow that file to be changed or edited. This also means you should have a completely blank project before using the Add-on.
 
-*    In Blender, go into :guilabel:`Edit` > :guilabel:`Preferences`.
-*    In the Add-ons menu, click on the :guilabel:`⤓ Install...` button.
-*    Select the ``.ZIP`` file you downloaded from the `SourceIO <https://github.com/REDxEYE/SourceIO>`_ releases page.
-*    Click on the check box to enable it.
-*    Go to :guilabel:`File` > :guilabel:`⤓ Import` > :guilabel:`Source Engine Assets` > :guilabel:`Source map (.bsp)`
+*    Go to :guilabel:`File` > :guilabel:`⤓ Import` > :guilabel:`Source Engine Assets` > :guilabel:`Source map (.bsp)` (Make sure SourceIO is installed).
 *    Select your map of choice. The map **MUST** be in your TF2 game directory. It will be in ``[game_directory] / tf / maps /``. You can use the name filter to narrow down the results. 
 
 | Once loaded in, maps will be quite bare-bones. The lighting will most likely be too dark, and the props aren't there. There are a few things to set up.
-
 *    Press A to select all objects within the viewport. Then Shift Click on an ``Empty``. An ``Empty`` is a placeholder. You'll notice a lot of these in places where Props are supposed to be.
 *    Hovering over the 3D Viewport, press :guilabel:`N` to open the side panel. There will be a :guilabel:`SourceIO` tab. Click on that to open it.
 *    Click on :guilabel:`Load Entity`.
 *    It might take some time so please be patient. If done right, all props should show up without any error messages, and there will also now be a lot of Collections.
 
-| The lighting is going to appear strange because in Eevee (Blender's default render engine) has a maximum of 128 lights. Filter the Outliner by lights with the following settings
+| The lighting is going to appear strange because in Eevee (Blender's default render engine) has a maximum of 128 lights. Filter the Outliner by lights with the following settings.
 
 .. image:: _images/toggles.png
   :width: 150
@@ -171,7 +210,7 @@ Installing and using SourceIO
 Finishing Touches (Both Methods)
 """"""""""""""""""""""""""""""""
 
-* Go to :guilabel:`Material Preview` mode to confirm that all materials are actually fully functional before you do anything else.
+* Go to :guilabel:`Material Preview` mode to confirm that all materials are actually fully functional before you do anything else. All textures should be visible and no part of the map should be white.
 * Use Eevee if you want a true TF2 look. Cycles will get you very different results.
 * There's unfortunately a limit of Eevee which there's no way around. It can only have 128 active lights at once, while a lot of maps in TF2 end up having significantly more than that. Unfortunately the only way around this is to use Cycles, which doesn't have a light limit, but another alternative is to maintain the majority of the look by turning off every light except the one which starts with the name ``light_environment``. This is the 'Sun' light and is responsible for nearly all outdoor shadows present on the map.
 * If you want more accurate TF2 colors, go to Color Management, and set the Color Profile from :guilabel:`Filmic` to :guilabel:`Standard`.
@@ -193,16 +232,26 @@ Individual Props
 Method
 ^^^^^^
 
+.. _prop_method1_summary:
+
+Summary of Method
+"""""""""""""""""
+
+*    Download GCFScape, SourceIO. Install SourceIO into Blender.
+*    Extract the necessary files from ``tf2_misc_dir.vpk`` and ``tf2_textures_dir.vpk`` into ``[game_directory] / tf``.
+*    Use SourceIO to import ``.MDL`` file of choice from the extracted folders.
+
+.. _characterandrig_method2_detailed:
+
+Full Guide of Method
+""""""""""""""""""""
+
 | The process is rather simple, it only requires a bit of setup, then the importing of the prop should be doable with a few clicks.
-*    Download `GCFScape <https://nemstools.github.io/pages/GCFScape-Download.html>`_, and `SourceIO <https://github.com/REDxEYE/SourceIO>`_.
-*    In Blender, go into :guilabel:`Edit` > :guilabel:`Preferences`.
-*    In the Add-ons menu, click on the :guilabel:`⤓ Install...` button.
-*    Find and select the ``.ZIP`` file you downloaded from the `SourceIO <https://github.com/REDxEYE/SourceIO>`_ releases page.
-*    Click on the check box to enable it.
+*    Download `GCFScape <https://nemstools.github.io/pages/GCFScape-Download.html>`_, and `SourceIO <https://github.com/REDxEYE/SourceIO>`_. Install SourceIO into Blender, instructions listed in :ref:`tf2_v_installingprograms`
 *    Go to ``[game_directory] / tf`` and open the file called ``tf2_misc_dir.vpk``. It should open through GCFScape.
 *    In GCFScape, right Click the ``Models`` folder, click :guilabel:`Extract`, and Extract it to ``[game_directory] / tf``. You can drag and drop as well but it is considerably laggier to do so.
-*    Still in GCFScape, go to the ``Materials`` folder. Inside of it there should be another folder called ``Models``. Extract this to ``[game_directory] / tf`` as well.
-*    Once extracted, you may close GCFScape and open another file called ``tf2_textures_dir.vpk``. There should be another folder inside called ``Models``. Extract this to ``[game_directory] / tf``.
+*    Then in GCFScape, go to the ``Materials`` folder. Inside of it there should be another folder called ``Models``. Extract this to ``[game_directory] / tf`` as well.
+*    Once extracted, you may close GCFScape and open another file called ``tf2_textures_dir.vpk``. It should open in GCFSCape. There should be another folder inside called ``Models``. Extract this to ``[game_directory] / tf``.
 | All of that was for setting things up. Once that's completed, all you have to do for bringing a Model in is to open Blender, click :guilabel:`File` > :guilabel:`⤓ Import` > :guilabel:`Source Engine Assets` > :guilabel:`Source model (.mdl)`, and choose the ``.MDL`` file you're after inside the ``Models`` folder. It should have textures set up and everything. The above steps don't have to be repeated.
 
 .. _tf2_v_characterandrig:
@@ -210,8 +259,8 @@ Method
 Character and Rig
 -----------------
 
-| :ref:`characterandrig_method1` is easier to do as, the work is already done. `Hisanimations <https://youtube.com/c/hisanimations>`_ from the `TF2 Blender Discord server <https://discord.gg/zHC2gJW>`_ has already made a fully working Character Ports file that you can use for yourself. His `YouTube video <https://youtu.be/0DMz-n1LSII>`_ explains what it is and how to use it. If you have questions or need help with this port, join the `Discord server <https://discord.gg/zHC2gJW>`_ to get help. Using this is recommended in most cases, but if you intend on animating, and especially for long animation work, then :ref:`characterandrig_method2` is recommended, as it gives significantly better performance in animations.
-| :ref:`characterandrig_method2` is to extract all the Characters and Rigs from the actual game. Three tools are used. It's definitely not as simple as the other method. You should only do this if you'll be doing animations and need the most viewport performance. You can still animate with method 1, it won't be as fast as it could be.
+| :ref:`characterandrig_method1` is easier to do as, the work is already done. `Hisanimations <https://youtube.com/c/hisanimations>`_ from the `TF2 Blender Discord server <https://discord.gg/zHC2gJW>`_ has already made a fully working Character Ports file that you can use for yourself. His `YouTube video <https://youtu.be/0DMz-n1LSII>`_ explains what it is and how to use it. If you have questions or need help with this port, join the `Discord server <https://discord.gg/zHC2gJW>`_ to get help. Using this is recommended in most cases, but if you intend on animating, and especially for long or intense animation work, then :ref:`characterandrig_method2` is recommended, as it gives significantly better framerate in animations.
+| :ref:`characterandrig_method2` is to extract all the Characters and Rigs from the actual game. Three tools are used. It's definitely not as simple as the other method. You should only do this if you'll be doing animations and need the maximum performance. You can still animate with method 1, it won't be as fast as it could be.
 | :ref:`characterandrig_method2` requires a functioning copy of Team Fortress 2 and a recent copy of Blender. You don't need a copy of the game for method 1. 
 
 .. _characterandrig_method1:
@@ -231,10 +280,8 @@ Method 2 (Alternate)
 Summary of Method 2
 """""""""""""""""""
 
-| This summary is a smaller guide to come back to so you don't have to read the entire thing if you're doing the process again.
-
 *    Download GCFScape, Blender Source Tools, and Crowbar. Install Blender Source Tools as an Add-on into Blender. (This step is only necessary for first time use).
-*    Extract the necessary class files into a folder of your choice.
+*    Extract the necessary class files from ``tf2_misc_dir.vpk`` into a folder of your choice. (This step is only necessary for first time use).
 *    Open the ``.MDL`` file in Crowbar and Decompile it into another folder.
 *    Use Blender Source Tools to import the ``.QC`` file
 *    Remove or hide any unnecessary objects such as the hitbox or extra LOD models.
@@ -247,8 +294,9 @@ Full Guide of Method 2
 .. note::
 
     | If you want better quality models, you'll have to find your SFM game folder (the same way as you found your TF2 game folder). Within that are files under a directory called ``tf_movies``. The character models under this directory are much higher quality than the ones which can be found within TF2's own files, and if you have SFM installed or know someone who has it installed, it's highly recommended to use these instead. You barely lose performance when using these. If you're going this route, you'll know you did it right when the Crowbar decompiled files have SFM in their names.
+    | The process is the same, the files are just a bit different. The Hisanimations port in :ref:`characterandrig_method1` uses the SFM models.
 
-*    Download `GCFScape <https://nemstools.github.io/pages/GCFScape-Download.html>`_, `Crowbar <https://steamcommunity.com/groups/CrowbarTool>`_, and `Blender Source Tools <https://developer.valvesoftware.com/wiki/Blender_Source_Tools>`_.
+*    Download `GCFScape <https://nemstools.github.io/pages/GCFScape-Download.html>`_, `Crowbar <https://steamcommunity.com/groups/CrowbarTool>`_, and `Blender Source Tools <https://developer.valvesoftware.com/wiki/Blender_Source_Tools>`_. Instructions for installing are under :ref:`tf2_v_installingprograms`.
 *    Go to ``[game_directory] / tf`` and open the file called ``tf2_misc_dir.vpk``. It should open through GCFScape.
 *    Go to ``models / player / hwm``. You'll find a bunch of files with the class names. These are models used in game. If you're using the SFM files, only the specific directories differ but the process is the same, so continue reading.
 *    Extract all files with the same name (For example, if you want to import Heavy, then extract all files starting with the name ``heavy_``) to a new folder.
@@ -256,11 +304,7 @@ Full Guide of Method 2
 *    For the Output Folder, make a new folder or choose an existing one to Decompile to.
 *    You don't need to change any settings, but do make sure that the checkbox :guilabel:`QC File` is enabled.
 *    Click :guilabel:`Decompile` in the bottom left.
-*    In Blender, go into :guilabel:`Edit` > :guilabel:`Preferences`.
-*    In the Add-ons menu, click on the :guilabel:`⤓ Install...` button.
-*    Select the ``.ZIP`` file you downloaded from the `Blender Source Tools <https://developer.valvesoftware.com/wiki/Blender_Source_Tools>`_ page.
-*    Click on the check box to enable it.
-*    Finally, In Blender, go into :guilabel:`File` > :guilabel:`Import` > :guilabel:`Source Engine (.smd, .vta, .dmx, .qc)`.
+*    Finally, In Blender, go into :guilabel:`File` > :guilabel:`Import` > :guilabel:`Source Engine (.smd, .vta, .dmx, .qc)` (Make sure Blender Source Tools is installed).
 *    Go to the folder where ``Crowbar`` Decompiled the files. In there you should find multiple files, click on the one that ends with ``.QC``.
 *    If everything was done right, you should now have the model in Blender with a fully working rig.
 
@@ -268,7 +312,8 @@ Full Guide of Method 2
 
 .. note::
 
-    | If you used TF2's in-game files, then inside GCFScape when you're extracting the files, you might have noticed that similar files were also under ``models / player``. The difference between these files and the ones inside ``models / player / hwm`` is only of the mouth supposedly having HWM properties. HWM, or HardWare Morph System, is used by VALVe for facial reflexes and stuff. But according to Hisanimations, they aren't used in TF2, despite their files being present. Whether you use files under ``models / player`` or ``models / player / hwm``, won't matter. Other than the mouth, both have the exact same mesh and their quality will be the same.
+    | If you used TF2's in-game files, then inside GCFScape when you're extracting the files from ``tf2_misc_dir.vpk``, you might have noticed that similar files were also under ``models / player``. The difference between these files and the ones inside ``models / player / hwm`` is only of the mouth supposedly having HWM properties. HWM, or HardWare Morph System, is used by VALVe for facial reflexes and stuff. But according to Hisanimations, they aren't used in TF2, despite their files being present. Whether you use files under ``models / player`` or ``models / player / hwm``, won't matter. Other than the mouth, both have the exact same mesh and their quality will be the same.
+    | Again, as mentioned earlier, if you want better quality models, you need to get the files from ``tf_movies`` from SFM.
 
 .. _tf2_v_animations:
 
@@ -288,7 +333,23 @@ Animations
 Method
 ^^^^^^
 
-*    Download `GCFScape <https://nemstools.github.io/pages/GCFScape-Download.html>`_, `Crowbar <https://steamcommunity.com/groups/CrowbarTool>`_, and `Blender Source Tools <https://developer.valvesoftware.com/wiki/Blender_Source_Tools>`_.
+.. _animations_method1_summary:
+
+Summary of Method
+"""""""""""""""""
+
+*    Download GCFScape, Blender Source Tools, and Crowbar. Install Blender Source Tools as an Add-on into Blender. (This step is only necessary for first time use).
+*    Extract the necessary class files from ``tf2_misc_dir.vpk`` into a folder of your choice. (This step is only necessary for first time use).
+*    Open the appropriate ``.MDL`` file in Crowbar and Decompile it into another folder.
+*    Use Blender Source Tools to import the ``.QC`` file
+*    Remove or hide any unnecessary objects such as the hitbox or extra LOD models.
+
+.. _characterandrig_method1_detailed:
+
+Full Guide of Method
+""""""""""""""""""""
+
+*    Download `GCFScape <https://nemstools.github.io/pages/GCFScape-Download.html>`_, `Crowbar <https://steamcommunity.com/groups/CrowbarTool>`_, and `Blender Source Tools <https://developer.valvesoftware.com/wiki/Blender_Source_Tools>`_. Instructions for installing are under :ref:`tf2_v_installingprograms`.
 *    Go to ``[game_directory] / tf`` and open the file called ``tf2_misc_dir.vpk``. It should open through GCFScape.
 *    From GCFScape, extract the ``models`` folder to ``[game_directory] / tf`` 
 *    Close GCFScape. Go to the folder you just extracted, which is``models``, and go to the ``player`` folder. Copy ``(class)_animations.mdl`` to another location, preferably a new folder. This is the file that holds almost all animation data for that specific class.
@@ -296,13 +357,9 @@ Method
 *    Open Crowbar, and go to the :guilabel:`Decompile` tab. For the ``MDL`` file, select the ``.MDL`` from the files you just extracted through GCFScape.
 *    For the Output Folder, make a new folder or choose an existing one to Decompile to.
 *    You don't need to change any settings, click :guilabel:`Decompile` in the bottom left. If done right, the folder should have a very large amount of ``.SMD`` files.
-*    In Blender, go into :guilabel:`Edit` > :guilabel:`Preferences`.
-*    In the Add-ons menu, click on the :guilabel:`⤓ Install...` button.
-*    Select the ``.ZIP`` file you downloaded from the `Blender Source Tools <https://developer.valvesoftware.com/wiki/Blender_Source_Tools>`_ page.
-*    Click on the check box to enable it.
 *    Finally, In Blender, click on the specific skeleton you want to apply an animation to (You do have to import the Character first. You can't just bring the animation into an empty scene.)
-*    Go into :guilabel:`File` > :guilabel:`Import` > :guilabel:`Source Engine (.smd, .vta, .dmx, .qc)`.
-*    Go to the folder where ``Crowbar`` Decompiled the files. In there you should find multiple files, all with a lot of names. Find the one that you're after, and import it.
+*    After that, go into :guilabel:`File` > :guilabel:`Import` > :guilabel:`Source Engine (.smd, .vta, .dmx, .qc)`.
+*    Go to the folder where Crowbar Decompiled the files. In there you should find multiple files, all with a lot of names. Find the one that you're after, and import it.
 *    If everything was done right, the Timeline in Blender should adjust itself and by pressing play, the Animation should be visible.
 
 .. note::
@@ -321,4 +378,5 @@ Weapons and Cosmetics
 
 Sound effects & Voice lines
 ---------------------------
+
 | Download `GCFScape <https://nemstools.github.io/pages/GCFScape-Download.html>`_. With GCFScape, open ``tf2_sound_vo_english_dir.vpk`` for voice lines, and ``tf2_sound_misc.vpk`` for sound effects, both located in ``[game_directory] / tf``, to search for whatever you're after. You can extract it then browse it or just go through it directly in GCFScape.

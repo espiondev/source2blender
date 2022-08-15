@@ -19,7 +19,7 @@ Installing Programs
 .. _install_bst:
 
 Installing Blender Source Tools
-"""""""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 *    Download `Blender Source Tools <http://steamreview.org/BlenderSourceTools>`_, it's a ``.ZIP`` file. Don't open or extract it. Make sure your Blender version is up to date, the download link says it's supported for versions 2.92 and higher.
 *    In Blender, go into :guilabel:`Edit` > :guilabel:`Preferences`.
@@ -32,7 +32,7 @@ Installing Blender Source Tools
 .. _install_Plumber:
 
 Installing Plumber
-""""""""""""""""""
+^^^^^^^^^^^^^^^^^^
 
 *    Go to the `Plumber <https://github.com/lasa01/io_import_vmf/releases>`_ download page, click on the big bold text in front that says Plumber. Scroll down, download the ``.ZIP`` that's appropriate for your system. It's available for MacOS, Linux, and Windows. Do not extract or open the ``.ZIP`` when downloaded.
 *    Make sure your Blender Version is up to date. The site says it supports 2.82 and higher but for compatibility with Blender Source Tools, make sure you have 2.92 or higher.
@@ -47,7 +47,7 @@ Installing Plumber
 .. _install_sourceio:
 
 Installing SourceIO
-"""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^
 
 *    Go to the `SourceIO <https://github.com/REDxEYE/SourceIO/releases>`_ download page, click on the big bold text that says SourceIO. Scroll down, download the file called ``SourceIO.zip``. Do not extract or open the ``.ZIP`` when downloaded.
 *    In Blender, go into :guilabel:`Edit` > :guilabel:`Preferences`.
@@ -60,7 +60,7 @@ Installing SourceIO
 .. _install_nonaddons:
 
 Installing GCFScape, Crowbar, BSPSource
-"""""""""""""""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 | These programs are either unpacked into folders or have an installer. Just go to their download links by clicking their names in the section they're referred to. They're programs that run outside Blender, and not as addons.
 
@@ -98,7 +98,7 @@ Full Guide of Method 1
 .. note::
     Always get the most recent version of a program or Add-on linked here.
 
-| `Blender Source Tools <http://steamreview.org/BlenderSourceTools>`_, `Blender Source Tools <https://developer.valvesoftware.com/wiki/Blender_Source_Tools>`_, and `Plumber <https://github.com/lasa01/io_import_vmf/releases>`_ will be used for Method 1. The steps to install these can be seen at the :ref:`tf2_v_installingprograms` section. (Plumber was originally called io_import_vmf. This new creation is currently in Beta but significantly superior to io_import_vmf and that's why we've linked the page to download that instead.)
+| `Blender Source Tools <http://steamreview.org/BlenderSourceTools>`_, `BSPSource <https://developer.valvesoftware.com/wiki/BSPSource>`_, and `Plumber <https://github.com/lasa01/io_import_vmf/releases>`_ will be used for Method 1. The steps to install these can be seen at the :ref:`tf2_v_installingprograms` section. (Plumber was originally called io_import_vmf. This new creation is currently in Beta but significantly superior to io_import_vmf and that's why we've linked the page to download that instead.)
 
 | To start off, we need to make sure the map is even usable in the first place. Some maps are compressed beyond readability for BSPSource (Usually newer ones). To fix that, you need to repack it.
 
@@ -237,17 +237,17 @@ Method
 Summary of Method
 """""""""""""""""
 
-*    Download GCFScape, SourceIO. Install SourceIO into Blender.
+*    Download GCFScape, and SourceIO. Install SourceIO into Blender.
 *    Extract the necessary files from ``tf2_misc_dir.vpk`` and ``tf2_textures_dir.vpk`` into ``[game_directory] / tf``.
 *    Use SourceIO to import ``.MDL`` file of choice from the extracted folders.
 
-.. _characterandrig_method2_detailed:
+.. _prop_method1_detailed:
 
 Full Guide of Method
 """"""""""""""""""""
 
 | The process is rather simple, it only requires a bit of setup, then the importing of the prop should be doable with a few clicks.
-*    Download `GCFScape <https://nemstools.github.io/pages/GCFScape-Download.html>`_, and `SourceIO <https://github.com/REDxEYE/SourceIO>`_. Install SourceIO into Blender, instructions listed in :ref:`tf2_v_installingprograms`
+*    Download `GCFScape <https://nemstools.github.io/pages/GCFScape-Download.html>`_, and `SourceIO <https://github.com/REDxEYE/SourceIO>`_. Install SourceIO into Blender (installation guide listed in :ref:`tf2_v_installingprograms`)
 *    Go to ``[game_directory] / tf`` and open the file called ``tf2_misc_dir.vpk``. It should open through GCFScape.
 *    In GCFScape, right Click the ``Models`` folder, click :guilabel:`Extract`, and Extract it to ``[game_directory] / tf``. You can drag and drop as well but it is considerably laggier to do so.
 *    Then in GCFScape, go to the ``Materials`` folder. Inside of it there should be another folder called ``Models``. Extract this to ``[game_directory] / tf`` as well.
@@ -344,7 +344,7 @@ Summary of Method
 *    Use Blender Source Tools to import the ``.QC`` file
 *    Remove or hide any unnecessary objects such as the hitbox or extra LOD models.
 
-.. _characterandrig_method1_detailed:
+.. _animations_method1_detailed:
 
 Full Guide of Method
 """"""""""""""""""""
@@ -364,7 +364,7 @@ Full Guide of Method
 
 .. note::
 
-    | In some cases, you may find two identically named files, one name starting with taunt_ and the other name starting with layer_taunt_. These are different files. As of writing, it is uncertain which is the one to use but, if one file doesn't give the wanted results, try the other. Also, not every animation is guaranteed to work, even if it's not an Additive taunt.
+    | In some cases, you may find two identically named files, one name starting with "taunt_" and the other name starting with layer_taunt_. These are different files. As of writing, it is uncertain which is the one to use but, if one file doesn't give the wanted results, try the other. Also, not every animation is guaranteed to work, even if it's not an Additive taunt.
     | Animations are designed to be played back at 30fps or 24fps. You can use the NLA Editor to change the speed of the animation.
     
 .. _tf2_v_weaponsandcosmetics:

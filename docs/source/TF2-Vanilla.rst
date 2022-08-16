@@ -259,9 +259,10 @@ Full Guide of Method
 Character and Rig
 -----------------
 
-| :ref:`characterandrig_method1` is easier to do as, the work is already done. `Hisanimations <https://youtube.com/c/hisanimations>`_ from the `TF2 Blender Discord server <https://discord.gg/zHC2gJW>`_ has already made a fully working Character Ports file that you can use for yourself. His `YouTube video <https://youtu.be/0DMz-n1LSII>`_ explains what it is and how to use it. If you have questions or need help with this port, join the `Discord server <https://discord.gg/zHC2gJW>`_ to get help. Using this is recommended in most cases, but if you intend on animating, and especially for long or intense animation work, then :ref:`characterandrig_method2` is recommended, as it gives significantly better framerate in animations.
-| :ref:`characterandrig_method2` is to extract all the Characters and Rigs from the actual game. Three tools are used. It's definitely not as simple as the other method. You should only do this if you'll be doing animations and need the maximum performance. You can still animate with method 1, it won't be as fast as it could be.
-| :ref:`characterandrig_method2` requires a functioning copy of Team Fortress 2 and a recent copy of Blender. You don't need a copy of the game for method 1. 
+| :ref:`characterandrig_method1` is the best of these as, the work is already done. `Hisanimations <https://youtube.com/c/hisanimations>`_ from the `TF2 Blender Discord server <https://discord.gg/zHC2gJW>`_ has already made a fully working Character Ports file that you can use for yourself. His `YouTube video <https://youtu.be/0DMz-n1LSII>`_ explains what it is and how to use it. If you have questions or need help with this port, join the `Discord server <https://discord.gg/zHC2gJW>`_ to get help. Using this is recommended in most cases, but if you intend on animating, and especially for long or intense animation work, then :ref:`characterandrig_method2` is recommended, as it gives significantly better framerate in animations.
+| :ref:`characterandrig_method2` is to get the stuff directly from the in-game files. This method is recommended if you're going to do very long and extensive animation work, and need the maximum possible performance. You can still animate completely fine with :ref:`characterandrig_method1`, but this one just gives a much higher FPS number. It does have more work involved though.
+| :ref:`characterandrig_method3` is similar to :ref:`characterandrig_method2` but not recommended unless you for some reason don't need the textures. The one thing it has that :ref:`characterandrig_method1` and :ref:`characterandrig_method2` don't have, is LODs. Three tools are used. It's definitely not as simple as the other methods. This method exists more as a way to only get the mesh and wanting to do the textures yourself. Textures WILL NOT AUTOMATICALLY WORK with this method, hence why it is Not Recommended. You'll have to find the textures on your own and apply them.
+| :ref:`characterandrig_method2` and :ref:`characterandrig_method3` require a functioning copy of Team Fortress 2 and a recent copy of Blender. You don't need a copy of the game for method 1. 
 
 .. _characterandrig_method1:
 
@@ -280,10 +281,9 @@ Method 2 (Alternate)
 Summary of Method 2
 """""""""""""""""""
 
-*    Download GCFScape, Blender Source Tools, and Crowbar. Install Blender Source Tools as an Add-on into Blender. (This step is only necessary for first time use).
+*    Download GCFScape, and SourceIO. Install SourceIO as an Add-on into Blender. (This step is only necessary for first time use).
 *    Extract the necessary class files from ``tf2_misc_dir.vpk`` into a folder of your choice. (This step is only necessary for first time use).
-*    Open the ``.MDL`` file in Crowbar and Decompile it into another folder.
-*    Use Blender Source Tools to import the ``.QC`` file
+*    Import the ``.MDL`` from :guilabel:`File` > :guilabel:`Import` > :guilabel:`Source Engine Assets` > :guilabel:`Source Model (.mdl)`.
 *    Remove or hide any unnecessary objects such as the hitbox or extra LOD models.
 
 .. _characterandrig_method2_detailed:
@@ -291,10 +291,42 @@ Summary of Method 2
 Full Guide of Method 2
 """"""""""""""""""""""
 
+*    Download `GCFScape <https://nemstools.github.io/pages/GCFScape-Download.html>`_, and `SourceIO <https://github.com/REDxEYE/SourceIO>`_. Instructions for installing are under :ref:`tf2_v_installingprograms`.
+*    Go to ``[game_directory] / tf`` and open the file called ``tf2_misc_dir.vpk``. It should open through GCFScape.
+*    This next step will add 2.5 GB to your game folder size, so make sure you're not low on space. Extract the ``Models`` folder into ``[game_directory] / tf``. Do not drag and drop as it can bug out. Right click the folder and click :guilabel:`Extract` so you may extract it. 
+*    Repeat the process for the folder called ``Materials``. Extract this folder into ``[game_directory] / tf``. Luckily this one uses significantly less space.
+*    Finally, In Blender, go into :guilabel:`File` > :guilabel:`Import` > :guilabel:`Source Engine Assets` > :guilabel:`Source Model (.mdl)` (Make sure SourceIO is installed).
+*    Go to ``[game_directory] / tf / models / player``. Here you'll find a bunch of files that have the names of the TF2 mercenaries, such as heavy.mdl or spy_animations.mdl, and so on. 
+*    For the class you want to import, click the ``(class).mdl``. If you want the imported model to be compatible with taunts or animations (the process of which is explained further down the page), then make sure to set the :guilabel:`World scale` to 1.
+*    If everything was done right, you should now have the model in Blender with a fully working rig and textures. Make sure to use Material Preview to confirm that the textures are functional.
+
+.. _characterandrig_method3:
+
+Method 3 (Not Recommended)
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+| Again, Textures will not automatically work with this method. All you get over the other two methods is LODs, so this is not worth doing unless you really need the LODs for some reason. You'll have to find and assign textures yourself if this is the method you want to go.
+
+.. _characterandrig_method3_summary:
+
+Summary of Method 3
+"""""""""""""""""""
+
+*    Download GCFScape, Blender Source Tools, and Crowbar. Install Blender Source Tools as an Add-on into Blender. (This step is only necessary for first time use).
+*    Extract the necessary class files from ``tf2_misc_dir.vpk`` into a folder of your choice. (This step is only necessary for first time use).
+*    Open the ``.MDL`` file in Crowbar and Decompile it into another folder.
+*    Use Blender Source Tools to import the ``.QC`` file
+*    Remove or hide any unnecessary objects such as the hitbox or extra LOD models.
+
+.. _characterandrig_method3_detailed:
+
+Full Guide of Method 3
+""""""""""""""""""""""
+
 .. note::
 
-    | If you want better quality models, you'll have to find your SFM game folder (the same way as you found your TF2 game folder). Within that are files under a directory called ``tf_movies``. The character models under this directory are much higher quality than the ones which can be found within TF2's own files, and if you have SFM installed or know someone who has it installed, it's highly recommended to use these instead. You barely lose performance when using these. If you're going this route, you'll know you did it right when the Crowbar decompiled files have SFM in their names.
-    | The process is the same, the files are just a bit different. The Hisanimations port in :ref:`characterandrig_method1` uses the SFM models.
+    | There is a way to get a higher quality mesh, by the use of SFM. You'll have to find your SFM game folder (the same way as you found your TF2 game folder). Within that are files under a directory called ``tf_movies``. The character models under this directory are much higher quality than the ones which can be found within TF2's own files, and if you have SFM installed or know someone who has it installed, it's highly recommended to use these instead. You barely lose performance when using these. If you're going this route, you'll know you did it right when the Crowbar decompiled files have SFM in their names.
+    | The process is the same, regardless of if you use the SFM Files or not. The files are just a bit different. The Hisanimations port in :ref:`characterandrig_method1` uses the SFM models.
 
 *    Download `GCFScape <https://nemstools.github.io/pages/GCFScape-Download.html>`_, `Crowbar <https://steamcommunity.com/groups/CrowbarTool>`_, and `Blender Source Tools <https://developer.valvesoftware.com/wiki/Blender_Source_Tools>`_. Instructions for installing are under :ref:`tf2_v_installingprograms`.
 *    Go to ``[game_directory] / tf`` and open the file called ``tf2_misc_dir.vpk``. It should open through GCFScape.
@@ -313,7 +345,7 @@ Full Guide of Method 2
 .. note::
 
     | If you used TF2's in-game files, then inside GCFScape when you're extracting the files from ``tf2_misc_dir.vpk``, you might have noticed that similar files were also under ``models / player``. The difference between these files and the ones inside ``models / player / hwm`` is only of the mouth supposedly having HWM properties. HWM, or HardWare Morph System, is used by VALVe for facial reflexes and stuff. But according to Hisanimations, they aren't used in TF2, despite their files being present. Whether you use files under ``models / player`` or ``models / player / hwm``, won't matter. Other than the mouth, both have the exact same mesh and their quality will be the same.
-    | Again, as mentioned earlier, if you want better quality models, you need to get the files from ``tf_movies`` from SFM.
+    | Again, as mentioned earlier, if you want better quality models, you need to get the files from ``tf_movies`` from SFM, or just use :ref:`characterandrig_method1` for the highest quality models and ease of use.
 
 .. _tf2_v_animations:
 
@@ -321,6 +353,7 @@ Animations
 ----------
 
 | Regardless of what method you use to import the TF2 characters and their appropriate rigs, be it the Hisanimations port, or the TF2 in game models, or the SFM models, all use the same method for applying in-game animations. There's no other method hence only one method is listed. However, for the Hisanimations port, you do have to make sure you get the one that's compatible with taunts. That one is available under the ``#community-ports`` channel of the `TF2 Blender Discord server <https://discord.gg/zHC2gJW>`_.
+| This is a bit long and tedious so, make sure to follow every step carefully, but at least you won't have to do these animations yourself from scratch. The method works.
 | 
 
 .. note::

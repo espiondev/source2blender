@@ -26,3 +26,8 @@ Contents
    index
    TF2-Vanilla
    TF2-Workshop
+
+extensions = [
+    'sphinx.ext.autosectionlabel'
+]
+autosectionlabel_prefix_document = True

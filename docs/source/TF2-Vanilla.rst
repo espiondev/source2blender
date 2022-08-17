@@ -279,7 +279,7 @@ Character and Rig
 Method 1 (Recommended)
 ^^^^^^^^^^^^^^^^^^^^^^
 
-| Watch the `Hisanimations' TF2 Blender Character port <https://youtu.be/7rH6_eq-I0c>`_ video and follow the instructions.
+| Watch the `Hisanimations TF2 Blender Character port <https://youtu.be/7rH6_eq-I0c>`_ video and follow the instructions.
 
 .. _characterandrig_method2:
 

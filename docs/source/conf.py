@@ -37,3 +37,9 @@ html_css_files = [
 
 # -- Options for EPUB output
 epub_show_urls = "footnote"
+
+# -- Used for allowing cross-referencing, added as solution from: https://stackoverflow.com/questions/15394347/adding-a-cross-reference-to-a-subheading-or-anchor-in-another-page
+extensions = [
+    'sphinx.ext.autosectionlabel'
+]
+autosectionlabel_prefix_document = True

@@ -410,7 +410,7 @@ Full Guide of Method
 
 .. note::
 
-    | In some cases, you may find two identically named files, one name starting with "taunt_" and the other name starting with layer_taunt_. These are different files. As of writing, it is uncertain which is the one to use but, if one file doesn't give the wanted results, try the other. Also, not every animation is guaranteed to work, even if it's not an Additive taunt.
+    | In some cases, you may find two identically named files, one name starting with ``taunt_`` and the other name starting with ``layer_taunt_``. These are different files. As of writing, it is uncertain which is the one to use but, if one file doesn't give the wanted results, try the other. Also, not every animation is guaranteed to work, even if it's not an Additive one.
     | Animations are designed to be played back at 30fps or 24fps. You can use the NLA Editor to change the speed of the animation.
     
 .. _tf2_v_weaponsandcosmetics:

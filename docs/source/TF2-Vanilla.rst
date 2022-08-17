@@ -127,7 +127,7 @@ Convert a .BSP to .VMF
 
 *    Download `BSPSource <https://developer.valvesoftware.com/wiki/BSPSource>`_ and extract it. Make sure to extract all files.
 *    Run ``bspsrc.jar``
-*    There's many options in the program. For now, just click the button for :guilabel:`Add`, and browse to your TF2 folder. From there, go to ``[game_directory] / tf / maps`` and choose the specific ``.BSP`` (map file) you want to convert.
+*    There's many options in the program. For now, just click the button for :guilabel:`Add`, and browse to your TF2 folder. From there, if you repacked a file using EspionRepacker, go to the folder where the Output file is and select it. Otherwise, go to ``[game_directory] / tf / maps`` and choose the specific ``.BSP`` (map file) you want to convert.
 *    Go to the :guilabel:`Other` tab in BSPSource, and enable the checkbox labelled :guilabel:`Extract Embedded Files`.
 *    Once that's done, just click the :guilabel:`Decompile` button in the bottom right, there's no need to edit the other settings, though you're free to play around if you know what you're doing.
 *    A file browser will show up for where to put the ``.VMF`` file. You can choose any location, but it's best if it's a place you can easily come back to.
@@ -225,14 +225,23 @@ Finishing Touches (Both Methods)
 Individual Props
 ----------------
 
-| This section is written as a way to obtain individual props that are universally used in maps stored in the TF2 files, such as Barrels, Control Points, or Gates. Some maps will have props that aren't used universally, and are exclusive to them. In this case it's best to just import the map, find the prop, and separate it.
+| This section is written as a way to obtain individual props that are universally used in maps stored in the TF2 files, such as Barrels, Control Points, or Gates. Some maps will have props that aren't used universally, and are exclusive to them. These can still be obtained with both methods.
+| :ref:`prop_method1` is the better of the two as, the work is already done. `Hisanimations <https://youtube.com/c/hisanimations>`_ from the `TF2 Blender Discord server <https://discord.gg/zHC2gJW>`_ has already made a fully working Props, Weapons, and Cosmetics Ports file that you can use for yourself. His `YouTube video <https://youtu.be/0DMz-n1LSII>`_ explains what it is and how to use it. If you have questions or need help with this port, join the `Discord server <https://discord.gg/zHC2gJW>`_ to get help.
+| :ref:`prop_method1` is also significantly more space effective. The download of it takes up ``5.2 GB`` while doing it using ``prop_method2`` will add ``7.7 GB`` to your TF2 game directory.
 
 .. _prop_method1:
 
-Method
-^^^^^^
+Method 1 (Recommended)
+^^^^^^^^^^^^^^^^^^^^^^
 
-.. _prop_method1_summary:
+| Watch the `Hisanimations TF2 Blender Prop, Cosmetics, Weapons port <https://youtu.be/0DMz-n1LSII>`_ video and follow the instructions.
+
+.. _prop_method2:
+
+Method 2 (Alternate)
+^^^^^^^^^^^^^^^^^^^^
+
+.. _prop_method2_summary:
 
 Summary of Method
 """""""""""""""""
@@ -241,7 +250,7 @@ Summary of Method
 *    Extract the necessary files from ``tf2_misc_dir.vpk`` and ``tf2_textures_dir.vpk`` into ``[game_directory] / tf``.
 *    Use SourceIO to import ``.MDL`` file of choice from the extracted folders.
 
-.. _prop_method1_detailed:
+.. _prop_method2_detailed:
 
 Full Guide of Method
 """"""""""""""""""""
@@ -249,9 +258,10 @@ Full Guide of Method
 | The process is rather simple, it only requires a bit of setup, then the importing of the prop should be doable with a few clicks.
 *    Download `GCFScape <https://nemstools.github.io/pages/GCFScape-Download.html>`_, and `SourceIO <https://github.com/REDxEYE/SourceIO>`_. Install SourceIO into Blender (installation guide listed in :ref:`tf2_v_installingprograms`)
 *    Go to ``[game_directory] / tf`` and open the file called ``tf2_misc_dir.vpk``. It should open through GCFScape.
-*    In GCFScape, right Click the ``Models`` folder, click :guilabel:`Extract`, and Extract it to ``[game_directory] / tf``. You can drag and drop as well but it is considerably laggier to do so.
-*    Then in GCFScape, go to the ``Materials`` folder. Inside of it there should be another folder called ``Models``. Extract this to ``[game_directory] / tf`` as well.
-*    Once extracted, you may close GCFScape and open another file called ``tf2_textures_dir.vpk``. It should open in GCFSCape. There should be another folder inside called ``Models``. Extract this to ``[game_directory] / tf``.
+*    In GCFScape, right Click the ``Models`` folder, click :guilabel:`Extract`, and Extract it to ``[game_directory] / tf``. Don't try to Drag and Drop as it's extremely laggy and buggy. The extraction will be 2.5 GB in size so make sure you have the space for it.
+*    After that, go back a step, then go into the ``Materials`` folder. Inside of this is another folder called ``Models``. Extract this to ``[game_directory] / tf`` as well.
+*    Close GCFScape. Go to ``[game_directory] / tf`` and open the file called ``tf2_textures_dir.vpk``. It should open through GCFScape, just like the previous ``.VPK`` file.
+*    This next step will add ``5.3 GB`` to your game folder size, so make sure you're not low on space. There should be only one folder inside, called ``Materials``. Open this, then find the ``Models`` folder. Extract this folder to ``[game_directory] / tf``. You can now close GCFScape.
 | All of that was for setting things up. Once that's completed, all you have to do for bringing a Model in is to open Blender, click :guilabel:`File` > :guilabel:`⤓ Import` > :guilabel:`Source Engine Assets` > :guilabel:`Source model (.mdl)`, and choose the ``.MDL`` file you're after inside the ``Models`` folder. It should have textures set up and everything. The above steps don't have to be repeated.
 
 .. _tf2_v_characterandrig:
@@ -269,7 +279,7 @@ Character and Rig
 Method 1 (Recommended)
 ^^^^^^^^^^^^^^^^^^^^^^
 
-| Watch `Hisanimations' TF2 Blender port <https://youtu.be/7rH6_eq-I0c>`_ and follow the instructions.
+| Watch the `Hisanimations' TF2 Blender Character port <https://youtu.be/7rH6_eq-I0c>`_ video and follow the instructions.
 
 .. _characterandrig_method2:
 
@@ -293,12 +303,15 @@ Full Guide of Method 2
 
 *    Download `GCFScape <https://nemstools.github.io/pages/GCFScape-Download.html>`_, and `SourceIO <https://github.com/REDxEYE/SourceIO>`_. Instructions for installing are under :ref:`tf2_v_installingprograms`.
 *    Go to ``[game_directory] / tf`` and open the file called ``tf2_misc_dir.vpk``. It should open through GCFScape.
-*    This next step will add 2.5 GB to your game folder size, so make sure you're not low on space. Extract the ``Models`` folder into ``[game_directory] / tf``. Do not drag and drop as it can bug out. Right click the folder and click :guilabel:`Extract` so you may extract it. 
-*    Repeat the process for the folder called ``Materials``. Extract this folder into ``[game_directory] / tf``. Luckily this one uses significantly less space.
-*    Finally, In Blender, go into :guilabel:`File` > :guilabel:`Import` > :guilabel:`Source Engine Assets` > :guilabel:`Source Model (.mdl)` (Make sure SourceIO is installed).
-*    Go to ``[game_directory] / tf / models / player``. Here you'll find a bunch of files that have the names of the TF2 mercenaries, such as heavy.mdl or spy_animations.mdl, and so on. 
+*    This next step will add ``2.5 GB`` to your game folder size, so make sure you're not low on space. Extract the ``Models`` folder into ``[game_directory] / tf``. Do not drag and drop as it can bug out. Right click the folder and click :guilabel:`Extract` so you may extract it. Once done, close GCFScape.
+*    In Blender, go into :guilabel:`File` > :guilabel:`Import` > :guilabel:`Source Engine Assets` > :guilabel:`Source Model (.mdl)` (Make sure SourceIO is installed).
+*    Go to ``[game_directory] / tf / models / player``. Here you'll find a bunch of files that have the names of the TF2 mercenaries, such as heavy.mdl or spy_animations.mdl, and so on. Only focus on the one that doesn't have animations in the name, the other files are for the :ref:`tf2_v_animations` section.
 *    For the class you want to import, click the ``(class).mdl``. If you want the imported model to be compatible with taunts or animations (the process of which is explained further down the page), then make sure to set the :guilabel:`World scale` to 1.
 *    If everything was done right, you should now have the model in Blender with a fully working rig and textures. Make sure to use Material Preview to confirm that the textures are functional.
+
+.. note::
+
+    | This process is identical to that used in :ref:`prop_method2`, but needs less files to be extracted. As for why, we don't know. SourceIO is very mysterious.
 
 .. _characterandrig_method3:
 
@@ -384,7 +397,7 @@ Full Guide of Method
 
 *    Download `GCFScape <https://nemstools.github.io/pages/GCFScape-Download.html>`_, `Crowbar <https://steamcommunity.com/groups/CrowbarTool>`_, and `Blender Source Tools <https://developer.valvesoftware.com/wiki/Blender_Source_Tools>`_. Instructions for installing are under :ref:`tf2_v_installingprograms`.
 *    Go to ``[game_directory] / tf`` and open the file called ``tf2_misc_dir.vpk``. It should open through GCFScape.
-*    From GCFScape, extract the ``models`` folder to ``[game_directory] / tf`` 
+*    From GCFScape, extract the ``models`` folder to ``[game_directory] / tf``. If you've already done this step from previous guides, there's no need to do it again. Otherwise, make sure you have space, as this step will add 2.5 GB to your TF2 folder.
 *    Close GCFScape. Go to the folder you just extracted, which is``models``, and go to the ``player`` folder. Copy ``(class)_animations.mdl`` to another location, preferably a new folder. This is the file that holds almost all animation data for that specific class.
 *    Repeat the process for the ``.MDL`` present in ``models / workshop / player / animations``. Just in case the specific animation can't be found in that first ``.MDL`` file, we'll get the remaining ones from here too.
 *    Open Crowbar, and go to the :guilabel:`Decompile` tab. For the ``MDL`` file, select the ``.MDL`` from the files you just extracted through GCFScape.
@@ -405,7 +418,7 @@ Full Guide of Method
 Weapons and Cosmetics
 ---------------------
 
-| `Hisanimations <https://youtube.com/c/hisanimations>`_ made a `video <https://youtu.be/0DMz-n1LSII>`_ explaining how to use his TF2 collection with every TF2 weapon, cosmetic, and prop. 
+| `Hisanimations <https://youtube.com/c/hisanimations>`_ made a `video <https://youtu.be/0DMz-n1LSII>`_ explaining how to use his TF2 collection with every TF2 weapon, cosmetic, and prop. Watch the video and follow the instructions.
 
 .. _tf2_v_soundeffectsvoices:
 

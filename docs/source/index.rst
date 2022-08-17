@@ -14,7 +14,7 @@ Source2Blender documentation
 
 Credit
 ------
-This documentation was made by `Woha <https://github.com/WilliamWoha>`_ and `Hisanimations <https://github.com/hisprofile>`_ and was adapted to ReadTheDocs by Spy (`spy-ware on Github <https://github.com/spy-ware>`_) and Woha (`WilliamWoha on GitHub <https://github.com/WilliamWoha>`_) 
+This documentation was made by `Woha <https://github.com/WilliamWoha>`_ and `Hisanimations <https://github.com/hisprofile>`_ and additional assistance from the members of the `TF2 Blender Discord server <https://discord.gg/zHC2gJW>`_. It was adapted to ReadTheDocs by Spy (`spy-ware on Github <https://github.com/spy-ware>`_) and Woha (`WilliamWoha on GitHub <https://github.com/WilliamWoha>`_) 
 
 
 Contents
@@ -24,10 +24,8 @@ Contents
    :maxdepth: 1
 
    index
+   installingprograms
    TF2-Vanilla
    TF2-Workshop
-
-extensions = [
-    'sphinx.ext.autosectionlabel'
-]
-autosectionlabel_prefix_document = True
+   GMod-Vanilla
+   

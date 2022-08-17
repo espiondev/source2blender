@@ -127,7 +127,7 @@ Convert a .BSP to .VMF
 
 *    Download `BSPSource <https://developer.valvesoftware.com/wiki/BSPSource>`_ and extract it. Make sure to extract all files.
 *    Run ``bspsrc.jar``
-*    There's many options in the program. For now, just click the button for :guilabel:`Add`, and browse to your TF2 folder. From there, if you repacked a file using EspionRepacker, go to the folder where the Output file is and select it. Otherwise, go to ``[game_directory] / tf / maps`` and choose the specific ``.BSP`` (map file) you want to convert.
+*    There's many options in the program. For now, just click the button for :guilabel:`Add`. From there, if you repacked a file using EspionRepacker, go to the folder where the Output file is and select it. Otherwise, go to ``[game_directory] / tf / maps`` and choose the specific ``.BSP`` (map file) you want to convert.
 *    Go to the :guilabel:`Other` tab in BSPSource, and enable the checkbox labelled :guilabel:`Extract Embedded Files`.
 *    Once that's done, just click the :guilabel:`Decompile` button in the bottom right, there's no need to edit the other settings, though you're free to play around if you know what you're doing.
 *    A file browser will show up for where to put the ``.VMF`` file. You can choose any location, but it's best if it's a place you can easily come back to.

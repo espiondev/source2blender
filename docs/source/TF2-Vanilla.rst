@@ -69,16 +69,16 @@ Installing GCFScape, Crowbar, BSPSource
 Maps and included props
 -----------------------
 
-| :ref:`map_method1` uses three tools, all linked in that section. This method is recommended as it makes the maps significantly easier to work with. All imported items are organized into collections and very easy to work with and customize.
-| :ref:`map_method2` uses only one addon, called SourceIO. It's a one click solution and way easier than :ref:`map_method1` , but the names of objects becomes messy, and there's extra cleanup required as extra objects such as the map hitbox is also imported. It's closer in looks to TF2 as it uses its own shader, so if you want the true TF2 look, then use this. :ref:`map_method1` also works fine but is better suited for applying your own style or flair to your renders and animations. 
+| :ref:`tf2_v_map_method1` uses three tools, all linked in that section. This method is recommended as it makes the maps significantly easier to work with. All imported items are organized into collections and very easy to work with and customize.
+| :ref:`tf2_v_map_method2` uses only one addon, called SourceIO. It's a one click solution and way easier than :ref:`tf2_v_map_method1` , but the names of objects becomes messy, and there's extra cleanup required as extra objects such as the map hitbox is also imported. It's closer in looks to TF2 as it uses its own shader, so if you want the true TF2 look, then use this. :ref:`tf2_v_map_method1` also works fine but is better suited for applying your own style or flair to your renders and animations. 
 | Both methods require a fully working copy of Team Fortress 2 and a recent copy of Blender. If you are unable to get these methods to work, it is recommended to use the latest version of Blender.
 
-.. _map_method1:
+.. _tf2_v_map_method1:
 
 Method 1 (Recommended)
 ^^^^^^^^^^^^^^^^^^^^^^
 
-.. _map_method1_summary:
+.. _tf2_v_map_method1_summary:
 
 Summary of Method 1
 """""""""""""""""""
@@ -90,7 +90,7 @@ Summary of Method 1
 *    Import ``.VMF`` file from :guilabel:`File` > :guilabel:`Import` > :guilabel:`Plumber` > :guilabel:`Valve Map Format (.vmf)` in Blender.
 *    Disable all lights except ``light_environment``, and set Color Profile from :guilabel:`Filmic` to :guilabel:`Standard`.
 
-.. _map_method1_detailed:
+.. _tf2_v_map_method1_detailed:
 
 Full Guide of Method 1
 """"""""""""""""""""""
@@ -102,7 +102,7 @@ Full Guide of Method 1
 
 | To start off, we need to make sure the map is even usable in the first place. Some maps are compressed beyond readability for BSPSource (Usually newer ones). To fix that, you need to repack it.
 
-.. _fix_compressed_bsp:
+.. _tf2_v_fix_compressed_bsp:
 
 Repack compressed .BSP files
 """"""""""""""""""""""""""""
@@ -116,7 +116,7 @@ Repack compressed .BSP files
 *    Navigate to ``[game directory] / bin`` for the BSPZip folder, ``[game directory] / tf / maps / [map to repack]`` as the map you want to Repack, and your output folder of choice.
 *    Click on :guilabel:`Repack` to repack your file. A folder will be generated called ``out``, and within this folder will be the ``.BSP`` file, ready to use for the next steps. 
 
-.. _convert_bsp_to_vmf:
+.. _tf2_v_convert_bsp_to_vmf:
 
 Convert a .BSP to .VMF
 """"""""""""""""""""""
@@ -139,7 +139,7 @@ Convert a .BSP to .VMF
 
     During the time that BSPSource is Decompiling the map, it will show logs of what it's doing. There is an ``Errors & Warnings`` box visible. This should be completely empty. If at any point something is shown in this box, then the process failed and needs to be done again.
 
-.. _importing_vmf:
+.. _tf2_v_importing_vmf:
 
 Bringing The Map In
 """""""""""""""""""
@@ -151,15 +151,15 @@ Bringing The Map In
 *    Then click the ``.VMF`` file, and click :guilabel:`Import`. That's it, you should have everything. 
 
 | The installation steps are not necessary to do again. It's really just as simple as, Repack ``.BSP`` if needed, Turn into ``.VMF`` with BSPSource, Bring ``.VMF`` into Blender.
-| Go to :ref:`finishing_touches` for advice on clean up and additional useful things to know about within Blender regarding these maps.
-| If you wish to familiarize yourself with the whole process, or see an overview, a :ref:`map_method1_summary` is written which you can refer to.
+| Go to :ref:`tf2_v_finishing_touches` for advice on clean up and additional useful things to know about within Blender regarding these maps.
+| If you wish to familiarize yourself with the whole process, or see an overview, a :ref:`tf2_v_map_method1_summary` is written which you can refer to.
 
-.. _map_method2:
+.. _tf2_v_map_method2:
 
 Method 2 (Alternate)
 ^^^^^^^^^^^^^^^^^^^^
 
-.. _map_method2_summary:
+.. _tf2_v_map_method2_summary:
 
 Summary of Method 2
 """""""""""""""""""
@@ -171,14 +171,14 @@ Summary of Method 2
 *    Press N under the 3D Viewport to open the sidebar, go to SourceIO, and click :guilabel:`Load Entity`.
 *    Disable all lights except ``light_environment``, and set Color Profile from :guilabel:`Filmic` to :guilabel:`Standard`.
 
-.. _map_method2_detailed:
+.. _tf2_v_map_method2_detailed:
 
 Full Guide of Method 2
 """"""""""""""""""""""
 
-`SourceIO <https://github.com/REDxEYE/SourceIO>`_ will be used for :ref:`map_method2_detailed`. The steps to install these can be seen at the :ref:`tf2_v_installingprograms` section.
+`SourceIO <https://github.com/REDxEYE/SourceIO>`_ will be used for :ref:`tf2_v_map_method2_detailed`. The steps to install these can be seen at the :ref:`tf2_v_installingprograms` section.
 
-.. _importing_bsp:
+.. _tf2_v_importing_bsp:
 
 Bringing the Map in
 """""""""""""""""""
@@ -205,7 +205,7 @@ Bringing the Map in
 .. seealso::
     For a full list of Eevee's limitations, you can consult `this page <https://docs.blender.org/manual/en/latest/render/eevee/limitations.html>`_ from Blender's official manual. 
 
-.. _finishing_touches:
+.. _tf2_v_finishing_touches:
 
 Finishing Touches (Both Methods)
 """"""""""""""""""""""""""""""""
@@ -226,22 +226,22 @@ Individual Props
 ----------------
 
 | This section is written as a way to obtain individual props that are universally used in maps stored in the TF2 files, such as Barrels, Control Points, or Gates. Some maps will have props that aren't used universally, and are exclusive to them. These can still be obtained with both methods.
-| :ref:`prop_method1` is the better of the two as, the work is already done. `Hisanimations <https://youtube.com/c/hisanimations>`_ from the `TF2 Blender Discord server <https://discord.gg/zHC2gJW>`_ has already made a fully working Props, Weapons, and Cosmetics Ports file that you can use for yourself. His `YouTube video <https://youtu.be/0DMz-n1LSII>`_ explains what it is and how to use it. If you have questions or need help with this port, join the `Discord server <https://discord.gg/zHC2gJW>`_ to get help.
-| :ref:`prop_method1` is also significantly more space effective. The download of it takes up ``5.2 GB`` while doing it using ``prop_method2`` will add ``7.7 GB`` to your TF2 game directory.
+| :ref:`tf2_v_prop_method1` is the better of the two as, the work is already done. `Hisanimations <https://youtube.com/c/hisanimations>`_ from the `TF2 Blender Discord server <https://discord.gg/zHC2gJW>`_ has already made a fully working Props, Weapons, and Cosmetics Ports file that you can use for yourself. His `YouTube video <https://youtu.be/0DMz-n1LSII>`_ explains what it is and how to use it. If you have questions or need help with this port, join the `Discord server <https://discord.gg/zHC2gJW>`_ to get help.
+| :ref:`tf2_v_prop_method1` is also significantly more space effective. The download of it takes up ``5.2 GB`` while doing it using ``prop_method2`` will add ``7.7 GB`` to your TF2 game directory.
 
-.. _prop_method1:
+.. _tf2_v_prop_method1:
 
 Method 1 (Recommended)
 ^^^^^^^^^^^^^^^^^^^^^^
 
 | Watch the `Hisanimations TF2 Blender Weapons, Cosmetics, and Props port <https://youtu.be/0DMz-n1LSII>`_ video and follow the instructions.
 
-.. _prop_method2:
+.. _tf2_v_prop_method2:
 
 Method 2 (Alternate)
 ^^^^^^^^^^^^^^^^^^^^
 
-.. _prop_method2_summary:
+.. _tf2_v_prop_method2_summary:
 
 Summary of Method
 """""""""""""""""
@@ -250,7 +250,7 @@ Summary of Method
 *    Extract the necessary files from ``tf2_misc_dir.vpk`` and ``tf2_textures_dir.vpk`` into ``[game_directory] / tf``.
 *    Use SourceIO to import ``.MDL`` file of choice from the extracted folders.
 
-.. _prop_method2_detailed:
+.. _tf2_v_prop_method2_detailed:
 
 Full Guide of Method
 """"""""""""""""""""
@@ -269,24 +269,24 @@ Full Guide of Method
 Character and Rig
 -----------------
 
-| :ref:`characterandrig_method1` is the best of these as, the work is already done. `Hisanimations <https://youtube.com/c/hisanimations>`_ from the `TF2 Blender Discord server <https://discord.gg/zHC2gJW>`_ has already made a fully working Character Ports file that you can use for yourself. His `YouTube video <https://youtu.be/0DMz-n1LSII>`_ explains what it is and how to use it. If you have questions or need help with this port, join the `Discord server <https://discord.gg/zHC2gJW>`_ to get help. Using this is recommended in most cases, but if you intend on animating, and especially for long or intense animation work, then :ref:`characterandrig_method2` is recommended, as it gives significantly better framerate in animations.
-| :ref:`characterandrig_method2` is to get the stuff directly from the in-game files. This method is recommended if you're going to do very long and extensive animation work, and need the maximum possible performance. You can still animate completely fine with :ref:`characterandrig_method1`, but this one just gives a much higher FPS number. It does have more work involved though.
-| :ref:`characterandrig_method3` is similar to :ref:`characterandrig_method2` but not recommended unless you for some reason don't need the textures. The one thing it has that :ref:`characterandrig_method1` and :ref:`characterandrig_method2` don't have, is LODs. Three tools are used. It's definitely not as simple as the other methods. This method exists more as a way to only get the mesh and wanting to do the textures yourself. Textures WILL NOT AUTOMATICALLY WORK with this method, hence why it is Not Recommended. You'll have to find the textures on your own and apply them.
-| :ref:`characterandrig_method2` and :ref:`characterandrig_method3` require a functioning copy of Team Fortress 2 and a recent copy of Blender. You don't need a copy of the game for method 1. 
+| :ref:`tf2_v_characterandrig_method1` is the best of these as, the work is already done. `Hisanimations <https://youtube.com/c/hisanimations>`_ from the `TF2 Blender Discord server <https://discord.gg/zHC2gJW>`_ has already made a fully working Character Ports file that you can use for yourself. His `YouTube video <https://youtu.be/0DMz-n1LSII>`_ explains what it is and how to use it. If you have questions or need help with this port, join the `Discord server <https://discord.gg/zHC2gJW>`_ to get help. Using this is recommended in most cases, but if you intend on animating, and especially for long or intense animation work, then :ref:`tf2_v_characterandrig_method2` is recommended, as it gives significantly better framerate in animations.
+| :ref:`tf2_v_characterandrig_method2` is to get the stuff directly from the in-game files. This method is recommended if you're going to do very long and extensive animation work, and need the maximum possible performance. You can still animate completely fine with :ref:`tf2_v_characterandrig_method1`, but this one just gives a much higher FPS number. It does have more work involved though.
+| :ref:`tf2_v_characterandrig_method3` is similar to :ref:`tf2_v_characterandrig_method2` but not recommended unless you for some reason don't need the textures. The one thing it has that :ref:`tf2_v_characterandrig_method1` and :ref:`tf2_v_characterandrig_method2` don't have, is LODs. Three tools are used. It's definitely not as simple as the other methods. This method exists more as a way to only get the mesh and wanting to do the textures yourself. Textures WILL NOT AUTOMATICALLY WORK with this method, hence why it is Not Recommended. You'll have to find the textures on your own and apply them.
+| :ref:`tf2_v_characterandrig_method2` and :ref:`tf2_v_characterandrig_method3` require a functioning copy of Team Fortress 2 and a recent copy of Blender. You don't need a copy of the game for method 1. 
 
-.. _characterandrig_method1:
+.. _tf2_v_characterandrig_method1:
 
 Method 1 (Recommended)
 ^^^^^^^^^^^^^^^^^^^^^^
 
 | Watch the `Hisanimations TF2 Blender Character port <https://youtu.be/7rH6_eq-I0c>`_ video and follow the instructions.
 
-.. _characterandrig_method2:
+.. _tf2_v_characterandrig_method2:
 
 Method 2 (Alternate)
 ^^^^^^^^^^^^^^^^^^^^
 
-.. _characterandrig_method2_summary:
+.. _tf2_v_characterandrig_method2_summary:
 
 Summary of Method 2
 """""""""""""""""""
@@ -296,7 +296,7 @@ Summary of Method 2
 *    Import the ``.MDL`` from :guilabel:`File` > :guilabel:`Import` > :guilabel:`Source Engine Assets` > :guilabel:`Source Model (.mdl)`.
 *    Remove or hide any unnecessary objects such as the hitbox or extra LOD models.
 
-.. _characterandrig_method2_detailed:
+.. _tf2_v_characterandrig_method2_detailed:
 
 Full Guide of Method 2
 """"""""""""""""""""""
@@ -311,16 +311,16 @@ Full Guide of Method 2
 
 .. note::
 
-    | This process is identical to that used in :ref:`prop_method2`, but needs less files to be extracted. As for why, we don't know. SourceIO is very mysterious.
+    | This process is identical to that used in :ref:`tf2_v_prop_method2`, but needs less files to be extracted. As for why, we don't know. SourceIO is very mysterious.
 
-.. _characterandrig_method3:
+.. _tf2_v_characterandrig_method3:
 
 Method 3 (Not Recommended)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 | Again, Textures will not automatically work with this method. All you get over the other two methods is LODs, so this is not worth doing unless you really need the LODs for some reason. You'll have to find and assign textures yourself if this is the method you want to go.
 
-.. _characterandrig_method3_summary:
+.. _tf2_v_characterandrig_method3_summary:
 
 Summary of Method 3
 """""""""""""""""""
@@ -331,7 +331,7 @@ Summary of Method 3
 *    Use Blender Source Tools to import the ``.QC`` file
 *    Remove or hide any unnecessary objects such as the hitbox or extra LOD models.
 
-.. _characterandrig_method3_detailed:
+.. _tf2_v_characterandrig_method3_detailed:
 
 Full Guide of Method 3
 """"""""""""""""""""""
@@ -339,7 +339,7 @@ Full Guide of Method 3
 .. note::
 
     | There is a way to get a higher quality mesh, by the use of SFM. You'll have to find your SFM game folder (the same way as you found your TF2 game folder). Within that are files under a directory called ``tf_movies``. The character models under this directory are much higher quality than the ones which can be found within TF2's own files, and if you have SFM installed or know someone who has it installed, it's highly recommended to use these instead. You barely lose performance when using these. If you're going this route, you'll know you did it right when the Crowbar decompiled files have SFM in their names.
-    | The process is the same, regardless of if you use the SFM Files or not. The files are just a bit different. The Hisanimations port in :ref:`characterandrig_method1` uses the SFM models.
+    | The process is the same, regardless of if you use the SFM Files or not. The files are just a bit different. The Hisanimations port in :ref:`tf2_v_characterandrig_method1` uses the SFM models.
 
 *    Download `GCFScape <https://nemstools.github.io/pages/GCFScape-Download.html>`_, `Crowbar <https://steamcommunity.com/groups/CrowbarTool>`_, and `Blender Source Tools <https://developer.valvesoftware.com/wiki/Blender_Source_Tools>`_. Instructions for installing are under :ref:`tf2_v_installingprograms`.
 *    Go to ``[game_directory] / tf`` and open the file called ``tf2_misc_dir.vpk``. It should open through GCFScape.
@@ -374,12 +374,12 @@ Animations
     | Not all animations from TF2 can be imported with ease. It depends on which specific animation you want to import. Some animations in TF2 are additive, instead of independent, meaning that you need a base animation and the new animation adds on top of it. For example, to bring in the animation of shooting the shotgun, you first need to have the idle animation of that shotgun brought in.
     | This is possible in SFM. However, in Blender, a script is required. It's currently being developed by Hisanimations and not ready right now. 
 
-.. _animations_method1:
+.. _tf2_v_animations_method1:
 
 Method
 ^^^^^^
 
-.. _animations_method1_summary:
+.. _tf2_v_animations_method1_summary:
 
 Summary of Method
 """""""""""""""""
@@ -390,7 +390,7 @@ Summary of Method
 *    Use Blender Source Tools to import the ``.QC`` file
 *    Remove or hide any unnecessary objects such as the hitbox or extra LOD models.
 
-.. _animations_method1_detailed:
+.. _tf2_v_animations_method1_detailed:
 
 Full Guide of Method
 """"""""""""""""""""

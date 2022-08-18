@@ -11,7 +11,7 @@ TF2 Vanilla
     :depth: 3
 
 
-.. _tf2_v_mapsandprops:
+.. _tf2_v_map:
 
 Maps and included props
 -----------------------
@@ -46,7 +46,7 @@ Full Guide of Method 1
     Always get the most recent version of a program or Add-on linked here.
 
 | `Blender Source Tools <http://steamreview.org/BlenderSourceTools>`_, `BSPSource <https://developer.valvesoftware.com/wiki/BSPSource>`_, and `Plumber <https://github.com/lasa01/io_import_vmf/releases>`_ will be used for Method 1. The steps to install these can be seen at the :ref:`installingprograms` section. 
-| Plumber was originally called io_import_vmf, and it's by the same developers. It's currently in Beta but significantly superior to io_import_vmf and that's why we've linked the page to download that instead).
+| Plumber was originally called io_import_vmf, and it's by the same developers. It's currently in Beta but significantly superior to io_import_vmf and that's why we've linked the page to download that instead.
 
 | To start off, we need to make sure the map is even usable in the first place. Some maps are compressed beyond readability for BSPSource (Usually newer ones). To fix that, you need to repack it.
 
@@ -62,7 +62,7 @@ Repack compressed .BSP files
 
 *    Go to the releases page for `EspionRepacker <https://github.com/spy-ware/EspionRepacker/releases>`_ and download the latest version (don't download the one called Source Code).
 *    For the BSPZip folder, go to ``[game directory] / bin``.
-*    For the map you want to Repack, go to ``[game directory] / tf / maps / [map to repack]``
+*    For the map you want to Repack, go to ``[game directory] / tf / maps`` and choose the specific ``.BSP`` file (Map file) you want to Repack.
 *    The output folder is of your own choice, but make sure it's a place you can come back to easily.
 *    Click on :guilabel:`Repack` to repack your file. A folder will be generated called ``out``, and within this folder will be the ``.BSP`` file, ready to use for the next steps. 
 
@@ -103,7 +103,7 @@ Bringing The Map In
 | The installation steps are not necessary to do again. It's really just as simple as, Repack ``.BSP`` if needed, Turn into ``.VMF`` with BSPSource, Bring ``.VMF`` into Blender.
 | Go to :ref:`tf2_v_finishing_touches` for advice on clean up and additional useful things to know about within Blender regarding these maps.
 | If you wish to familiarize yourself with the whole process, or see an overview, a :ref:`tf2_v_map_method1_summary` is written which you can refer to.
-| If any problems occur you can ask for help on the `TF2 Blender Discord server <https://discord.gg/zHC2gJW>`_
+| If any problems occur you can ask for help on the `TF2 Blender Discord server <https://discord.gg/zHC2gJW>`_.
 
 .. _tf2_v_map_method2:
 
@@ -174,7 +174,7 @@ Finishing Touches (Both Methods)
     | In some maps, for example ``pl_badwater``, some universally used props will look a bit off, such as the rocks used in the starting area for the payload cart. This is because these props have multiple different skins used by different maps. A script is being developed to make it easy to change skins, but if you currently want to do it manually, then go to the Materials section of this object and make it so all the assigned faces are of a different material slot instead. If you know how Materials and Assigning works, this shouldn't be too difficult for you to do.
     | If you used SourceIO to import the map, in the sidebar (brought up by pressing the N button), there should be the option to change through different skins easily.
 
-.. _tf2_v_individualprops:
+.. _tf2_v_prop:
 
 Individual Props
 ----------------

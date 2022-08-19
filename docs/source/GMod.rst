@@ -1,17 +1,23 @@
-.. _gmod_vanilla:
+.. _gmod:
 
-Garry's Mod Vanilla
-===================
+Garry's Mod
+===========
 
 | Throughout this page, you'll find clickable text where a link is provided. Just click on it or right click and 'Open in new tab' to see the contents.
-| Depending on the category you'll find multiple methods or only one. Where there are multiple methods (Such as in the :ref:`gmod_v_mapsandprops` Section), the benefits and drawbacks of both will be listed. Places where there's only one method means that the other method just wasn't as good/worth it, or there only is one way to do it.
+| Depending on the category you'll find multiple methods or only one. Where there are multiple methods (Such as in the :ref:`gmod_map` Section), the benefits and drawbacks of both will be listed. Places where there's only one method means that the other method just wasn't as good/worth it, or there only is one way to do it.
 | It's best if you have an up-to-date copy of Garry's Mod installed as nearly all of these methods will be relying on obtaining files present from within the game.
+
+.. note::
+    The methods shown throughout this page are all effective on both the Vanilla files of Garry's Mod, as well as Mods and Workshop items. If using Workshop Addons or Mods, the only extra step necessary is to move the files in question to appropriate locations.
+    A program called GMad can be used for turning ``.GMA`` files, which are used as Addon files and are present under ``[game_directory] / garrysmod / addons``, into regular files. After that, the folders can be copied to ``[game_directory] / garrysmod``, and then the methods can be applied for bringing them in.
+    If instead you obtained the files from a mod download, then you can extract those directly to ``[game_directory] / garrysmod`` without having to use GMad.
+    
 
 .. contents:: Table of Contents
     :depth: 3
 
 
-.. _gmod_v_map:
+.. _gmod_map:
 
 Maps and included props
 -----------------------
@@ -19,16 +25,16 @@ Maps and included props
 .. note::
     If you know the Team Fortress 2 methods for bringing maps in, it is exactly the same process here except the location is changed to ``[game_directory] / garrysmod / maps`` instead of ``[game_directory] / tf / maps``. The fully detailed guide has still been listed here, similar to the :ref:`tf2_vanilla` section, as some users may not be experienced with Team Fortress 2 and may only be interested in Garry's Mod. This is why you will find the instructions here and on that page to be extremely similar, as they're the same process.
     
-| :ref:`gmod_v_map_method1` uses three tools, all linked in that section. This method is recommended as it makes the maps significantly easier to work with. All imported items are organized into collections and very easy to work with and customize.
-| :ref:`gmod_v_map_method2` uses only one addon, called SourceIO. It's a one click solution and way easier than :ref:`gmod_v_map_method1` , but the names of objects becomes messy, and there's extra cleanup required as extra objects such as the map hitbox is also imported. It's closer in looks to Gmod as it uses its own shader, so if you want the true Gmod look, then use this. :ref:`gmod_v_map_method1` also works fine but is better suited for applying your own style or flair to your renders and animations. 
+| :ref:`gmod_map_method1` uses three tools, all linked in that section. This method is recommended as it makes the maps significantly easier to work with. All imported items are organized into collections and very easy to work with and customize.
+| :ref:`gmod_map_method2` uses only one addon, called SourceIO. It's a one click solution and way easier than :ref:`gmod_map_method1` , but the names of objects becomes messy, and there's extra cleanup required as extra objects such as the map hitbox is also imported. It's closer in looks to Gmod as it uses its own shader, so if you want the true Gmod look, then use this. :ref:`gmod_map_method1` also works fine but is better suited for applying your own style or flair to your renders and animations. 
 | Both methods require a fully working copy of Garry's Mod and a recent copy of Blender. If you are unable to get these methods to work, it is recommended to use the latest version of Blender.
 
-.. _gmod_v_map_method1:
+.. _gmod_map_method1:
 
 Method 1 (Recommended)
 ^^^^^^^^^^^^^^^^^^^^^^
 
-.. _gmod_v_map_method1_summary:
+.. _gmod_map_method1_summary:
 
 Summary of Method 1
 """""""""""""""""""
@@ -40,7 +46,7 @@ Summary of Method 1
 *    Import the ``.VMF`` file from :guilabel:`File` > :guilabel:`Import` > :guilabel:`Plumber` > :guilabel:`Valve Map Format (.vmf)` in Blender.
 *    Disable all lights except ``light_environment``, and set Color Profile from :guilabel:`Filmic` to :guilabel:`Standard`.
 
-.. _gmod_v_map_method1_detailed:
+.. _gmod_map_method1_detailed:
 
 Full Guide of Method 1
 """"""""""""""""""""""
@@ -53,7 +59,7 @@ Full Guide of Method 1
 
 | To start off, we need to make sure the map is even usable in the first place. Some maps are compressed beyond readability for BSPSource (Usually newer ones). To fix that, you need to repack it.
 
-.. _gmod_v_fix_compressed_bsp:
+.. _gmod_fix_compressed_bsp:
 
 Repack compressed .BSP files
 """"""""""""""""""""""""""""
@@ -69,7 +75,7 @@ Repack compressed .BSP files
 *    The output folder is of your own choice, but make sure it's a place you can come back to easily.
 *    Click on :guilabel:`Repack` to repack your file. A folder will be generated called ``out``, and within this folder will be the ``.BSP`` file, ready to use for the next steps. 
 
-.. _gmod_v_convert_bsp_to_vmf:
+.. _gmod_convert_bsp_to_vmf:
 
 Convert a .BSP to .VMF
 """"""""""""""""""""""
@@ -92,7 +98,7 @@ Convert a .BSP to .VMF
 
     During the time that BSPSource is Decompiling the map, it will show logs of what it's doing. There is an ``Errors & Warnings`` box visible. This should be completely empty. If at any point something is shown in this box, then the process failed and needs to be done again. 
 
-.. _gmod_v_importing_vmf:
+.. _gmod_importing_vmf:
 
 Bringing The Map In
 """""""""""""""""""
@@ -103,16 +109,16 @@ Bringing The Map In
 *    Then click the ``.VMF`` file, and click :guilabel:`Import`. That's it, you should have everything. 
 
 | The installation steps are not necessary to do again. It's really just as simple as, Repack ``.BSP`` if needed, Turn into ``.VMF`` with BSPSource, Bring ``.VMF`` into Blender.
-| Go to :ref:`gmod_v_finishing_touches` for advice on clean up and additional useful things to know about within Blender regarding these maps.
-| If you wish to familiarize yourself with the whole process, or see an overview, a :ref:`gmod_v_map_method1_summary` is written which you can refer to.
+| Go to :ref:`gmod_finishing_touches` for advice on clean up and additional useful things to know about within Blender regarding these maps.
+| If you wish to familiarize yourself with the whole process, or see an overview, a :ref:`gmod_map_method1_summary` is written which you can refer to.
 | If any problems occur you can ask for help on the `TF2 Blender Discord server <https://discord.gg/zHC2gJW>`_.
 
-.. _gmod_v_map_method2:
+.. _gmod_map_method2:
 
 Method 2 (Alternate)
 ^^^^^^^^^^^^^^^^^^^^
 
-.. _gmod_v_map_method2_summary:
+.. _gmod_map_method2_summary:
 
 Summary of Method 2
 """""""""""""""""""
@@ -120,18 +126,18 @@ Summary of Method 2
 *    Download SourceIO and install it as an Add-on into Blender (This step is only necessary for first time use).
 *    Go to :guilabel:`File` > :guilabel:`Import` > :guilabel:`Source Engine Assets` > :guilabel:`Source Map (.bsp)` in Blender.
 *    Locate the map you wish to bring into Blender under ``[game_directory] / garrysmod / maps``.
-*    Select everything by pressing A, then Shift Click an ``Empty``.
+*    Once the map is brought in, select everything by pressing A, then Shift Click an ``Empty``.
 *    Press N under the 3D Viewport to open the sidebar, go to SourceIO, and click :guilabel:`Load Entity`.
 *    Disable all lights except ``light_environment``, and set Color Profile from :guilabel:`Filmic` to :guilabel:`Standard`.
 
-.. _gmod_v_map_method2_detailed:
+.. _gmod_map_method2_detailed:
 
 Full Guide of Method 2
 """"""""""""""""""""""
 
-`SourceIO <https://github.com/REDxEYE/SourceIO>`_ will be used for :ref:`gmod_v_map_method2_detailed`. The steps to install these can be seen at the :ref:`installingprograms` section.
+`SourceIO <https://github.com/REDxEYE/SourceIO>`_ will be used for :ref:`gmod_map_method2_detailed`. The steps to install these can be seen at the :ref:`installingprograms` section.
 
-.. _gmod_v_importing_bsp:
+.. _gmod_importing_bsp:
 
 Bringing the Map in
 """""""""""""""""""
@@ -151,7 +157,7 @@ Bringing the Map in
 *    Click on :guilabel:`Load Entity`.
 *    It might take some time so please be patient. If done right, all props should show up without any error messages.
 
-| The names of the props will be a huge mess, and every single prop will end up having its own Collection. For this reason, :ref:`gmod_v_map_method1` is recommended, but otherwise, the overall Map and the Props on the map are pretty much the exact same.
+| The names of the props will be a huge mess, and every single prop will end up having its own Collection. For this reason, :ref:`gmod_map_method1` is recommended, but otherwise, the overall Map and the Props on the map are pretty much the exact same.
 | The lighting is going to appear strange because in Eevee (Blender's default render engine) has a maximum of 128 lights. Filter the Outliner (the place where all objects and things in the scene are shown) by lights with the following settings:
 
 .. image:: _images/toggles.png
@@ -161,7 +167,7 @@ Bringing the Map in
 .. seealso::
     For a full list of Eevee's limitations, you can consult `this page <https://docs.blender.org/manual/en/latest/render/eevee/limitations.html>`_ from Blender's official manual. 
 
-.. _gmod_v_finishing_touches:
+.. _gmod_finishing_touches:
 
 Finishing Touches (Both Methods)
 """"""""""""""""""""""""""""""""
@@ -171,28 +177,29 @@ Finishing Touches (Both Methods)
 * There's unfortunately a limit of Eevee which there's no way around. It can only have 128 active lights at once, while maps can end up having more than that. Unfortunately the only way around this is to use Cycles, which doesn't have a light limit, but another alternative is to maintain the majority of the look by turning off every light except the one which starts with the name ``light_environment``. This is the 'Sun' light and is responsible for nearly all outdoor lighting and shadows present on the map.
 * If you want more accurate Garry's Mod colors, go to Color Management, and set the Color Profile from :guilabel:`Filmic` to :guilabel:`Standard`.
 
-.. _gmod_v_prop:
+.. _gmod_prop:
 
 Individual Props
 ----------------
 
 | This section is written as a way to obtain individual props that are universally used in maps stored in Gmod files, such as Barrels. Some maps will have props that aren't used universally, and are exclusive to them. In this case it's best to just import the map, find the prop, and separate it.
 
-.. _gmod_v_prop_method1:
+.. _gmod_prop_method1:
 
 Method
 ^^^^^^
 
-.. _gmod_v_prop_method1_summary:
+.. _gmod_prop_method1_summary:
 
 Summary of Method
 """""""""""""""""
 
-*    Download GCFScape, and SourceIO. Install SourceIO into Blender (This step is only necessary on first time use).
-*    Use GCFScape to extract the necessary files from ``garrysmod_dir.vpk`` into ``[game_directory] / garrysmod`` (This step is only necessary on first time use).
+*    Download GCFScape and SourceIO. Install SourceIO into Blender (This step is only necessary on first time use).
+*    (Vanilla) Use GCFScape to extract the necessary files from ``garrysmod_dir.vpk`` into ``[game_directory] / garrysmod`` (This step is only necessary on first time use).
+*    (Workshop and Mods) Use GMad to obtain the files of the addon or mod, and move the folders into ``[game_directory] / garrysmod`` (This step is only necessary for first time use).
 *    Use SourceIO to import ``.MDL`` file of choice from the extracted folders.
 
-.. _gmod_v_prop_method1_detailed:
+.. _gmod_prop_method1_detailed:
 
 Full Guide of Method
 """"""""""""""""""""
@@ -204,32 +211,34 @@ Full Guide of Method
 *    Then in GCFScape, Extract the folder called ``Materials`` to ``[game_directory] / garrysmod`` as well.
 | All of that was for setting things up. Once that's completed, all you have to do for bringing a Model in is to open Blender, click :guilabel:`File` > :guilabel:`⤓ Import` > :guilabel:`Source Engine Assets` > :guilabel:`Source model (.mdl)`, and choose the ``.MDL`` file you're after inside the ``Models`` folder. It should have textures set up and everything. The above steps don't have to be repeated.
 
-.. _gmod_v_characterandrig:
+.. _gmod_characterandrig:
 
 Character and Rig
 -----------------
 
-| Follow the initial steps for setting up :ref:`gmod_v_prop`.
+| Follow the initial steps for setting up :ref:`gmod_prop`.
 | The ``.MDL`` files are all present under ``[game_directory] / garrysmod / models``. Just use SourceIO to bring in the one you want. Click :guilabel:`File` > :guilabel:`⤓ Import` > :guilabel:`Source Engine Assets` > :guilabel:`Source model (.mdl)`, and choose the ``.MDL`` file you're after. If you import a character, they should have a rig and textures set up.
 
-.. _gmod_v_animations:
+.. _gmod_weaponsandcosmetics:
+
+Weapons and Cosmetics
+---------------------
+
+| Follow the initial steps for setting up :ref:`gmod_prop`.
+| The ``.MDL`` files are all present under ``[game_directory] / garrysmod / models``. Just use SourceIO to bring in the one you want. Click :guilabel:`File` > :guilabel:`⤓ Import` > :guilabel:`Source Engine Assets` > :guilabel:`Source model (.mdl)`, and choose the ``.MDL`` file you're after. The weapon should have a rig and textures set up.
+
+.. _gmod_animations:
 
 Animations
 ----------
 
 | WIP
     
-.. _gmod_v_weaponsandcosmetics:
-
-Weapons and Cosmetics
----------------------
-
-| Follow the initial steps for setting up :ref:`gmod_v_prop`.
-| The ``.MDL`` files are all present under ``[game_directory] / garrysmod / models``. Just use SourceIO to bring in the one you want. Click :guilabel:`File` > :guilabel:`⤓ Import` > :guilabel:`Source Engine Assets` > :guilabel:`Source model (.mdl)`, and choose the ``.MDL`` file you're after. The weapon should have a rig and textures set up.
-
-.. _gmod_v_soundeffectsvoices:
+.. _gmod_soundeffectsvoices:
 
 Sound effects & Voice lines
 ---------------------------
 
-| Download `GCFScape <https://nemstools.github.io/pages/GCFScape-Download.html>`_. With GCFScape, open ``garrysmod_dir.vpk`` and browse the ``Sound`` folder. Extract the files you need.
+| Download `GCFScape <https://nemstools.github.io/pages/GCFScape-Download.html>`_. 
+*    (Vanilla) With GCFScape, open ``garrysmod_dir.vpk`` and browse the ``Sound`` folder. Extract the files you need.
+*    (Workshop and Mods) Go through the files you need.

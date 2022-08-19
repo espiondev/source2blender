@@ -1,7 +1,7 @@
 .. _tf2_vanilla:
 
-TF2 Vanilla
-===========
+Team Fortress 2 Vanilla
+=======================
 
 | Throughout this page, you'll find clickable text where a link is provided. Just click on it or right click and 'Open in new tab' to see the contents.
 | Depending on the category you'll find two methods or only one. Where there are multiple methods (Such as in the :ref:`tf2_v_mapsandprops` Section), the benefits and drawbacks will be listed. Places where there's only one method means that other methods just wasn't as good/worth it, or there only is one way to do it.

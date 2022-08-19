@@ -1,7 +1,7 @@
 .. _tf2_workshop:
 
-TF2 Workshop
-============
+Team Fortress 2 Workshop
+========================
 
 .. contents:: Table of Contents
     :depth: 3

@@ -4,14 +4,21 @@ Garry's Mod
 ===========
 
 | Throughout this page, you'll find clickable text where a link is provided. Just click on it or right click and 'Open in new tab' to see the contents.
-| Depending on the category you'll find multiple methods or only one. Where there are multiple methods (Such as in the :ref:`gmod_map` Section), the benefits and drawbacks of both will be listed. Places where there's only one method means that the other method just wasn't as good/worth it, or there only is one way to do it.
+| Depending on the category you'll find multiple methods or only one. Where there are multiple methods (Such as in the :ref:`gmod_map` Section), the benefits and drawbacks will be listed. Places where there's only one method means that the other method just wasn't as good/worth it, or there only is one way to do it.
 | It's best if you have an up-to-date copy of Garry's Mod installed as nearly all of these methods will be relying on obtaining files present from within the game.
 
 .. note::
     The methods shown throughout this page are all effective on both the Vanilla files of Garry's Mod, as well as Mods and Workshop items. If using Workshop Addons or Mods, the only extra step necessary is to move the files in question to appropriate locations.
     A program called GMad can be used for turning ``.GMA`` files, which are used as Addon files and are present under ``[game_directory] / garrysmod / addons``, into regular files. After that, the folders can be copied to ``[game_directory] / garrysmod``, and then the methods can be applied for bringing them in.
     If instead you obtained the files from a mod download, then you can extract those directly to ``[game_directory] / garrysmod`` without having to use GMad.
-    
+        
+.. _gmod_gmad:
+
+Turn Addons into Regular Files
+""""""""""""""""""""""""""""""
+
+| To turn a ``.GMA`` file into the files you need so that they can be brought into Blender, open two windows of the Game Directory, side by side. In one window, go into ``[game_directory] / garrysmod / addons``. This is where your ``.GMA`` file will be. In the other window, go to ``[game_directory] / bin``. Here, you'll find ``gmad.exe``.
+| Drag and drop the ``.GMA`` file onto ``gmad.exe``. It will create a new folder with the same name as the ``.GMA`` file, in the Addons folder. This folder will contain everything you need for all the steps on the rest of the page.
 
 .. contents:: Table of Contents
     :depth: 3
@@ -205,10 +212,18 @@ Full Guide of Method
 """"""""""""""""""""
 
 | The process is rather simple, it only requires a bit of setup, then the importing of the prop should be doable with a few clicks.
-*    Download `GCFScape <https://nemstools.github.io/pages/GCFScape-Download.html>`_, and `SourceIO <https://github.com/REDxEYE/SourceIO>`_. Install SourceIO into Blender (installation guide listed in :ref:`installingprograms`)
+*    Download `SourceIO <https://github.com/REDxEYE/SourceIO>`_. Install SourceIO into Blender (Installation guide listed in :ref:`installingprograms`).
+
+| Steps for Vanilla:
+*    Download `GCFScape <https://nemstools.github.io/pages/GCFScape-Download.html>`_ and install it.
 *    Go to ``[game_directory] / garrysmod`` and open the file called ``garrysmod_dir.vpk``. It should open through GCFScape.
-*    In GCFScape, right Click the ``Models`` folder, click :guilabel:`Extract`, and Extract it to ``[game_directory] / garrysmod``. Don't drag and drop as it is laggy and can bug out.
+*    In GCFScape, Right Click the ``Models`` folder, click :guilabel:`Extract`, and Extract it to ``[game_directory] / garrysmod``. Don't drag and drop as it is laggy and can bug out.
 *    Then in GCFScape, Extract the folder called ``Materials`` to ``[game_directory] / garrysmod`` as well.
+
+| Steps for Workshop and Mods:
+*    (Addon) Use Gmad to obtain the files from the ``.GMA`` file. The steps for how to use it can be found at the :ref:`gmod_gmad` Section. Open the newly created folder, and move all the folders inside to ``[game_directory] / garrysmod``.
+*    (Mods) If it is a ``.GMA`` file, use Gmad to obtain the folders. If it is regular files, extra work isn't required. Just move the folders into ``[game_directory] / garrysmod``.
+
 | All of that was for setting things up. Once that's completed, all you have to do for bringing a Model in is to open Blender, click :guilabel:`File` > :guilabel:`⤓ Import` > :guilabel:`Source Engine Assets` > :guilabel:`Source model (.mdl)`, and choose the ``.MDL`` file you're after inside the ``Models`` folder. It should have textures set up and everything. The above steps don't have to be repeated.
 
 .. _gmod_characterandrig:

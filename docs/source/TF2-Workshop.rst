@@ -13,7 +13,7 @@ Team Fortress 2 Workshop
 .. contents:: Table of Contents
     :depth: 3
 
-.. _tf2_w_mapsandprops:
+.. _tf2_w_map:
 
 Maps and included props
 -----------------------

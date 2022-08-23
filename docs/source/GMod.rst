@@ -64,24 +64,6 @@ Full Guide of Method 1
 | `Blender Source Tools <http://steamreview.org/BlenderSourceTools>`_, `BSPSource <https://developer.valvesoftware.com/wiki/BSPSource>`_, and `Plumber <https://github.com/lasa01/io_import_vmf/releases>`_ will be used for Method 1. The steps to install these can be seen at the :ref:`installingprograms` section. 
 | Plumber was originally called io_import_vmf, and it's by the same developers. It's currently in Beta but significantly superior to io_import_vmf and that's why we've linked the page to download that instead.
 
-| To start off, we need to make sure the map is even usable in the first place. Some maps are compressed beyond readability for BSPSource (Usually newer ones). To fix that, you need to repack it.
-
-.. _gmod_fix_compressed_bsp:
-
-Repack compressed .BSP files
-""""""""""""""""""""""""""""
-
-.. note::
-
-    | These steps are only to be followed in case a .BSP file was too compressed for BSPSource. If you're unsure, better to do it anyways.
-    | Make sure to follow the steps in the right order. 
-
-*    Go to the releases page for `EspionRepacker <https://github.com/spy-ware/EspionRepacker/releases>`_ and download the latest version (don't download the one called Source Code).
-*    For the BSPZip folder, go to ``[game directory] / bin``.
-*    For the map you want to Repack, go to ``[game directory] / garrysmod / maps`` and choose the specific ``.BSP`` file (Map file) you want to Repack.
-*    The output folder is of your own choice, but make sure it's a place you can come back to easily.
-*    Click on :guilabel:`Repack` to repack your file. A folder will be generated called ``out``, and within this folder will be the ``.BSP`` file, ready to use for the next steps. 
-
 .. _gmod_convert_bsp_to_vmf:
 
 Convert a .BSP to .VMF
@@ -115,7 +97,7 @@ Bringing The Map In
 *    In the folder space underneath the :guilabel:`Game`, type the name of the folder with the same name as the ``.VMF``. If you don't have such a folder, you can skip this step.
 *    Then click the ``.VMF`` file, and click :guilabel:`Import`. That's it, you should have everything. 
 
-| The installation steps are not necessary to do again. It's really just as simple as, Repack ``.BSP`` if needed, Turn into ``.VMF`` with BSPSource, Bring ``.VMF`` into Blender.
+| The installation steps are not necessary to do again. It's really just as simple as, Turn into ``.VMF`` with BSPSource, Bring ``.VMF`` into Blender.
 | Go to :ref:`gmod_finishing_touches` for advice on clean up and additional useful things to know about within Blender regarding these maps.
 | If you wish to familiarize yourself with the whole process, or see an overview, a :ref:`gmod_map_method1_summary` is written which you can refer to.
 | If any problems occur you can ask for help on the `TF2 Blender Discord server <https://discord.gg/zHC2gJW>`_.
@@ -201,8 +183,8 @@ Method
 Summary of Method
 """""""""""""""""
 
-*    Download GCFScape and SourceIO. Install SourceIO into Blender (This step is only necessary on first time use).
-*    (Vanilla) Use GCFScape to extract the necessary files from ``garrysmod_dir.vpk`` into ``[game_directory] / garrysmod`` (This step is only necessary on first time use).
+*    Download SourceIO. Install SourceIO into Blender (This step is only necessary on first time use).
+*    (Vanilla) Download GCFScape. Use GCFScape to extract the necessary files from ``garrysmod_dir.vpk`` into ``[game_directory] / garrysmod`` (This step is only necessary on first time use).
 *    (Workshop and Mods) Use GMad to obtain the files of the addon or mod, and move the folders into ``[game_directory] / garrysmod`` (This step is only necessary for first time use).
 *    Use SourceIO to import ``.MDL`` file of choice from the extracted folders.
 
@@ -221,7 +203,7 @@ Full Guide of Method
 *    Then in GCFScape, Extract the folder called ``Materials`` to ``[game_directory] / garrysmod`` as well.
 
 | Steps for Workshop and Mods:
-*    (Addon) Use Gmad to obtain the files from the ``.GMA`` file. The steps for how to use it can be found at the :ref:`gmod_gmad` Section. Open the newly created folder, and move all the folders inside to ``[game_directory] / garrysmod``.
+*    (Addon) Use Gmad (Instructions for how to use it are at the :ref:`gmod_gmad` Section) to obtain the files from the ``.GMA`` file. Open the newly created folder, and move all the folders inside to ``[game_directory] / garrysmod``.
 *    (Mods) If it is a ``.GMA`` file, use Gmad to obtain the folders. If it is regular files, extra work isn't required. Just move the folders into ``[game_directory] / garrysmod``.
 
 | All of that was for setting things up. Once that's completed, all you have to do for bringing a Model in is to open Blender, click :guilabel:`File` > :guilabel:`⤓ Import` > :guilabel:`Source Engine Assets` > :guilabel:`Source model (.mdl)`, and choose the ``.MDL`` file you're after inside the ``Models`` folder. It should have textures set up and everything. The above steps don't have to be repeated.

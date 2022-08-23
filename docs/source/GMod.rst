@@ -15,7 +15,7 @@ Garry's Mod
 .. _gmod_gmad:
 
 Turn Addons into Regular Files
-""""""""""""""""""""""""""""""
+------------------------------
 
 | To turn a ``.GMA`` file into the files you need so that they can be brought into Blender, open two windows of the Game Directory, side by side. In one window, go into ``[game_directory] / garrysmod / addons``. This is where your ``.GMA`` file will be. In the other window, go to ``[game_directory] / bin``. Here, you'll find ``gmad.exe``.
 | Drag and drop the ``.GMA`` file onto ``gmad.exe``. It will create a new folder with the same name as the ``.GMA`` file, in the Addons folder. This folder will contain everything you need for all the steps on the rest of the page.
@@ -236,6 +236,5 @@ Animations
 Sound effects & Voice lines
 ---------------------------
 
-| Download `GCFScape <https://nemstools.github.io/pages/GCFScape-Download.html>`_. 
-*    (Vanilla) With GCFScape, open ``garrysmod_dir.vpk`` and browse the ``Sound`` folder. Extract the files you need.
+*    (Vanilla) Download `GCFScape <https://nemstools.github.io/pages/GCFScape-Download.html>`_. Use it to open ``garrysmod_dir.vpk`` and browse the ``Sound`` folder. Extract the files you need.
 *    (Workshop and Mods) Go through the files you need.

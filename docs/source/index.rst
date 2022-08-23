@@ -28,4 +28,5 @@ Contents
    TF2-Vanilla
    TF2-Workshop
    GMod
+   SFM
    

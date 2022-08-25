@@ -5,7 +5,7 @@ Source Filmmaker
 
 .. note::
 
-    If you wanna make sure EVERYTHING works, be it maps or props or literally and mod or addon, then you'll wanna make sure you have all the DLC's of SFM installed. First launch Steam. Then go to :guilabel:`Library` and right click Source Filmmaker. Click :guilabel:`Properties`, and go to :guilabel:`DLC`. Check the ones you need, and exit this menu. Launch SFM and create a session, it'll prompt you for the downloads. It's gonna take a while as the DLC's can go upto 7 GB in size individually, but it's only a one time thing.
+    If you wanna make sure EVERYTHING works, be it maps or models or literally and mod or addon, then you'll wanna make sure you have all the DLC's of SFM installed. First launch Steam. Then go to :guilabel:`Library` and right click Source Filmmaker. Click :guilabel:`Properties`, and go to :guilabel:`DLC`. Check the ones you need, and exit this menu. Launch SFM and create a session, it'll prompt you for the downloads. It's gonna take a while as the DLC's can go upto 7 GB in size individually, but it's only a one time thing.
 
 | Throughout this page, you'll find clickable text where a link is provided. Just click on it or right click and 'Open in new tab' to see the contents.
 | It's recommended for SFM to be installed for the best experience. You can also obtain the files using Crowbar's downloader, and most should work fine using this, but read the description of the specific map. If it says it needs other things like Prop Packs or to have DLC's, then downloading SFM is your best option.
@@ -15,7 +15,8 @@ Source Filmmaker
 
     Unlike Team Fortress 2 and Garry's Mod, all the files and folders are pretty much already prepared and you don't need to do anything extra, such as turning the Addon file into regular folders or using GCFScape to extract from ``.VPK`` files. So the steps are easier here.
     However, if using Workshop Addons or Mods that are specifically **maps**, the only extra step necessary is to set up Plumber. Here's how to set it up.
-    Plumber won't autodetect the files from SFM like it does with other titles, so some manual work is needed. Open Blender, then go to :guilabel:`Edit` > :guilabel:`Preferences...` > :guilabel:`Add-ons`, and find Plumber. Expand it. You'll find two windows, one on top of the other. In the first one, click the ``+`` sign on the right. Label this new box as Source Filmmaker, or as SFM. That's your choice. In the second window, you have to manually add the directories of all folders within the folder. These will be folders with names such as ``steamapps / common / SourceFilmmaker / game / tf``, ``steamapps / common / SourceFilmmaker / game / hl2``, ``steamapps / common / SourceFilmmaker / game / tf_movies``, etc. All folders should be added. You do also have to be careful that Plumber writes the directories with \ and **NOT** with /. Look at the other titles for reference if you need to. Once this is set up, Plumber should be good to go if you want to import an SFM map.
+    
+| For importing maps, Plumber won't autodetect the files from SFM like it does with other titles, so some manual work is needed. Open Blender, then go to :guilabel:`Edit` > :guilabel:`Preferences...` > :guilabel:`Add-ons`, and find Plumber. Expand it. You'll find two windows, one on top of the other. In the first one, click the ``+`` sign on the right. Label this new box as Source Filmmaker, or as SFM. That's your choice. In the second window, you have to manually add the directories of all folders within the folder. These will be folders with names such as ``steamapps / common / SourceFilmmaker / game / tf``, ``steamapps / common / SourceFilmmaker / game / hl2``, ``steamapps / common / SourceFilmmaker / game / tf_movies``, etc. All folders should be added. You do also have to be careful that Plumber writes the directories with \ and **NOT** with /. Look at the other titles for reference if you need to. Once this is set up, Plumber should be good to go if you want to import an SFM map.
        
 
 .. contents:: Table of Contents
@@ -27,9 +28,9 @@ Source Filmmaker
 Maps and included props
 -----------------------
 
-| :ref:`sfm_map_method1` uses three tools, all linked in that section. This method is recommended as it makes the maps significantly easier to work with. All imported items are organized into collections and very easy to work with and customize.
+| :ref:`sfm_map_method1` uses three tools, all linked in that section.
 | Unlike Team Fortress 2 and GMod, SFM maps are a bit complicated and pull resources from multiple different folders. SourceIO has not been successful for the importing of maps, but has been fine for everything else. For this reason, the Map Import section only has one method.
-| This method require a fully working copy of Source Filmmaker and a recent version of Blender. If you are unable to get this method to work, it is recommended to use the latest version of Blender.
+| This method requires a fully working copy of Source Filmmaker and a recent version of Blender. If you are unable to get this method to work, it is recommended to use the latest version of Blender.
 
 .. _sfm_map_method1:
 
@@ -42,7 +43,7 @@ Summary of Method
 """""""""""""""""
 
 *    Download BSPSource, Plumber, and Blender Source Tools. Install Plumber and Blender Source Tools as Add-ons into Blender (This step is only necessary on first time use).
-*    Set up an entry in Plumber for it to read all of SFM's folders present under ``[sfm_directory] / game``.
+*    Set up an entry in Plumber for it to read all of SFM's folders present under ``[sfm_directory] / game`` (This step is only necessary on first time use).
 *    Locate the map you wish to bring into Blender by going to ``[sfm_directory] / game / workshop / maps``.
 *    Convert the ``.BSP`` file into a ``.VMF`` file using BSPSource.
 *    Import the ``.VMF`` file from :guilabel:`File` > :guilabel:`Import` > :guilabel:`Plumber` > :guilabel:`Valve Map Format (.vmf)` in Blender.
@@ -56,7 +57,7 @@ Full Guide of Method
 .. note::
     Always get the most recent version of a program or Add-on linked here.
 
-| `Blender Source Tools <http://steamreview.org/BlenderSourceTools>`_, `BSPSource <https://developer.valvesoftware.com/wiki/BSPSource>`_, and `Plumber <https://github.com/lasa01/io_import_vmf/releases>`_ will be used for Method 1. The steps to install these can be seen at the :ref:`installingprograms` section. 
+| `Blender Source Tools <http://steamreview.org/BlenderSourceTools>`_, `BSPSource <https://developer.valvesoftware.com/wiki/BSPSource>`_, and `Plumber <https://github.com/lasa01/io_import_vmf/releases>`_ will be used for this method. The steps to install these can be seen at the :ref:`installingprograms` section. 
 | Plumber was originally called io_import_vmf, and it's by the same developers. It's currently in Beta but significantly superior to io_import_vmf and that's why we've linked the page to download that instead.
 
 .. _sfm_convert_bsp_to_vmf:
@@ -94,8 +95,8 @@ Bringing The Map In
 *    Then click the ``.VMF`` file, and click :guilabel:`Import`. That's it, you should have everything. 
 
 | The installation steps are not necessary to do again. It's really just as simple as, Once you set up Plumber so it reads the SFM folders, all you have to do is turn the ``.BSP`` map file into ``.VMF`` with BSPSource, and bring ``.VMF`` into Blender with Plumber.
-| Go to :ref:`tf2_v_finishing_touches` for advice on clean up and additional useful things to know about within Blender regarding these maps.
-| If you wish to familiarize yourself with the whole process, or see an overview, a :ref:`tf2_v_map_method1_summary` is written which you can refer to.
+| Go to :ref:`sfm_finishing_touches` for advice on clean up and additional useful things to know about within Blender regarding these maps.
+| If you wish to familiarize yourself with the whole process, or see an overview, a :ref:`sfm_map_method1_summary` is written which you can refer to.
 | If any problems occur you can ask for help on the `TF2 Blender Discord server <https://discord.gg/zHC2gJW>`_.
 
 | The lighting is going to appear strange because in Eevee (Blender's default render engine) has a maximum of 128 lights. Filter the Outliner (the place where all objects and things in the scene are shown) by lights with the following settings:
@@ -114,22 +115,22 @@ Finishing Touches
 
 * Use :guilabel:`Material Preview` mode to confirm that all materials are actually fully functional before you do anything else. All textures should be visible and no part of the map should be white.
 * Use Eevee if you want a true Source look. Cycles will get you very different results.
-* There's unfortunately a limit of Eevee which there's no way around. It can only have 128 active lights at once, while a lot of maps in TF2 end up having significantly more than that. Unfortunately the only way around this is to use Cycles, which doesn't have a light limit, but another alternative is to maintain the majority of the look by turning off every light except the one which starts with the name ``light_environment``. This is the 'Sun' light and is responsible for nearly all outdoor lighting and shadows present on the map.
+* There's unfortunately a limit of Eevee which there's no way around. It can only have 128 active lights at once, while a lot of maps can have more than that. Unfortunately the only way around this is to use Cycles, which doesn't have a light limit, but another alternative is to maintain the majority of the look by turning off every light except the one which starts with the name ``light_environment``. This is the 'Sun' light and is responsible for nearly all outdoor lighting and shadows present on the map.
 * If you want more accurate Source colors, go to Color Management, and set the Color Profile from :guilabel:`Filmic` to :guilabel:`Standard`.
 
-.. _sfm_prop:
+.. _sfm_model:
 
-Individual Props
-----------------
+Individual Models
+-----------------
 
-| This section is written as a way to obtain individual props that are used in maps.
+| This section is written as a way to obtain individual models that can be found in the SFM Workshop. This includes characters, weapons, vehicles, cosmetics, the method for importing will all be the same.
 
-.. _sfm_prop_method1:
+.. _sfm_model_method1:
 
 Method
 ^^^^^^
 
-.. _sfm_prop_method1_summary:
+.. _sfm_model_method1_summary:
 
 Summary of Method
 """""""""""""""""
@@ -137,37 +138,17 @@ Summary of Method
 *    Download SourceIO. Install SourceIO as an Add-on into Blender.
 *    Use SourceIO to import ``.MDL`` file of choice from the extracted folders.
 
-.. _sfm_prop_method1_detailed:
+.. _sfm_model_method1_detailed:
 
 Full Guide of Method
 """"""""""""""""""""
 
-| All you have to do for bringing a Model in is to first install `SourceIO <https://github.com/REDxEYE/SourceIO>`_ as an Add-on into Blender. The steps for this can be found at the :ref:`installingprograms` Section. Once done, open Blender, click :guilabel:`File` > :guilabel:`⤓ Import` > :guilabel:`Source Engine Assets` > :guilabel:`Source model (.mdl)`, and choose the ``.MDL`` file you're after inside the ``Models`` folder. The ``Models`` folder can be found inside any of the directories within the ``[sfm_directory] / game`` folders. It should have textures set up and everything.
+| It's amazing how simple SourceIO has made it. First install `SourceIO <https://github.com/REDxEYE/SourceIO>`_ as an Add-on into Blender. The steps for this can be found at the :ref:`installingprograms` Section. Once done, open Blender, click :guilabel:`File` > :guilabel:`⤓ Import` > :guilabel:`Source Engine Assets` > :guilabel:`Source model (.mdl)`, and choose the ``.MDL`` file you're after inside the ``Models`` folder. The ``Models`` folder can be found inside any of the directories within the ``[sfm_directory] / game`` folders. It should have textures set up and everything. Workshop items and mods can be found under ``[sfm_directory] / game / workshop``, and the ``MDL`` files should be in the ``Models`` folder.
 
-.. _sfm_characterandrig:
-
-Character and Rig
------------------
-
-| WIP
 
 .. _sfm_animations:
 
 Animations
 ----------
-
-| WIP
-    
-.. _sfm_weaponsandcosmetics:
-
-Weapons and Cosmetics
----------------------
-
-| WIP
-
-.. _sfm_soundeffectsvoices:
-
-Sound effects & Voice lines
----------------------------
 
 | WIP

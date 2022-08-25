@@ -5,7 +5,7 @@ Source Filmmaker
 
 .. note::
 
-    If you wanna make sure EVERYTHING works, be it maps or props or literally and mod or addon, then you'll wanna make sure you have all the DLC's of SFM installed. First launch Steam. Then go to :guilabel:`Library` and right click Source Filmmaker. Click :guilabel:`Properties`, and go to :guilabel:`DLC`. Check the ones you need, and exit this menu. Launch SFM and create a session, it'll prompt you for the downloads. It's gonna take a while as the DLC's can go upto 7 GB in size individually, but it's only a one time thing.
+    If you wanna make sure EVERYTHING works, be it maps or models or literally and mod or addon, then you'll wanna make sure you have all the DLC's of SFM installed. First launch Steam. Then go to :guilabel:`Library` and right click Source Filmmaker. Click :guilabel:`Properties`, and go to :guilabel:`DLC`. Check the ones you need, and exit this menu. Launch SFM and create a session, it'll prompt you for the downloads. It's gonna take a while as the DLC's can go upto 7 GB in size individually, but it's only a one time thing.
 
 | Throughout this page, you'll find clickable text where a link is provided. Just click on it or right click and 'Open in new tab' to see the contents.
 | It's recommended for SFM to be installed for the best experience. You can also obtain the files using Crowbar's downloader, and most should work fine using this, but read the description of the specific map. If it says it needs other things like Prop Packs or to have DLC's, then downloading SFM is your best option.
@@ -125,12 +125,12 @@ Individual Models
 
 | This section is written as a way to obtain individual models that can be found in the SFM Workshop. This includes characters, weapons, vehicles, cosmetics, the method for importing will all be the same.
 
-.. _sfm_prop_method1:
+.. _sfm_model_method1:
 
 Method
 ^^^^^^
 
-.. _sfm_prop_method1_summary:
+.. _sfm_model_method1_summary:
 
 Summary of Method
 """""""""""""""""
@@ -138,7 +138,7 @@ Summary of Method
 *    Download SourceIO. Install SourceIO as an Add-on into Blender.
 *    Use SourceIO to import ``.MDL`` file of choice from the extracted folders.
 
-.. _sfm_prop_method1_detailed:
+.. _sfm_model_method1_detailed:
 
 Full Guide of Method
 """"""""""""""""""""

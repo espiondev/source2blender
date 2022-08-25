@@ -299,9 +299,9 @@ Summary of Method
 """""""""""""""""
 
 *    Download GCFScape, Blender Source Tools, and Crowbar. Install Blender Source Tools as an Add-on into Blender (This step is only necessary for first time use).
-*    Using GCFScape, extract the necessary class files from ``tf2_misc_dir.vpk`` into a folder of your choice. (This step is only necessary for first time use).
+*    Using GCFScape, extract the necessary class files from ``tf2_misc_dir.vpk`` into a folder of your choice (This step is only necessary for first time use).
 *    Open the appropriate ``.MDL`` file in Crowbar and Decompile it into another folder.
-*    Use Blender Source Tools to import the ``.QC`` file
+*    Use Blender Source Tools to import the ``.QC`` file.
 *    Remove or hide any unnecessary objects such as the hitbox or extra LOD models.
 
 .. _tf2_v_animations_method1_detailed:

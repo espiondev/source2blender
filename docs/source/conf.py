@@ -17,6 +17,7 @@ extensions = [
     "sphinx.ext.autodoc",
     "sphinx.ext.autosummary",
     "sphinx.ext.intersphinx",
+
 ]
 
 intersphinx_mapping = {
@@ -32,6 +33,15 @@ templates_path = ["_templates"]
 # html_theme = "sphinx_rtd_theme"
 html__theme = "sphinx_rtd_theme"
 
+html_static_path = ['_static']
+
+html_logo = "s2b.png"
+
+html_theme_options = {
+    'logo_only': True,
+    'display_version': False,
+}
+
 # -- Options for EPUB output
 epub_show_urls = "footnote"
 
@@ -40,3 +50,7 @@ extensions = [
     'sphinx.ext.autosectionlabel'
 ]
 autosectionlabel_prefix_document = True
+
+
+def setup(app):
+    app.add_css_file("css/rtd_dark.css")

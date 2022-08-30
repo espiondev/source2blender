@@ -5,7 +5,7 @@ Source Filmmaker
 
 .. note::
 
-    If you wanna make sure EVERYTHING works, be it maps or models or literally and mod or addon, then you'll wanna make sure you have all the DLC's of SFM installed. First launch Steam. Then go to :guilabel:`Library` and right click Source Filmmaker. Click :guilabel:`Properties`, and go to :guilabel:`DLC`. Check the ones you need, and exit this menu. Launch SFM and create a session, it'll prompt you for the downloads. It's gonna take a while as the DLC's can go upto 7 GB in size individually, but it's only a one time thing.
+    If you want to make sure *everything* works, be it maps or models or literally and mod or addon, then you'll want to make sure you have all the DLC's of SFM installed. First launch Steam. Then go to :guilabel:`Library` and right click Source Filmmaker. Click :guilabel:`Properties`, and go to :guilabel:`DLC`. Check the ones you need, and exit this menu. Launch SFM and create a session, it'll prompt you for the downloads. It's gonna take a while as the DLC's can go upto 7 GB in size individually, but it's only a one time thing.
 
 | Throughout this page, you'll find clickable text where a link is provided. Just click on it or right click and 'Open in new tab' to see the contents.
 | It's recommended for SFM to be installed for the best experience. You can also obtain the files using Crowbar's downloader, and most should work fine using this, but read the description of the specific map. If it says it needs other things like Prop Packs or to have DLC's, then downloading SFM is your best option.

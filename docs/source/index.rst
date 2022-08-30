@@ -25,4 +25,7 @@ Contents
    :maxdepth: 2
    :glob:
 
+   TF2-Vanilla
+   TF2-Workshop
+   
    *

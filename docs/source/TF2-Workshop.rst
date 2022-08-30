@@ -9,10 +9,6 @@ Team Fortress 2 Workshop
 
 | If you know how to use SteamCMD then this shouldn't be a problem. Otherwise, I recommend  `This Youtube Video <https://youtu.be/fxFX9uamHvI>`_ that explains how to use it. Maps work completely fine and you can Subscribe to them. Everything else, is where it gets complicated.
 
-
-.. contents:: Table of Contents
-    :depth: 3
-
 .. _tf2_w_map:
 
 Maps and included props

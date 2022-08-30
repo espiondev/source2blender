@@ -19,10 +19,6 @@ Source Filmmaker
 | For importing maps, Plumber won't autodetect the files from SFM like it does with other titles, so some manual work is needed. Open Blender, then go to :guilabel:`Edit` > :guilabel:`Preferences...` > :guilabel:`Add-ons`, and find Plumber. Expand it. You'll find two windows, one on top of the other. In the first one, click the ``+`` sign on the right. Label this new box as Source Filmmaker, or as SFM. That's your choice. In the second window, you have to manually add the directories of all folders within the folder. These will be folders with names such as ``steamapps / common / SourceFilmmaker / game / tf``, ``steamapps / common / SourceFilmmaker / game / hl2``, ``steamapps / common / SourceFilmmaker / game / tf_movies``, etc. All folders should be added. You do also have to be careful that Plumber writes the directories with \ and **NOT** with /. Look at the other titles for reference if you need to. Once this is set up, Plumber should be good to go if you want to import an SFM map.
        
 
-.. contents:: Table of Contents
-    :depth: 3
-
-
 .. _sfm_map:
 
 Maps and included props

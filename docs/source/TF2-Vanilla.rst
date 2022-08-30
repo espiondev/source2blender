@@ -7,10 +7,6 @@ Team Fortress 2 Vanilla
 | Depending on the category you'll find two methods or only one. Where there are multiple methods (Such as in the :ref:`tf2_v_map` Section), the benefits and drawbacks will be listed. Places where there's only one method means that other methods just wasn't as good/worth it, or there only is one way to do it.
 | It's best if you have an up-to-date copy of Team Fortress 2 installed as nearly all of these methods will be relying on obtaining files present from within the game.
 
-.. contents:: Table of Contents
-    :depth: 3
-
-
 .. _tf2_v_map:
 
 Maps and included props

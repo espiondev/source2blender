@@ -15,18 +15,3 @@ Source2Blender documentation
 Credit
 ------
 This documentation was made by `Woha <https://github.com/WilliamWoha>`_, `Hisanimations <https://github.com/hisprofile>`_, and `Meer <https://github.com/meerguy>`_, with additional assistance from the members of the `TF2 Blender Discord server <https://discord.gg/zHC2gJW>`_. It was adapted to ReadTheDocs by Spy (`spy-ware on Github <https://github.com/spy-ware>`_) and Woha (`WilliamWoha on GitHub <https://github.com/WilliamWoha>`_) 
-
-
-Contents
---------
-
-.. toctree::
-   :maxdepth: 1
-
-   index
-   installingprograms
-   TF2-Vanilla
-   TF2-Workshop
-   GMod
-   SFM
-   

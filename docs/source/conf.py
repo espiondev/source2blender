@@ -31,11 +31,11 @@ templates_path = ["_templates"]
 # -- Options for HTML output
 
 # html_theme = "sphinx_rtd_theme"
-html__theme = "sphinx_rtd_theme"
+html__theme = "furo"
 
 html_static_path = ['_static']
 
-html_logo = "s2b.png"
+# html_logo = "s2b.png"
 
 html_theme_options = {
     'logo_only': True,

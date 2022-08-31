@@ -8,8 +8,8 @@ Garry's Mod
 | It's best if you have an up-to-date copy of Garry's Mod installed as nearly all of these methods will be relying on obtaining files present from within the game.
 
 .. note::
-    The methods shown throughout this page are all effective on both the Vanilla files of Garry's Mod, as well as Mods and Workshop items. If using Workshop Addons or Mods, the only extra step necessary is to move the files in question to appropriate locations.
-    A program called GMad can be used for turning ``.GMA`` files, which are used as Addon files and are present under ``[game_directory] / garrysmod / addons``, into regular files. After that, the folders can be copied to ``[game_directory] / garrysmod``, and then the methods can be applied for bringing them in.
+    The methods shown throughout this page are all effective on both the Vanilla files of Garry's Mod, as well as Mods and Workshop items. If using Workshop Add-ons or Mods, the only extra step necessary is to move the files in question to appropriate locations.
+    A program called GMad can be used for turning ``.GMA`` files, which are used as Add-on files and are present under ``[game_directory] / garrysmod / addons``, into regular files. After that, the folders can be copied to ``[game_directory] / garrysmod``, and then the methods can be applied for bringing them in.
     If instead you obtained the files from a mod download, then you can extract those directly to ``[game_directory] / garrysmod`` without having to use GMad.
         
 .. _gmod_gmad:
@@ -18,7 +18,7 @@ Turn Addons into Regular Files
 ------------------------------
 
 | To turn a ``.GMA`` file into the files you need so that they can be brought into Blender, open two windows of the Game Directory, side by side. In one window, go into ``[game_directory] / garrysmod / addons``. This is where your ``.GMA`` file will be. In the other window, go to ``[game_directory] / bin``. Here, you'll find ``gmad.exe``.
-| Drag and drop the ``.GMA`` file onto ``gmad.exe``. It will create a new folder with the same name as the ``.GMA`` file, in the Addons folder. This folder will contain everything you need for all the steps on the rest of the page.
+| Drag and drop the ``.GMA`` file onto ``gmad.exe``. It will create a new folder with the same name as the ``.GMA`` file, in the Add-ons folder. This folder will contain everything you need for all the steps on the rest of the page.
 
 .. _gmod_map:
 

@@ -16,9 +16,9 @@ Credit
 ------
 This documentation was made by  |woha| `Woha <https://github.com/WilliamWoha>`_, `Hisanimations <https://github.com/hisprofile>`_, and |meer| `Meer <https://github.com/meerguy>`_, with additional assistance from the members of the `TF2 Blender Discord server <https://discord.gg/zHC2gJW>`_. It was adapted to ReadTheDocs by |espion| Espion (`spy-ware on GitHub <https://github.com/spy-ware>`_) and |woha| Woha (`WilliamWoha on GitHub <https://github.com/WilliamWoha>`_) 
 
-.. |woha| image:: _images/woha.png :width: 64
-.. |meer| image:: _images/meer.png :width: 64
-.. |espion| image:: _images/espion.png :width: 64
+.. |woha| image:: _images/woha.png
+.. |meer| image:: _images/meer.png
+.. |espion| image:: _images/espion.png
 
 Contents
 --------

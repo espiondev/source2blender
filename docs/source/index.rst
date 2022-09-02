@@ -14,11 +14,8 @@ Source2Blender documentation
 
 Credit
 ------
-This documentation was made by  |woha1| `Woha <https://github.com/WilliamWoha>`_, `Hisanimations <https://github.com/hisprofile>`_, and |meer1| `Meer <https://github.com/meerguy>`_, with additional assistance from the members of the `TF2 Blender Discord server <https://discord.gg/zHC2gJW>`_. It was adapted to ReadTheDocs by |espion1| Espion (`spy-ware on GitHub <https://github.com/spy-ware>`_) and |woha1| Woha (`WilliamWoha on GitHub <https://github.com/WilliamWoha>`_) 
+This documentation was made by `Woha <https://github.com/WilliamWoha>`_, `Hisanimations <https://github.com/hisprofile>`_, and `Meer <https://github.com/meerguy>`_, with additional assistance from the members of the `TF2 Blender Discord server <https://discord.gg/zHC2gJW>`_. It was adapted to ReadTheDocs by Espion (`spy-ware on GitHub <https://github.com/spy-ware>`_) and Woha (`WilliamWoha on GitHub <https://github.com/WilliamWoha>`_) 
 
-.. |woha1| image:: _images/woha1.png
-.. |meer1| image:: _images/meer1.png
-.. |espion1| image:: _images/espion1.png
 
 Contents
 --------

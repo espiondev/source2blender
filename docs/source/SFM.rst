@@ -16,7 +16,8 @@ Source Filmmaker
     Unlike Team Fortress 2 and Garry's Mod, all the files and folders are pretty much already prepared and you don't need to do anything extra, such as turning the Add-on file into regular folders or using GCFScape to extract from ``.VPK`` files. So the steps are easier here.
     However, if using Workshop Add-ons or Mods that are specifically **maps**, the only extra step necessary is to set up Plumber. Here's how to set it up.
     
-| For importing maps, Plumber won't autodetect the files from SFM like it does with other titles, so some manual work is needed. Open Blender, then go to :guilabel:`Edit` > :guilabel:`Preferences...` > :guilabel:`Add-ons`, and find Plumber. Expand it. You'll find two windows, one on top of the other. In the first one, click the ``+`` sign on the right. Label this new box as Source Filmmaker, or as SFM. That's your choice. In the second window, you have to manually add the directories of all folders within the folder. These will be folders with names such as ``steamapps / common / SourceFilmmaker / game / tf``, ``steamapps / common / SourceFilmmaker / game / hl2``, ``steamapps / common / SourceFilmmaker / game / tf_movies``, etc. All folders should be added. You do also have to be careful that Plumber writes the directories with ``\`` and **NOT** with ``/``. Look at the other titles for reference if you need to. Once this is set up, Plumber should be good to go if you want to import an SFM map.
+| For importing maps, Plumber won't autodetect the files from SFM like it does with other titles, so some manual work is needed. Open Blender, then go to :guilabel:`Edit` > :guilabel:`Preferences...` > :guilabel:`Add-ons`, and find Plumber. Expand it. You'll find two boxes, one on top of the other. There might be some Source Titles present in this box, such as Team Fortress 2 or Garry's Mod. If not, don't worry about it, but if it's there then it'll be helpful to view them to see how to set it up. For this box, click the ``+`` sign on the right. Label this new entry as Source Filmmaker, or as SFM. That's your choice. In the second box below, you have to manually add the directories of folders present in the Source Filmmaker folder.
+| If you're confused by what that means, you're basically setting up Plumber so it pulls data from these locations and the textures all work. These will be folders with names such as ``steamapps / common / SourceFilmmaker / game / tf``, ``steamapps / common / SourceFilmmaker / game / hl2``, ``steamapps / common / SourceFilmmaker / game / tf_movies``, etc. All folders should be added. You do also have to be careful that Plumber writes the directories with ``\\`` and **NOT** with ``/``. Look at the other titles for reference if you need to. Once this is set up, Plumber should be good to go if you want to import an SFM map.
        
 
 .. _sfm_map:
@@ -24,7 +25,7 @@ Source Filmmaker
 Maps and included props
 -----------------------
 
-| :ref:`sfm_map_method1` uses three tools, all linked in that section.
+| This :ref:`sfm_map_method1` uses three tools, all linked in that section.
 | Unlike Team Fortress 2 and GMod, SFM maps are a bit complicated and pull resources from multiple different folders. SourceIO has not been successful for the importing of maps, but has been fine for everything else. For this reason, the Map Import section only has one method.
 | This method requires a fully working copy of Source Filmmaker and a recent version of Blender. If you are unable to get this method to work, it is recommended to use the latest version of Blender.
 

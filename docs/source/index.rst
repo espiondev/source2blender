@@ -25,7 +25,10 @@ Contents
    :maxdepth: 2
    :glob:
 
-   TF2-Vanilla
-   TF2-Workshop
+   InstallingPrograms/index
+   TF2Vanilla/index
+   TF2Workshop/index
+   SFM/index
+   GMod/index
    
    *

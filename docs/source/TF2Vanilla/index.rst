@@ -15,11 +15,11 @@ Contents
    :maxdepth: 2
    :glob:
 
-   tf2_v_map
-   tf2_v_prop
-   tf2_v_characterandrig
-   tf2_v_animations
-   tf2_v_weaponsandcosmetics
-   tf2_v_soundeffectsvoices
+   Map
+   Prop
+   CharacterAndRig
+   Animations
+   WeaponsAndCosmetics
+   SoundEffectsVoices
    
    *

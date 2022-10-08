@@ -28,8 +28,8 @@ Contents
    :maxdepth: 2
    :glob:
 
-   sfm_map
-   sfm_model
-   sfm_animations
+   Map
+   Model
+   Animations
    
    *

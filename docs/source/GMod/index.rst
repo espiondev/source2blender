@@ -28,11 +28,11 @@ Contents
    :maxdepth: 2
    :glob:
 
-   gmod_map
-   gmod_prop
-   gmod_characterandrig
-   gmod_animations
-   gmod_weaponsandcosmetics
-   gmod_soundeffectsvoices
+   Map
+   Prop
+   CharacterAndRig
+   Animations
+   WeaponsAndCosmetics
+   SoundEffectsVoices
    
    *

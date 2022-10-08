@@ -17,6 +17,6 @@ Contents
    :maxdepth: 2
    :glob:
 
-   tf2_w_map
+   Map
    
    *

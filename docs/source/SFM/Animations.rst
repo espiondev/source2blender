@@ -4,3 +4,5 @@ Animations
 ----------
 
 | WIP
+
+.. image:: images/construction.png

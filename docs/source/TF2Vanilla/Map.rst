@@ -172,7 +172,7 @@ Applying Skybox
 | After that, Shift Click the Empty. This is important because otherwise it won't line up.
 | Finally, click Object, then Transform VMF 3D sky.
 | A GIF has been attached to show the process visually.
+|
 
 .. image:: _images/skybox.gif
-  :width: 350
   :alt: Visual guide for applying Skybox. 

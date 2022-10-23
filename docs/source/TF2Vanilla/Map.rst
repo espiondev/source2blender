@@ -174,5 +174,5 @@ Applying Skybox
 | A GIF has been attached to show the process visually.
 |
 
-.. image:: _images/skybox.gif
+.. image:: _images/skybox2.gif
   :alt: Visual guide for applying Skybox. 

@@ -3,7 +3,7 @@
 Animations
 ----------
 
-| Regardless of what method you use to import the TF2 characters and their appropriate rigs, be it the Hisanimations port, or the TF2 in game models, or the SFM models, all use the same method for applying in-game animations. There's no other method hence only one method is listed. However, for the Hisanimations port, you do have to make sure you get the one that's compatible with taunts. That one is available under the ``#community-ports`` channel of the `TF2 Blender Discord server <https://discord.gg/zHC2gJW>`_.
+| Regardless of what method you use to import the TF2 characters and their appropriate rigs, be it the Hisanimations port, or the TF2 in game models, or the SFM models, all use the same method for applying in-game animations (But for the Hisanimations port, you do have to make sure you get the one that's compatible with taunts. That one is available under the ``#community-ports`` channel of the `TF2 Blender Discord server <https://discord.gg/zHC2gJW>`_). There's no other method hence only one method is listed.
 | This is a bit long and tedious so, make sure to follow every step carefully, but at least you won't have to do these animations yourself from scratch. The method works.
 | 
 

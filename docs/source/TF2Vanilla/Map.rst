@@ -155,9 +155,24 @@ Finishing Touches (Both Methods)
 * Use Eevee if you want a true TF2 look. Cycles will get you very different results.
 * There's unfortunately a limit of Eevee which there's no way around. It can only have 128 active lights at once, while a lot of maps in TF2 end up having significantly more than that. Unfortunately the only way around this is to use Cycles, which doesn't have a light limit, but another alternative is to maintain the majority of the look by turning off every light except the one which starts with the name ``light_environment``. This is the 'Sun' light and is responsible for nearly all outdoor lighting and shadows present on the map.
 * If you want more accurate TF2 colors, go to Color Management, and set the Color Profile from :guilabel:`Filmic` to :guilabel:`Standard`.
+* To apply the Skybox, check the :ref:`tf2_v_skybox` section.
 
 .. note::
 
     | In some maps, for example ``pl_badwater``, some universally used props will look a bit off, such as the rocks used in the starting area for the payload cart. This is because these props have multiple different skins used by different maps. A script is being developed to make it easy to change skins, but if you currently want to do it manually, then go to the Materials section of this object and make it so all the assigned faces are of a different material slot instead. If you know how Materials and Assigning works, this shouldn't be too difficult for you to do.
     | If you used SourceIO to import the map, in the sidebar (brought up by pressing the N button), there should be the option to change through different skins easily.
 
+.. _tf2_v_skybox:
+
+Applying Skybox
+"""""""""""""""
+
+| It is necessary for Plumber to be installed for this next part.
+| To apply a Skybox, first find it in the corner, then select all the objects that are near it. Make sure none of the objects are linked to the rest of the map. If they are, then you have to go into Edit mode to separate it.
+| After that, Shift Click the Empty. This is important because otherwise it won't line up.
+| Finally, click Object, then Transform VMF 3D sky.
+| A GIF has been attached to show the process visually.
+
+.. image:: _images/skybox.gif
+  :width: 350
+  :alt: Visual guide for applying Skybox. 

@@ -1,6 +1,12 @@
 Source2Blender documentation
 ============================
 
+.. meta::
+   :google-site-verification: zT0JIkKNVBr7YlDPmjiFJMgLktqtTihUQTXYN1uoPQ8
+   
+.. meta::
+   :description: The reStructuredText plaintext markup language
+
 | This documentation will serve as a beginner-friendly guide to porting assets from games featuring Valve's game engine, Source, to Blender, the most popular free and open source 3D computer graphics software. 
 
 .. image:: _images/logo.png

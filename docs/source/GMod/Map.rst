@@ -22,7 +22,6 @@ Summary of Method 1
 
 *    Download BSPSource, Plumber, and Blender Source Tools. Install Plumber and Blender Source Tools as Add-ons into Blender (This step is only necessary on first time use).
 *    Locate the map you wish to bring into Blender by going to ``[game_directory] / garrysmod / maps``.
-*    Repack the ``.BSP`` file using ``EspionRepacker`` if necessary.
 *    Convert the ``.BSP`` file into a ``.VMF`` file using BSPSource.
 *    Import the ``.VMF`` file from :guilabel:`File` > :guilabel:`Import` > :guilabel:`Plumber` > :guilabel:`Valve Map Format (.vmf)` in Blender.
 *    Disable all lights except ``light_environment``, and set Color Profile from :guilabel:`Filmic` to :guilabel:`Standard`.
@@ -59,7 +58,7 @@ Convert a .BSP to .VMF
 
 .. important::
 
-    During the time that BSPSource is Decompiling the map, it will show logs of what it's doing. There is an ``Errors & Warnings`` box visible. This should be completely empty. If at any point something is shown in this box, then the process failed and needs to be done again. 
+    During the time that BSPSource is Decompiling the map, it will show logs of what it's doing. There is an ``Errors & Warnings`` box visible. If the process worked, then this box should be mostly empty. If [Warning] is shown in this, then it should be fine. If an [Error] is shown in this, however, then it may have failed. You'll have to come back to this step if the map doesn't work later. 
 
 .. _gmod_importing_vmf:
 
@@ -133,9 +132,25 @@ Bringing the Map in
 .. _gmod_finishing_touches:
 
 Finishing Touches (Both Methods)
-""""""""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * Use :guilabel:`Material Preview` mode to confirm that all materials are actually fully functional before you do anything else. All textures should be visible and no part of the map should be white.
-* Use Eevee if you want a true Garry's Mod look. Cycles will get you very different results.
-* There's unfortunately a limit of Eevee which there's no way around. It can only have 128 active lights at once, while maps can end up having more than that. Unfortunately the only way around this is to use Cycles, which doesn't have a light limit, but another alternative is to maintain the majority of the look by turning off every light except the one which starts with the name ``light_environment``. This is the 'Sun' light and is responsible for nearly all outdoor lighting and shadows present on the map.
+* Use Eevee if you want a true TF2 look. Cycles will get you very different results.
+* There's unfortunately a limit of Eevee which there's no way around. It can only have 128 active lights at once, while a lot of maps in TF2 end up having significantly more than that. Unfortunately the only way around this is to use Cycles, which doesn't have a light limit, but another alternative is to maintain the majority of the look by turning off every light except the one which starts with the name ``light_environment``. This is the 'Sun' light and is responsible for nearly all outdoor lighting and shadows present on the map.
 * If you want more accurate Garry's Mod colors, go to Color Management, and set the Color Profile from :guilabel:`Filmic` to :guilabel:`Standard`.
+* To apply the Skybox, check the :ref:`gmod_skybox` section.
+
+.. _gmod_skybox:
+
+Applying Skybox
+"""""""""""""""
+
+| It is necessary for Plumber to be installed for this next part. SourceIO cannot do this.
+| To apply a Skybox, first find it in the corner, then select all the objects that are near it. Make sure none of the objects are linked to the rest of the map. If they are, then you have to go into Edit mode to separate it.
+| After that, Shift Click the Empty. This is important because otherwise it won't line up.
+| Finally, click Object, then Transform VMF 3D sky.
+| A GIF has been attached to show the process visually.
+|
+
+.. image:: _images/skybox2.gif
+  :alt: Visual guide for applying Skybox. 

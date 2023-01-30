@@ -19,7 +19,6 @@ Summary of Method 1
 
 *    Download BSPSource, Plumber, and Blender Source Tools. Install Plumber and Blender Source Tools as Add-ons into Blender (This step is only necessary on first time use).
 *    Locate the map you wish to bring into Blender by going to ``[game_directory] / tf / maps``.
-*    If necessary, Repack the ``.BSP`` file using ``EspionRepacker``.
 *    Convert the ``.BSP`` file into a ``.VMF`` file using BSPSource.
 *    Import the ``.VMF`` file from :guilabel:`File` > :guilabel:`Import` > :guilabel:`Plumber` > :guilabel:`Valve Map Format (.vmf)` in Blender.
 *    Disable all lights except ``light_environment``, and set Color Profile from :guilabel:`Filmic` to :guilabel:`Standard`.
@@ -35,24 +34,6 @@ Full Guide of Method 1
 | `Blender Source Tools <http://steamreview.org/BlenderSourceTools>`_, `BSPSource <https://developer.valvesoftware.com/wiki/BSPSource>`_, and `Plumber <https://github.com/lasa01/io_import_vmf/releases>`_ (only download a release, pre-releases may be unreliable) will be used for Method 1. The steps to install these can be seen at the :ref:`installingprograms` section. 
 | Plumber was originally called io_import_vmf, and it's by the same developers. It's currently in Beta but significantly superior to io_import_vmf and that's why we've linked the page to download that instead.
 
-| To start off, we need to make sure the map is even usable in the first place. Some maps are compressed beyond readability for BSPSource (Usually newer ones). To fix that, you need to repack it.
-
-.. _tf2_v_fix_compressed_bsp:
-
-Repack compressed .BSP files
-""""""""""""""""""""""""""""
-
-.. note::
-
-    | These steps are only to be followed in case a .BSP file was too compressed for BSPSource. If you're unsure, better to do it anyways.
-    | Make sure to follow the steps in the right order. 
-
-*    Go to the releases page for `EspionRepacker <https://github.com/spy-ware/EspionRepacker/releases>`_ and download the latest version (don't download the one called Source Code).
-*    For the BSPZip folder, go to ``[game directory] / bin``.
-*    For the map you want to Repack, go to ``[game directory] / tf / maps`` and choose the specific ``.BSP`` file (Map file) you want to Repack.
-*    The output folder is of your own choice, but make sure it's a place you can come back to easily.
-*    Click on :guilabel:`Repack` to repack your file. A folder will be generated called ``out``, and within this folder will be the ``.BSP`` file, ready to use for the next steps. 
-
 .. _tf2_v_convert_bsp_to_vmf:
 
 Convert a .BSP to .VMF
@@ -64,7 +45,7 @@ Convert a .BSP to .VMF
 
 *    Download `BSPSource <https://developer.valvesoftware.com/wiki/BSPSource>`_ and extract all files to a folder.
 *    Open ``bspsrc.jar`` from this folder.
-*    There's many options in the program. For now, just click the button for :guilabel:`Add`. From there, if you repacked a file using EspionRepacker, go to the folder where the Output file is (the one which is a ``.BSP`` file) and select it. Otherwise, go to ``[game_directory] / tf / maps`` and choose the specific map file you want to convert (these are also ``.BSP`` files).
+*    There's many options in the program. For now, just click the button for :guilabel:`Add`. From there, go to ``[game_directory] / tf / maps`` and choose the specific map file you want to convert.
 *    Go to the :guilabel:`Other` tab in BSPSource, and enable the checkbox labelled :guilabel:`Extract Embedded Files`.
 *    Once done, just click the :guilabel:`Decompile` button in the bottom right. There's no need to edit the other settings, though you're free to play around if you know what you're doing.
 *    A file browser will show up for where to put the ``.VMF`` file. You can choose any location, but it's best if it's a place you can easily come back to.
@@ -74,7 +55,7 @@ Convert a .BSP to .VMF
 
 .. important::
 
-    During the time that BSPSource is Decompiling the map, it will show logs of what it's doing. There is an ``Errors & Warnings`` box visible. This should be completely empty. If [Warning] is shown in this, then it should be fine. If an [Error] is shown in this, however, then it may have failed. You'll have to come back to this step if the map doesn't work later. 
+    During the time that BSPSource is Decompiling the map, it will show logs of what it's doing. There is an ``Errors & Warnings`` box visible. If the process worked, then this box should be mostly empty. If [Warning] is shown in this, then it should be fine. If an [Error] is shown in this, however, then it may have failed. You'll have to come back to this step if the map doesn't work later. 
 
 .. _tf2_v_importing_vmf:
 
@@ -149,7 +130,7 @@ Bringing the Map in
 .. _tf2_v_finishing_touches:
 
 Finishing Touches (Both Methods)
-""""""""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * Use :guilabel:`Material Preview` mode to confirm that all materials are actually fully functional before you do anything else. All textures should be visible and no part of the map should be white.
 * Use Eevee if you want a true TF2 look. Cycles will get you very different results.
@@ -167,7 +148,7 @@ Finishing Touches (Both Methods)
 Applying Skybox
 """""""""""""""
 
-| It is necessary for Plumber to be installed for this next part.
+| It is necessary for Plumber to be installed for this next part. SourceIO cannot do this.
 | To apply a Skybox, first find it in the corner, then select all the objects that are near it. Make sure none of the objects are linked to the rest of the map. If they are, then you have to go into Edit mode to separate it.
 | After that, Shift Click the Empty. This is important because otherwise it won't line up.
 | Finally, click Object, then Transform VMF 3D sky.

@@ -58,7 +58,7 @@ Convert a .BSP to .VMF
 
 .. important::
 
-    During the time that BSPSource is Decompiling the map, it will show logs of what it's doing. There is an ``Errors & Warnings`` box visible. This should be completely empty. If at any point something is shown in this box, then the process failed and needs to be done again. 
+    During the time that BSPSource is Decompiling the map, it will show logs of what it's doing. There is an ``Errors & Warnings`` box visible. If the process worked, then this box should be mostly empty. If [Warning] is shown in this, then it should be fine. If an [Error] is shown in this, however, then it may have failed. You'll have to come back to this step if the map doesn't work later. 
 
 .. _sfm_importing_vmf:
 
@@ -66,7 +66,7 @@ Bringing The Map In
 """""""""""""""""""
 
 | You can now import a .VMF file from the :guilabel:`File` > :guilabel:`Import` > :guilabel:`Plumber` > :guilabel:`Valve Map Format (.vmf)` button (Make sure Plumber and Blender Source Tools are installed). Browse to the location you stored your ``.VMF`` file which you Decompiled using BSPSource earlier. 
-*    Make sure that in the Import settings, the game is set to Team Fortress 2. 
+*    Make sure that in the Import settings, the game is set to Source Filmmaker (If this option is not available to you, then you have to go to the :ref:`sfm` homepage to set up Plumber). 
 *    Set the Scale to 0.1, and the Light Brightness set to 10. This is so the map is compatible with the Hisanimations Characters port and TF2 Collections Port.
 *    In the folder space underneath the :guilabel:`Game`, type the name of the folder with the same name as the ``.VMF``. So if for example, your map file is called ``fnaf1_sfm_d.vmf`` then there should also be a folder called ``fnaf1_sfm_d``. Write ``fnaf1_sfm_d`` in that space. If you don't have such a folder, you can skip this step.
 *    Then click the ``.VMF`` file, and click :guilabel:`Import`. That's it, you should have everything. 
@@ -88,9 +88,24 @@ Bringing The Map In
 .. _sfm_finishing_touches:
 
 Finishing Touches
-"""""""""""""""""
+^^^^^^^^^^^^^^^^^
 
 * Use :guilabel:`Material Preview` mode to confirm that all materials are actually fully functional before you do anything else. All textures should be visible and no part of the map should be white.
-* Use Eevee if you want a true Source look. Cycles will get you very different results.
-* There's unfortunately a limit of Eevee which there's no way around. It can only have 128 active lights at once, while a lot of maps can have more than that. Unfortunately the only way around this is to use Cycles, which doesn't have a light limit, but another alternative is to maintain the majority of the look by turning off every light except the one which starts with the name ``light_environment``. This is the 'Sun' light and is responsible for nearly all outdoor lighting and shadows present on the map.
-* If you want more accurate Source colors, go to Color Management, and set the Color Profile from :guilabel:`Filmic` to :guilabel:`Standard`.
+* Use Eevee if you want a true TF2 look. Cycles will get you very different results.
+* There's unfortunately a limit of Eevee which there's no way around. It can only have 128 active lights at once, while a lot of maps in TF2 end up having significantly more than that. Unfortunately the only way around this is to use Cycles, which doesn't have a light limit, but another alternative is to maintain the majority of the look by turning off every light except the one which starts with the name ``light_environment``. This is the 'Sun' light and is responsible for nearly all outdoor lighting and shadows present on the map.
+* If you want more accurate TF2 colors, go to Color Management, and set the Color Profile from :guilabel:`Filmic` to :guilabel:`Standard`.
+* To apply the Skybox, check the :ref:`sfm_skybox` section.
+
+.. _sfm_skybox:
+
+Applying Skybox
+"""""""""""""""
+
+| To apply a Skybox, first find it in the corner, then select all the objects that are near it. Make sure none of the objects are linked to the rest of the map. If they are, then you have to go into Edit mode to separate it.
+| After that, Shift Click the Empty. This is important because otherwise it won't line up.
+| Finally, click Object, then Transform VMF 3D sky.
+| A GIF has been attached to show the process visually.
+|
+
+.. image:: _images/skybox2.gif
+  :alt: Visual guide for applying Skybox. 

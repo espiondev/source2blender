@@ -3,8 +3,8 @@
 # -- Project information
 
 project = "Source2Blender"
-copyright = "2022, Spy"
-author = "Spy"
+copyright = "2023, Espion"
+author = "Espion"
 
 release = "0.1"
 version = "0.1.0"

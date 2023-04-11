@@ -5,7 +5,7 @@ Source2Blender documentation
    :google-site-verification: zT0JIkKNVBr7YlDPmjiFJMgLktqtTihUQTXYN1uoPQ8
    
 .. meta::
-   :description: The reStructuredText plaintext markup language
+   :description: The Source2Blender documentation, for porting Source engine assets to Blender. Made with ❤️ by the TF2 Blender Community
 
 | This documentation will serve as a beginner-friendly guide to porting assets from games featuring Valve's game engine, Source, to Blender, the most popular free and open source 3D computer graphics software. 
 

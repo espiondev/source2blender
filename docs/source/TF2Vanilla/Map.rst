@@ -31,7 +31,7 @@ Full Guide of Method 1
 .. note::
     Always get the most recent version of a program or Add-on linked here.
 
-| `Blender Source Tools <http://steamreview.org/BlenderSourceTools>`_, `BSPSource <https://developer.valvesoftware.com/wiki/BSPSource>`_, and `Plumber <https://github.com/lasa01/io_import_vmf/releases>`_ (only download a release, pre-releases may be unreliable) will be used for Method 1. The steps to install these can be seen at the :ref:`installingprograms` section. 
+| `Blender Source Tools <http://steamreview.org/BlenderSourceTools>`_, `BSPSource <https://developer.valvesoftware.com/wiki/BSPSource>`_, and `Plumber <https://github.com/lasa01/io_import_vmf/releases>`_ will be used for Method 1. The steps to install these can be seen at the :ref:`installingprograms` section. 
 | Plumber was originally called io_import_vmf, and it's by the same developers. It's currently in Beta but significantly superior to io_import_vmf and that's why we've linked the page to download that instead.
 
 .. _tf2_v_convert_bsp_to_vmf:

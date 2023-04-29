@@ -68,7 +68,7 @@ Bringing The Map In
 *    In the folder space underneath the :guilabel:`Game`, type the name of the folder with the same name as the ``.VMF``. So if for example, your map file is called ``pl_pier_d.vmf`` then there should also be a folder called ``pl_pier_d``. Write ``pl_pier_d`` in that space. If you don't have such a folder, you can skip this step.
 *    Then click the ``.VMF`` file, and click :guilabel:`Import`. That's it, you should have everything. 
 
-| The installation steps are not necessary to do again. It's really just as simple as, Repack ``.BSP`` if needed, Turn into ``.VMF`` with BSPSource, Bring ``.VMF`` into Blender.
+| The installation steps are not necessary to do again. It's really just as simple as, Turn ``.BSP`` into ``.VMF`` with BSPSource, Bring ``.VMF`` into Blender.
 | Go to :ref:`tf2_v_finishing_touches` for advice on clean up and additional useful things to know about within Blender regarding these maps.
 | If you wish to familiarize yourself with the whole process, or see an overview, a :ref:`tf2_v_map_method1_summary` is written which you can refer to.
 | If any problems occur you can ask for help on the `TF2 Blender Discord server <https://discord.gg/zHC2gJW>`_.

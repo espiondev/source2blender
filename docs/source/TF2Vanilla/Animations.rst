@@ -43,7 +43,7 @@ Full Guide of Method
 *    You don't need to change any settings, click :guilabel:`Decompile` in the bottom left. If done right, the folder should have a very large amount of ``.SMD`` files.
 *    Finally, In Blender, click on the specific skeleton you want to apply an animation to (You do have to import the Character first. You can't just bring the animation into an empty scene).
 *    After that, go into :guilabel:`File` > :guilabel:`Import` > :guilabel:`Source Engine (.smd, .vta, .dmx, .qc)`.
-*    Go to the folder where Crowbar Decompiled the files. In there you should find multiple files, all with a lot of names. Find the one that you're after, and import it.
+*    Go to the folder where Crowbar Decompiled the files. In there you should find multiple files, all with a lot of names. These files should all have the extension of ``.dmx``. Find the one that you're after, and import it. The names might not line up exactly, so you do have to do some searching, such as ``taunt_russian`` for Kazotsky Kick.
 *    If everything was done right, the Timeline in Blender should adjust itself and by pressing play, the Animation should be visible.
 
 .. note::

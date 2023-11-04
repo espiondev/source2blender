@@ -40,11 +40,11 @@ Full Guide of Method
 *    Repeat the process for the ``.MDL`` present in ``models / workshop / player / animations``. Just in case the specific animation can't be found in that first ``.MDL`` file, we'll get the remaining ones from here too.
 *    Open Crowbar, and go to the :guilabel:`Decompile` tab. For the ``MDL`` file, select the ``.MDL`` from the files you just extracted through GCFScape.
 *    For the Output Folder, make a new folder or choose an existing one to Decompile to.
-*    You don't need to change any settings, click :guilabel:`Decompile` in the bottom left. If done right, the folder should have a very large amount of ``.SMD`` files.
+*    You don't need to change any settings, click :guilabel:`Decompile` in the bottom left. If done right, the folder should have a very large amount of ``.smd`` or ``.dmx`` files.
 *    Finally, In Blender, click on the specific skeleton you want to apply an animation to (You do have to import the Character first. You can't just bring the animation into an empty scene).
 *    After that, go into :guilabel:`File` > :guilabel:`Import` > :guilabel:`Source Engine (.smd, .vta, .dmx, .qc)`.
-*    Go to the folder where Crowbar Decompiled the files. In there you should find multiple files, all with a lot of names. These files should all have the extension of ``.dmx``. Find the one that you're after, and import it. The names might not line up exactly, so you do have to do some searching, such as ``taunt_russian`` for Kazotsky Kick.
-*    If everything was done right, the Timeline in Blender should adjust itself and by pressing play, the Animation should be visible.
+*    Go to the folder where Crowbar Decompiled the files. In there you should find multiple files, all with a lot of names. These files should all have the extension of ``.dmx`` or ``.smd``. Find the one that you're after, and import it. The names might be familiar, so you do have to do some searching, such as ``taunt_russian`` for Kazotsky Kick.
+*    If everything was done right, the Timeline in Blender should adjust itself and by pressing play, the animation should be visible.
 
 .. note::
 
